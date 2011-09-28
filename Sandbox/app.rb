@@ -1,12 +1,77 @@
 require 'sinatra'
+require 'sinatra/content_for'
 require 'erb'
 require 'json'
+require 'sinatra/reloader' if development?
 
 set :public, File.dirname(__FILE__) + '/public'
 
 get '/' do
   images = get_images.values
-  erb :index, :locals => {images: images}
+  if images.length > 0
+    image = images[0]
+    redirect "/images/#{image[:id]}"
+  else
+    redirect "/add"
+  end
+end
+
+get '/add' do
+  images = get_images.values
+  erb :"add-image", :locals => {
+    :images => images, 
+    :image_template => image_template
+  }
+end
+
+post '/add' do
+  # create
+  images = get_images
+
+  image = {
+    url: params["url"],
+    name: params["name"],
+    description: params["description"]
+  }
+
+  id = images.keys.max+1
+  image[:id] = id
+  images[id] = image
+
+  redirect "/images/#{image[:id]}"
+end
+
+get '/edit/:id' do
+  images = get_images.values
+  id = params[:id].to_i
+  image = images[id]
+
+  erb :"edit-image", :locals => {
+    :images => images, 
+    :image => image, 
+    :image_id => id,
+    :image_template => image_template
+  }
+end
+
+post '/edit/:id' do
+  # edit
+  images = get_images
+  id = params[:id].to_i
+
+  image = images[id]
+  image[:name] = params["name"]
+  image[:description] = params["description"]
+
+  redirect "/images/#{image[:id]}"
+end
+
+get '/delete/:id' do
+  images = get_images
+  id = params[:id].to_i
+  images.delete(id)
+
+  redirect "/"
 end
 
 get '/images' do
@@ -27,12 +92,33 @@ post '/images' do
     description: image_data["description"]
   }
 
-  id = images.length
+  id = images.keys.max+1
   image[:id] = id
   images[id] = image
 
   content_type :json
   image.to_json
+end
+
+get '/images/:id' do
+  images = get_images.values
+  id = params[:id].to_i
+  image = images[id]
+
+  nextId = image[:id] + 1
+  nextId = 0 if nextId >= images.length
+  image[:nextId] = nextId
+
+  prevId = image[:id] - 1
+  prevId = images.length - 1 if prevId < 0
+  image[:prevId] = prevId
+
+  erb :image, :locals => {
+    :images => images, 
+    :image => image, 
+    :image_id => id,
+    :image_template => image_template
+  }
 end
 
 put '/images/:id' do
@@ -113,4 +199,13 @@ def get_images
 
   set :images, images
   return images
+end
+
+def image_template
+  {
+    id: "${id}",
+    url: "${url}",
+    name: "${name}",
+    description: "${description}"
+  }
 end

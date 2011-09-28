@@ -164,6 +164,11 @@ a{
   text-align: right;
 }
 
+#add-image-form .save-cancel #save {
+  width: 50px;
+  margin-right: 50px;
+}
+
 .image-view {
   width: 450px;
   height: 415px;
