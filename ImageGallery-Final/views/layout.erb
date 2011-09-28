@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Image Gallery</title>
+    <script src="/javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascript/jquery.tmpl.js" type="text/javascript"></script>
+    <script src="/javascript/underscore.js" type="text/javascript"></script>
+    <script src="/javascript/json2.js" type="text/javascript"></script>
+    <script src="/javascript/backbone.js" type="text/javascript"></script>
+    <script src="/javascript/backbone.modelbinding.js" type="text/javascript"></script>
+    <script src="/javascript/backbone.memento.js" type="text/javascript"></script>
+    <script src="/javascript/imagegallery.js" type="text/javascript"></script>
+    <link rel='stylesheet' href='/css/imagegallery.css' type='text/css'>
+
+    <script id="load-image-form-template" type="text/x-jquery-tmpl">
+      <%= erb :"add-image-template" %>
+    </script>
+
+    <script id="edit-image-template" type="text/x-jquery-tmpl">
+      <%= erb :"edit-image-template", :locals => {:image => image_template} %>
+    </script>
+
+    <script id="image-preview-template" type="text/x-jquery-tmpl">
+      <%= erb :"image-preview-template", :locals => {:image => image_template} %>
+    </script>
+
+    <script id="image-view-template" type="text/x-jquery-tmpl">
+      <%= erb :"image-view-template", :locals => {:image => image_template} %>
+    </script>
+
+    <%= erb :"image-comments-template" %>
+    <%= erb :"add-comment-template" %>
+    <%= erb :"comment-template" %>
+
+    <script id="image-not-found-template" type="text/x-jquery-tmpl">
+      <h2>Image With Id '${modelId}' Was Not Found</h2>
+    </script>
+    <script language="javascript">
+      $(function(){
+        <% image_id ||= -1 %>
+        var app = new ImageGallery.App(<%= images.to_json %>, <%= image_id %>);
+        app.initialize();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <ul id="menu">
+          <li><a href="/add" id="add-image">Add Image</a>
+        </ul>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+      <div id="sidebar">
+        <div id="image-list">
+          <% yield_content :image_list %>
+        </div>
+      </div>
+      <div id="footer">Copyright ©2011 <a href="http://www.pragprog.om">The Pragmatic Programmers</a>. Reproduced With Permission.</div>
+    </div>
+  </body>
+</html>

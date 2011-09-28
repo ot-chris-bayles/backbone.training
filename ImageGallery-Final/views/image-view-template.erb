@@ -1,0 +1,8 @@
+<h2 data-bind="text name"><%= image[:name] %></h2>
+<div class="nav-next"><a href="/images/<%= image[:nextId] %>">&lt;</a></div>
+<div class="nav-previous"><a href="/images/<%= image[:prevId] %>">&gt;</a></div>
+<img src="<%= image[:url] %>" width="300" height="200" alt="<%= image[:description] %>" data-bind="src url">
+<div class="image-footer">
+  <div class="description" data-bind="text description"><%= image[:description] %></div>
+  <div class="edit"><a href="/edit/<%= image[:id] %>">Edit</a></div>
+</div>
