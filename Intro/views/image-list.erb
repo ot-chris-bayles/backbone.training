@@ -1,0 +1,10 @@
+<% content_for :image_list do%>
+  <ul class="image-list">
+    <% images.each do |img_preview| %>
+      <li>
+        <%= erb :"image-preview-template", :locals => {:image => img_preview} %>
+      </li>
+    <% end %>
+   </ul>
+<% end %>
+
