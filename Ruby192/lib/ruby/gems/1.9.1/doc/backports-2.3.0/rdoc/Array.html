@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: Array</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/backports/1_8_7/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/backports/1.8.7/array.rb">lib/backports/1.8.7/array.rb</a></li>
+					
+						<li><a href="./lib/backports/1_9_1/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/backports/1.9.1/array.rb">lib/backports/1.9.1/array.rb</a></li>
+					
+						<li><a href="./lib/backports/1_9_2/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/backports/1.9.2/array.rb">lib/backports/1.9.2/array.rb</a></li>
+					
+						<li><a href="./lib/backports/rails/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/backports/rails/array.rb">lib/backports/rails/array.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-try_convert">::try_convert</a></li>
+					
+					<li><a href="#method-i-combination">#combination</a></li>
+					
+					<li><a href="#method-i-cycle">#cycle</a></li>
+					
+					<li><a href="#method-i-extract_options%21">#extract_options!</a></li>
+					
+					<li><a href="#method-i-flatten_with_optional_argument">#flatten_with_optional_argument</a></li>
+					
+					<li><a href="#method-i-flatten_with_optional_argument%21">#flatten_with_optional_argument!</a></li>
+					
+					<li><a href="#method-i-index_with_block">#index_with_block</a></li>
+					
+					<li><a href="#method-i-keep_if">#keep_if</a></li>
+					
+					<li><a href="#method-i-permutation">#permutation</a></li>
+					
+					<li><a href="#method-i-pop_with_optional_argument">#pop_with_optional_argument</a></li>
+					
+					<li><a href="#method-i-product">#product</a></li>
+					
+					<li><a href="#method-i-product_with_block">#product_with_block</a></li>
+					
+					<li><a href="#method-i-recursively_flatten_finite">#recursively_flatten_finite</a></li>
+					
+					<li><a href="#method-i-repeated_combination">#repeated_combination</a></li>
+					
+					<li><a href="#method-i-repeated_permutation">#repeated_permutation</a></li>
+					
+					<li><a href="#method-i-rindex_with_block">#rindex_with_block</a></li>
+					
+					<li><a href="#method-i-rotate">#rotate</a></li>
+					
+					<li><a href="#method-i-rotate%21">#rotate!</a></li>
+					
+					<li><a href="#method-i-sample">#sample</a></li>
+					
+					<li><a href="#method-i-select%21">#select!</a></li>
+					
+					<li><a href="#method-i-shift_with_optional_argument">#shift_with_optional_argument</a></li>
+					
+					<li><a href="#method-i-shuffle">#shuffle</a></li>
+					
+					<li><a href="#method-i-shuffle%21">#shuffle!</a></li>
+					
+					<li><a href="#method-i-sort_by%21">#sort_by!</a></li>
+					
+					<li><a href="#method-i-uniq_with_block">#uniq_with_block</a></li>
+					
+					<li><a href="#method-i-uniq_with_block%21">#uniq_with_block!</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./Enumerable/Enumerator.html">Enumerable::Enumerator</a></li>
+				
+					<li><a href="./Enumerable/MOST_EXTREME_OBJECT_EVER.html">Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+				
+					<li><a href="./Random.html">Random</a></li>
+				
+					<li><a href="./Random/Implementation.html">Random::Implementation</a></li>
+				
+					<li><a href="./Random/MT19937.html">Random::MT19937</a></li>
+				
+					<li><a href="./Enumerator.html">Enumerator</a></li>
+				
+					<li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+					<li><a href="./ARGF.html">ARGF</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./Backports.html">Backports</a></li>
+				
+					<li><a href="./BasicObject.html">BasicObject</a></li>
+				
+					<li><a href="./Binding.html">Binding</a></li>
+				
+					<li><a href="./Dir.html">Dir</a></li>
+				
+					<li><a href="./ENV.html">ENV</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./Fixnum.html">Fixnum</a></li>
+				
+					<li><a href="./Float.html">Float</a></li>
+				
+					<li><a href="./GC.html">GC</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./IO.html">IO</a></li>
+				
+					<li><a href="./Integer.html">Integer</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./MatchData.html">MatchData</a></li>
+				
+					<li><a href="./Math.html">Math</a></li>
+				
+					<li><a href="./Method.html">Method</a></li>
+				
+					<li><a href="./Module.html">Module</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+				
+					<li><a href="./Proc.html">Proc</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./Range.html">Range</a></li>
+				
+					<li><a href="./Regexp.html">Regexp</a></li>
+				
+					<li><a href="./StopIteration.html">StopIteration</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./Struct.html">Struct</a></li>
+				
+					<li><a href="./Symbol.html">Symbol</a></li>
+				
+					<li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Array</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="try-convert-method" class="method-detail ">
+				<a name="method-c-try_convert"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_convert</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="try-convert-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/backports/1.9.1/array.rb, line 4</span>
+4:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_convert</span>(<span class="ruby-identifier">obj</span>)
+5:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_ary</span>)
+6:       <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_ary</span>(<span class="ruby-identifier">obj</span>)
+7:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="combination-method" class="method-detail ">
+				<a name="method-i-combination"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">combination</span><span
+						class="method-args">(num)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="combination-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 3</span>
+ 3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">combination</span>(<span class="ruby-identifier">num</span>)
+ 4:     <span class="ruby-identifier">num</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">num</span>)
+ 5:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:combination</span>, <span class="ruby-identifier">num</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+ 6:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">size</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">num</span>
+ 7:     <span class="ruby-comment cmt"># Implementation note: slightly tricky.</span>
+ 8:                                              <span class="ruby-comment cmt"># Example: self = 1..7, num = 3</span>
+ 9:     <span class="ruby-identifier">picks</span> = (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">num</span>).<span class="ruby-identifier">to_a</span>                   <span class="ruby-comment cmt"># picks start at 0, 1, 2</span>
+10:     <span class="ruby-identifier">max_index</span> = ((<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-identifier">num</span>)<span class="ruby-operator">...</span><span class="ruby-identifier">size</span>).<span class="ruby-identifier">to_a</span>           <span class="ruby-comment cmt"># max (index for a given pick) is [4, 5, 6]</span>
+11:     <span class="ruby-identifier">pick_max_pairs</span> = <span class="ruby-identifier">picks</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">max_index</span>).<span class="ruby-identifier">reverse</span>  <span class="ruby-comment cmt"># pick_max_pairs = [[2, 6], [1, 5], [0, 4]]</span>
+12:     <span class="ruby-identifier">lookup</span> = <span class="ruby-identifier">pick_max_pairs</span>.<span class="ruby-identifier">find</span>(<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>})
+13:     <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+14:       <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">picks</span>)
+15:       <span class="ruby-identifier">move</span> = <span class="ruby-identifier">lookup</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">pick</span>, <span class="ruby-identifier">max</span><span class="ruby-operator">|</span> <span class="ruby-identifier">picks</span>[<span class="ruby-identifier">pick</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">max</span>}.<span class="ruby-identifier">first</span>
+16:       <span class="ruby-identifier">new_index</span> = <span class="ruby-identifier">picks</span>[<span class="ruby-identifier">move</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+17:       <span class="ruby-identifier">picks</span>[<span class="ruby-identifier">move</span><span class="ruby-operator">...</span><span class="ruby-identifier">num</span>] = (<span class="ruby-identifier">new_index</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">new_index</span><span class="ruby-operator">+</span><span class="ruby-identifier">num</span><span class="ruby-operator">-</span><span class="ruby-identifier">move</span>)).<span class="ruby-identifier">to_a</span>
+18:     <span class="ruby-keyword kw">end</span>
+19:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cycle-method" class="method-detail ">
+				<a name="method-i-cycle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cycle</span><span
+						class="method-args">(n = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cycle-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 22</span>
+22:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cycle</span>(<span class="ruby-identifier">n</span> = <span class="ruby-keyword kw">nil</span>)
+23:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:cycle</span>, <span class="ruby-identifier">n</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+24:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">nil?</span>
+25:       <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span> } <span class="ruby-keyword kw">until</span> <span class="ruby-keyword kw">false</span>
+26:     <span class="ruby-keyword kw">else</span>
+27:       <span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">n</span>)
+28:       <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span>{<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span> }}
+29:     <span class="ruby-keyword kw">end</span>
+30:     <span class="ruby-keyword kw">nil</span>
+31:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-options--method" class="method-detail ">
+				<a name="method-i-extract_options%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_options!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+See official <a
+href="http://api.rubyonrails.org/classes/ActiveSupport/CoreExtensions/Array/ExtractOptions.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-options--source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/backports/rails/array.rb, line 3</span>
+3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_options!</span>
+4:     <span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+5:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flatten-with-optional-argument-method" class="method-detail ">
+				<a name="method-i-flatten_with_optional_argument"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flatten_with_optional_argument</span><span
+						class="method-args">(level=-1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Recursively flatten any contained Arrays into an one-dimensional result.
+Adapted from rubinius&#8217;
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="flatten-with-optional-argument-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flatten_with_optional_argument</span>(<span class="ruby-identifier">level</span>=<span class="ruby-value">1</span>)
+42:       <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">flatten!</span>(<span class="ruby-identifier">level</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>
+43:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flatten-with-optional-argument--method" class="method-detail ">
+				<a name="method-i-flatten_with_optional_argument%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flatten_with_optional_argument!</span><span
+						class="method-args">(level=-1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Flattens self in place as #. If no changes are made, returns nil, otherwise
+self. Adapted from rubinius&#8217;
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="flatten-with-optional-argument--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 48</span>
+48:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flatten_with_optional_argument!</span>(<span class="ruby-identifier">level</span>=<span class="ruby-value">1</span>)
+49:       <span class="ruby-identifier">level</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">level</span>)
+50:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">flatten_without_optional_argument!</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>
+51: 
+52:       <span class="ruby-identifier">ret</span>, <span class="ruby-identifier">out</span> = <span class="ruby-keyword kw">nil</span>, []
+53:       <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">recursively_flatten_finite</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">out</span>, <span class="ruby-identifier">level</span>)
+54:       <span class="ruby-identifier">replace</span>(<span class="ruby-identifier">out</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ret</span>
+55:       <span class="ruby-identifier">ret</span>
+56:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="index-with-block-method" class="method-detail ">
+				<a name="method-i-index_with_block"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">index_with_block</span><span
+						class="method-args">(*arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="index-with-block-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 84</span>
+84:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_with_block</span>(*<span class="ruby-identifier">arg</span>)
+85:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">index_without_block</span>(*<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">empty?</span>
+86:       <span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">o</span>}
+87:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+88:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="keep-if-method" class="method-detail ">
+				<a name="method-i-keep_if"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">keep_if</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.9.2 See official <a
+href="http://ruby-doc.org/core-1.9/classes/Enumerable.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="keep-if-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 3</span>
+3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">keep_if</span>
+4:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:keep_if</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+5:     <span class="ruby-identifier">delete_if</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">elem</span>}
+6:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="permutation-method" class="method-detail ">
+				<a name="method-i-permutation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">permutation</span><span
+						class="method-args">(num = Backports::Undefined)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="permutation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 94</span>
+ 94:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">permutation</span>(<span class="ruby-identifier">num</span> = <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>)
+ 95:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:permutation</span>, <span class="ruby-identifier">num</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+ 96:     <span class="ruby-identifier">num</span> = <span class="ruby-identifier">num</span>.<span class="ruby-identifier">equal?</span>(<span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>) <span class="ruby-operator">?</span>
+ 97:           <span class="ruby-identifier">size</span> <span class="ruby-operator">:</span>
+ 98:           <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">num</span>)
+ 99:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">size</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">num</span>
+100: 
+101:     <span class="ruby-identifier">final_lambda</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">partial</span>, <span class="ruby-identifier">remain</span><span class="ruby-operator">|</span>
+102:       <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">partial</span>
+103:     <span class="ruby-keyword kw">end</span>
+104: 
+105:     <span class="ruby-identifier">outer_lambda</span> = <span class="ruby-identifier">num</span>.<span class="ruby-identifier">times</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">final_lambda</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proc</span>, <span class="ruby-identifier">ignore</span><span class="ruby-operator">|</span>
+106:       <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">partial</span>, <span class="ruby-identifier">remain</span><span class="ruby-operator">|</span>
+107:         <span class="ruby-identifier">remain</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+108:           <span class="ruby-identifier">new_remain</span> = <span class="ruby-identifier">remain</span>.<span class="ruby-identifier">dup</span>
+109:           <span class="ruby-identifier">new_remain</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">i</span>)
+110:           <span class="ruby-identifier">proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">partial</span>.<span class="ruby-identifier">dup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>, <span class="ruby-identifier">new_remain</span>)
+111:         <span class="ruby-keyword kw">end</span>
+112:       <span class="ruby-keyword kw">end</span>
+113:     <span class="ruby-keyword kw">end</span>
+114: 
+115:     <span class="ruby-identifier">outer_lambda</span>.<span class="ruby-identifier">call</span>([], <span class="ruby-keyword kw">self</span>)
+116:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pop-with-optional-argument-method" class="method-detail ">
+				<a name="method-i-pop_with_optional_argument"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pop_with_optional_argument</span><span
+						class="method-args">(n = Backports::Undefined)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pop-with-optional-argument-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pop_with_optional_argument</span>(<span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>)
+121:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">pop_without_optional_argument</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>
+122:       <span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">n</span>)
+123:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;negative array size&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+124:       <span class="ruby-identifier">first</span> = <span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">n</span>
+125:       <span class="ruby-identifier">first</span> = <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+126:       <span class="ruby-identifier">slice!</span>(<span class="ruby-identifier">first</span><span class="ruby-operator">..</span><span class="ruby-identifier">size</span>).<span class="ruby-identifier">to_a</span>
+127:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="product-method" class="method-detail ">
+				<a name="method-i-product"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">product</span><span
+						class="method-args">(*arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="product-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 132</span>
+132:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">product</span>(*<span class="ruby-identifier">arg</span>)
+133:     <span class="ruby-comment cmt"># Implementation notes: We build a block that will generate all the combinations</span>
+134:     <span class="ruby-comment cmt"># by building it up successively using &quot;inject&quot; and starting with one</span>
+135:     <span class="ruby-comment cmt"># responsible to append the values.</span>
+136:     <span class="ruby-comment cmt">#</span>
+137:     <span class="ruby-identifier">result</span> = []
+138: 
+139:     <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ary</span><span class="ruby-operator">|</span> <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_ary</span>(<span class="ruby-identifier">ary</span>)}
+140:     <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">reverse!</span> <span class="ruby-comment cmt"># to get the results in the same order as in MRI, vary the last argument first</span>
+141:     <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>
+142: 
+143:     <span class="ruby-identifier">outer_lambda</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:push</span>)) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proc</span>, <span class="ruby-identifier">values</span><span class="ruby-operator">|</span>
+144:       <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">partial</span><span class="ruby-operator">|</span>
+145:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+146:           <span class="ruby-identifier">proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">partial</span>.<span class="ruby-identifier">dup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>)
+147:         <span class="ruby-keyword kw">end</span>
+148:       <span class="ruby-keyword kw">end</span>
+149:     <span class="ruby-keyword kw">end</span>
+150: 
+151:     <span class="ruby-identifier">outer_lambda</span>.<span class="ruby-identifier">call</span>([])
+152: 
+153:     <span class="ruby-identifier">result</span>
+154:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="product-with-block-method" class="method-detail ">
+				<a name="method-i-product_with_block"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">product_with_block</span><span
+						class="method-args">(*arg, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="product-with-block-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 9</span>
+ 9:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">product_with_block</span>(*<span class="ruby-identifier">arg</span>, &amp;<span class="ruby-identifier">block</span>)
+10:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">product_without_block</span>(*<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+11:       <span class="ruby-comment cmt"># Same implementation as 1.8.7, but yielding</span>
+12:       <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">map!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ary</span><span class="ruby-operator">|</span> <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_ary</span>(<span class="ruby-identifier">ary</span>)}
+13:       <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">reverse!</span> <span class="ruby-comment cmt"># to get the results in the same order as in MRI, vary the last argument first</span>
+14:       <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>
+15: 
+16:       <span class="ruby-identifier">outer_lambda</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proc</span>, <span class="ruby-identifier">values</span><span class="ruby-operator">|</span>
+17:         <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">partial</span><span class="ruby-operator">|</span>
+18:           <span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+19:             <span class="ruby-identifier">proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">partial</span>.<span class="ruby-identifier">dup</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>)
+20:           <span class="ruby-keyword kw">end</span>
+21:         <span class="ruby-keyword kw">end</span>
+22:       <span class="ruby-keyword kw">end</span>
+23: 
+24:       <span class="ruby-identifier">outer_lambda</span>.<span class="ruby-identifier">call</span>([])
+25:       <span class="ruby-keyword kw">self</span>
+26:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="recursively-flatten-finite-method" class="method-detail ">
+				<a name="method-i-recursively_flatten_finite"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">recursively_flatten_finite</span><span
+						class="method-args">(array, out, level)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Helper to recurse through flattening Adapted from rubinius&#8217;;
+recursion guards are not needed because level is finite
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="recursively-flatten-finite-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 63</span>
+63:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recursively_flatten_finite</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">out</span>, <span class="ruby-identifier">level</span>)
+64:       <span class="ruby-identifier">ret</span> = <span class="ruby-keyword kw">nil</span>
+65:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+66:         <span class="ruby-identifier">out</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">array</span>)
+67:       <span class="ruby-keyword kw">else</span>
+68:         <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+69:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_ary</span>
+70:             <span class="ruby-identifier">recursively_flatten_finite</span>(<span class="ruby-identifier">o</span>.<span class="ruby-identifier">to_ary</span>, <span class="ruby-identifier">out</span>, <span class="ruby-identifier">level</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+71:             <span class="ruby-identifier">ret</span> = <span class="ruby-keyword kw">self</span>
+72:           <span class="ruby-keyword kw">else</span>
+73:             <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">o</span>
+74:           <span class="ruby-keyword kw">end</span>
+75:         <span class="ruby-keyword kw">end</span>
+76:       <span class="ruby-keyword kw">end</span>
+77:       <span class="ruby-identifier">ret</span>
+78:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="repeated-combination-method" class="method-detail ">
+				<a name="method-i-repeated_combination"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">repeated_combination</span><span
+						class="method-args">(num)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Note: Combinations are not yielded in the same order as MRI. This is not a
+bug; the spec states that the order is implementation dependent
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="repeated-combination-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 32</span>
+32:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">repeated_combination</span>(<span class="ruby-identifier">num</span>)
+33:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:repeated_combination</span>, <span class="ruby-identifier">num</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+34:     <span class="ruby-identifier">num</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">num</span>)
+35:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+36:       <span class="ruby-keyword kw">yield</span> [] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+37:     <span class="ruby-keyword kw">else</span>
+38:       <span class="ruby-identifier">indices</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">num</span>, <span class="ruby-value">0</span>)
+39:       <span class="ruby-identifier">indices</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">size</span>
+40:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">dec</span> = <span class="ruby-identifier">indices</span>.<span class="ruby-identifier">find_index</span>(&amp;<span class="ruby-value">:nonzero?</span>)
+41:         <span class="ruby-identifier">indices</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">dec</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">dec</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>, <span class="ruby-identifier">indices</span>[<span class="ruby-identifier">dec</span>]<span class="ruby-operator">-</span><span class="ruby-value">1</span>
+42:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">indices</span>)
+43:       <span class="ruby-keyword kw">end</span>
+44:     <span class="ruby-keyword kw">end</span>
+45:     <span class="ruby-keyword kw">self</span>
+46:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="repeated-permutation-method" class="method-detail ">
+				<a name="method-i-repeated_permutation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">repeated_permutation</span><span
+						class="method-args">(num)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Note: Permutations are not yielded in the same order as MRI. This is not a
+bug; the spec states that the order is implementation dependent
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="repeated-permutation-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 50</span>
+50:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">repeated_permutation</span>(<span class="ruby-identifier">num</span>)
+51:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:repeated_permutation</span>, <span class="ruby-identifier">num</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+52:     <span class="ruby-identifier">num</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">num</span>)
+53:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+54:       <span class="ruby-keyword kw">yield</span> [] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+55:     <span class="ruby-keyword kw">else</span>
+56:       <span class="ruby-identifier">indices</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">num</span>, <span class="ruby-value">0</span>)
+57:       <span class="ruby-identifier">indices</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">size</span>
+58:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">dec</span> = <span class="ruby-identifier">indices</span>.<span class="ruby-identifier">find_index</span>(&amp;<span class="ruby-value">:nonzero?</span>)
+59:         <span class="ruby-identifier">indices</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">dec</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">dec</span>, <span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+60:         <span class="ruby-identifier">indices</span>[<span class="ruby-identifier">dec</span>] <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+61:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">indices</span>)
+62:       <span class="ruby-keyword kw">end</span>
+63:     <span class="ruby-keyword kw">end</span>
+64:     <span class="ruby-keyword kw">self</span>
+65:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rindex-with-block-method" class="method-detail ">
+				<a name="method-i-rindex_with_block"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rindex_with_block</span><span
+						class="method-args">(*arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rindex-with-block-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 158</span>
+158:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rindex_with_block</span>(*<span class="ruby-identifier">arg</span>)
+159:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rindex_without_block</span>(*<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">empty?</span>
+160:       <span class="ruby-identifier">reverse_each</span>.<span class="ruby-identifier">each_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">o</span>}
+161:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+162:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rotate-method" class="method-detail ">
+				<a name="method-i-rotate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rotate</span><span
+						class="method-args">(n=1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rotate-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 67</span>
+67:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>)
+68:     <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">rotate!</span>(<span class="ruby-identifier">n</span>)
+69:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rotate--method" class="method-detail ">
+				<a name="method-i-rotate%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rotate!</span><span
+						class="method-args">(n=1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rotate--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 71</span>
+71:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>)
+72:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">empty?</span>
+73:     <span class="ruby-identifier">n</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">size</span>
+74:     <span class="ruby-identifier">concat</span>(<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">n</span>))
+75:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sample-method" class="method-detail ">
+				<a name="method-i-sample"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sample</span><span
+						class="method-args">(n = Backports::Undefined)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+Note: was named # in 1.8.7 and renamed in later versions
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sample-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 168</span>
+168:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sample</span>(<span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>)
+169:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>
+170:     <span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">n</span>)
+171:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;negative array size&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+172:     <span class="ruby-identifier">n</span> = <span class="ruby-identifier">size</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">size</span>
+173:     <span class="ruby-identifier">result</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+174:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+175:       <span class="ruby-identifier">r</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>)
+176:       <span class="ruby-identifier">result</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">result</span>[<span class="ruby-identifier">r</span>] = <span class="ruby-identifier">result</span>[<span class="ruby-identifier">r</span>], <span class="ruby-identifier">result</span>[<span class="ruby-identifier">i</span>]
+177:     <span class="ruby-keyword kw">end</span>
+178:     <span class="ruby-identifier">result</span>[<span class="ruby-identifier">n</span><span class="ruby-operator">..</span><span class="ruby-identifier">size</span>] = []
+179:     <span class="ruby-identifier">result</span>
+180:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select--method" class="method-detail ">
+				<a name="method-i-select%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="select--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 77</span>
+77:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select!</span>
+78:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:select!</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+79:     <span class="ruby-identifier">reject!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">elem</span>}
+80:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="shift-with-optional-argument-method" class="method-detail ">
+				<a name="method-i-shift_with_optional_argument"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">shift_with_optional_argument</span><span
+						class="method-args">(n = Backports::Undefined)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="shift-with-optional-argument-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 184</span>
+184:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shift_with_optional_argument</span>(<span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>)
+185:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">shift_without_optional_argument</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Backports</span><span class="ruby-operator">::</span><span class="ruby-constant">Undefined</span>
+186:       <span class="ruby-identifier">n</span> = <span class="ruby-constant">Backports</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">n</span>)
+187:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;negative array size&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+188:       <span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">n</span>)
+189:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="shuffle-method" class="method-detail ">
+				<a name="method-i-shuffle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">shuffle</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="shuffle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 194</span>
+194:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle</span>
+195:     <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">shuffle!</span>
+196:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="shuffle--method" class="method-detail ">
+				<a name="method-i-shuffle%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">shuffle!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard in Ruby 1.8.7+. See official <a
+href="http://ruby-doc.org/core-1.9/classes/Array.html">documentation</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="shuffle--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.8.7/array.rb, line 199</span>
+199:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle!</span>
+200:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-value str">&quot;can't modify frozen array&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frozen?</span>
+201:     <span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+202:       <span class="ruby-identifier">r</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>)
+203:       <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>], <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">r</span>] = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">r</span>], <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>]
+204:     <span class="ruby-keyword kw">end</span>
+205:     <span class="ruby-keyword kw">self</span>
+206:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sort-by--method" class="method-detail ">
+				<a name="method-i-sort_by%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sort_by!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="sort-by--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 82</span>
+82:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sort_by!</span>
+83:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:sort_by!</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+84:     <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;can't modify frozen array&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frozen?</span>
+85:     <span class="ruby-identifier">replace</span> <span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span>}
+86:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="uniq-with-block-method" class="method-detail ">
+				<a name="method-i-uniq_with_block"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">uniq_with_block</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="uniq-with-block-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uniq_with_block</span>
+100:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">uniq_without_block</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+101:       <span class="ruby-identifier">h</span> = {}
+102:       <span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+103:         <span class="ruby-identifier">h</span>[<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">elem</span>)] <span class="ruby-operator">||=</span> <span class="ruby-identifier">elem</span>
+104:       <span class="ruby-keyword kw">end</span>
+105:       <span class="ruby-identifier">h</span>.<span class="ruby-identifier">values</span>
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="uniq-with-block--method" class="method-detail ">
+				<a name="method-i-uniq_with_block%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">uniq_with_block!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="uniq-with-block--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/1.9.2/array.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uniq_with_block!</span>
+90:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">uniq_without_block!</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+91:       <span class="ruby-identifier">replace</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frozen?</span> <span class="ruby-comment cmt"># force error</span>
+92:       <span class="ruby-identifier">u</span> = <span class="ruby-identifier">uniq</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span>}
+93:       <span class="ruby-identifier">replace</span> <span class="ruby-identifier">u</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">size</span>
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

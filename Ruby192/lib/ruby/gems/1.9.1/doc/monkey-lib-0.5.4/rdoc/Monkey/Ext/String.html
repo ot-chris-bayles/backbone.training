@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Monkey::Ext::String</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/monkey/ext/string_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/monkey/ext/string.rb">lib/monkey/ext/string.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-%2F">#/</a></li>
+					
+					<li><a href="#method-i-absolute_path%3F">#absolute_path?</a></li>
+					
+					<li><a href="#method-i-atime">#atime</a></li>
+					
+					<li><a href="#method-i-basename">#basename</a></li>
+					
+					<li><a href="#method-i-blockdev%3F">#blockdev?</a></li>
+					
+					<li><a href="#method-i-cased_path">#cased_path</a></li>
+					
+					<li><a href="#method-i-chardev%3F">#chardev?</a></li>
+					
+					<li><a href="#method-i-chdir">#chdir</a></li>
+					
+					<li><a href="#method-i-cleanpath">#cleanpath</a></li>
+					
+					<li><a href="#method-i-ctime">#ctime</a></li>
+					
+					<li><a href="#method-i-directory%3F">#directory?</a></li>
+					
+					<li><a href="#method-i-directory_children">#directory_children</a></li>
+					
+					<li><a href="#method-i-dirname">#dirname</a></li>
+					
+					<li><a href="#method-i-expand_path">#expand_path</a></li>
+					
+					<li><a href="#method-i-extname">#extname</a></li>
+					
+					<li><a href="#method-i-file%3F">#file?</a></li>
+					
+					<li><a href="#method-i-file_executable%3F">#file_executable?</a></li>
+					
+					<li><a href="#method-i-file_executable_real%3F">#file_executable_real?</a></li>
+					
+					<li><a href="#method-i-file_exist%3F">#file_exist?</a></li>
+					
+					<li><a href="#method-i-file_exists%3F">#file_exists?</a></li>
+					
+					<li><a href="#method-i-file_grpowned%3F">#file_grpowned?</a></li>
+					
+					<li><a href="#method-i-file_join">#file_join</a></li>
+					
+					<li><a href="#method-i-file_open">#file_open</a></li>
+					
+					<li><a href="#method-i-file_owned%3F">#file_owned?</a></li>
+					
+					<li><a href="#method-i-file_readable%3F">#file_readable?</a></li>
+					
+					<li><a href="#method-i-file_readable_real%3F">#file_readable_real?</a></li>
+					
+					<li><a href="#method-i-file_relative%3F">#file_relative?</a></li>
+					
+					<li><a href="#method-i-file_size%3F">#file_size?</a></li>
+					
+					<li><a href="#method-i-file_sticky%3F">#file_sticky?</a></li>
+					
+					<li><a href="#method-i-file_writable%3F">#file_writable?</a></li>
+					
+					<li><a href="#method-i-file_writable_real%3F">#file_writable_real?</a></li>
+					
+					<li><a href="#method-i-file_zero%3F">#file_zero?</a></li>
+					
+					<li><a href="#method-i-ftype">#ftype</a></li>
+					
+					<li><a href="#method-i-mountpoint%3F">#mountpoint?</a></li>
+					
+					<li><a href="#method-i-mtime">#mtime</a></li>
+					
+					<li><a href="#method-i-pipe%3F">#pipe?</a></li>
+					
+					<li><a href="#method-i-realpath">#realpath</a></li>
+					
+					<li><a href="#method-i-root%3F">#root?</a></li>
+					
+					<li><a href="#method-i-socket%3F">#socket?</a></li>
+					
+					<li><a href="#method-i-symlink%3F">#symlink?</a></li>
+					
+					<li><a href="#method-i-to_version">#to_version</a></li>
+					
+					<li><a href="#method-i-to_version%21">#to_version!</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey/Autoloader.html">Monkey::Autoloader</a></li>
+				
+					<li><a href="../../Monkey/Backend.html">Monkey::Backend</a></li>
+				
+					<li><a href="../../Monkey/Backend/AbstractBackend.html">Monkey::Backend::AbstractBackend</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common.html">Monkey::Backend::Common</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/ExtractOptions.html">Monkey::Backend::Common::ExtractOptions</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Parent.html">Monkey::Backend::Common::Parent</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/SingletonClass.html">Monkey::Backend::Common::SingletonClass</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Tap.html">Monkey::Backend::Common::Tap</a></li>
+				
+					<li><a href="../../Monkey/Engine.html">Monkey::Engine</a></li>
+				
+					<li><a href="../../Monkey/Ext.html">Monkey::Ext</a></li>
+				
+					<li><a href="../../Monkey/Ext/Array.html">Monkey::Ext::Array</a></li>
+				
+					<li><a href="../../Monkey/Ext/Enumerable.html">Monkey::Ext::Enumerable</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL.html">Monkey::Ext::ExtDSL</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL/ClassDsl.html">Monkey::Ext::ExtDSL::ClassDsl</a></li>
+				
+					<li><a href="../../Monkey/Ext/File.html">Monkey::Ext::File</a></li>
+				
+					<li><a href="../../Monkey/Ext/File/ExtClassMethods.html">Monkey::Ext::File::ExtClassMethods</a></li>
+				
+					<li><a href="../../Monkey/Ext/Module.html">Monkey::Ext::Module</a></li>
+				
+					<li><a href="../../Monkey/Ext/Object.html">Monkey::Ext::Object</a></li>
+				
+					<li><a href="../../Monkey/Ext/Pathname.html">Monkey::Ext::Pathname</a></li>
+				
+					<li><a href="../../Monkey/Ext/String.html">Monkey::Ext::String</a></li>
+				
+					<li><a href="../../Monkey/Ext/Symbol.html">Monkey::Ext::Symbol</a></li>
+				
+					<li><a href="../../Monkey/Matcher.html">Monkey::Matcher</a></li>
+				
+					<li><a href="../../Monkey/Version.html">Monkey::Version</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Monkey::Ext::String</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail method-alias">
+				<a name="method-i-%2F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">/</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="String.html#method-i-file_join">file_join</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="absolute-path--method" class="method-detail ">
+				<a name="method-i-absolute_path%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">absolute_path?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="absolute-path--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">absolute_path?</span>
+26:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">absolute?</span>
+27:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="atime-method" class="method-detail ">
+				<a name="method-i-atime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">atime</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="atime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atime</span>
+22:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">atime</span>
+23:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="basename-method" class="method-detail ">
+				<a name="method-i-basename"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">basename</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="basename-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 29</span>
+29:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">basename</span>
+30:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">basename</span>.<span class="ruby-identifier">to_s</span>
+31:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="blockdev--method" class="method-detail ">
+				<a name="method-i-blockdev%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">blockdev?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="blockdev--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 33</span>
+33:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blockdev?</span>
+34:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">blockdev?</span>
+35:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cased-path-method" class="method-detail ">
+				<a name="method-i-cased_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cased_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="cased-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 61</span>
+61:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cased_path</span>
+62:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">cased_path</span>.<span class="ruby-identifier">to_s</span>
+63:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="chardev--method" class="method-detail ">
+				<a name="method-i-chardev%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">chardev?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="chardev--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 37</span>
+37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chardev?</span>
+38:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">chardev?</span>
+39:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="chdir-method" class="method-detail ">
+				<a name="method-i-chdir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">chdir</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="chdir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 65</span>
+65:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chdir</span>(&amp;<span class="ruby-identifier">block</span>)
+66:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">chdir</span>(&amp;<span class="ruby-identifier">block</span>)
+67:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cleanpath-method" class="method-detail ">
+				<a name="method-i-cleanpath"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cleanpath</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="cleanpath-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cleanpath</span>
+42:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">cleanpath</span>.<span class="ruby-identifier">to_s</span>
+43:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ctime-method" class="method-detail ">
+				<a name="method-i-ctime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ctime</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ctime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ctime</span>
+46:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">ctime</span>
+47:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="directory--method" class="method-detail ">
+				<a name="method-i-directory%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">directory?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="directory--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory?</span>
+54:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">directory?</span>
+55:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="directory-children-method" class="method-detail ">
+				<a name="method-i-directory_children"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">directory_children</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="directory-children-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 49</span>
+49:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory_children</span>
+50:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">children</span>
+51:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dirname-method" class="method-detail ">
+				<a name="method-i-dirname"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dirname</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dirname-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 57</span>
+57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dirname</span>
+58:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">to_s</span>
+59:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-path-method" class="method-detail ">
+				<a name="method-i-expand_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="expand-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 69</span>
+69:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_path</span>
+70:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">expand_path</span>.<span class="ruby-identifier">to_s</span>
+71:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extname-method" class="method-detail ">
+				<a name="method-i-extname"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extname</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="extname-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 73</span>
+73:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extname</span>
+74:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">extname</span>.<span class="ruby-identifier">to_s</span>
+75:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file--method" class="method-detail ">
+				<a name="method-i-file%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 77</span>
+77:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file?</span>
+78:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">file?</span>
+79:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-executable--method" class="method-detail ">
+				<a name="method-i-file_executable%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_executable?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-executable--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 103</span>
+103:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_executable?</span>
+104:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">executable?</span>
+105:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-executable-real--method" class="method-detail ">
+				<a name="method-i-file_executable_real%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_executable_real?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-executable-real--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 107</span>
+107:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_executable_real?</span>
+108:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">executable_real?</span>
+109:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-exist--method" class="method-detail ">
+				<a name="method-i-file_exist%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_exist?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-exist--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 81</span>
+81:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_exist?</span>
+82:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">exist?</span>
+83:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="String.html#method-i-file_exists%3F">file_exists?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="file-exists--method" class="method-detail method-alias">
+				<a name="method-i-file_exists%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="String.html#method-i-file_exist%3F">file_exist?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="file-grpowned--method" class="method-detail ">
+				<a name="method-i-file_grpowned%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_grpowned?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-grpowned--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 87</span>
+87:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_grpowned?</span>
+88:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">grpowned?</span>
+89:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-join-method" class="method-detail ">
+				<a name="method-i-file_join"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_join</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-join-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 111</span>
+111:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_join</span>(<span class="ruby-identifier">other</span>)
+112:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">join</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_s</span>
+113:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="String.html#method-i-%2F">/</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="file-open-method" class="method-detail ">
+				<a name="method-i-file_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_open</span><span
+						class="method-args">(mode = 'r', &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 117</span>
+117:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_open</span>(<span class="ruby-identifier">mode</span> = <span class="ruby-value str">'r'</span>, &amp;<span class="ruby-identifier">block</span>)
+118:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">open</span>(<span class="ruby-identifier">mode</span> = <span class="ruby-value str">'r'</span>, &amp;<span class="ruby-identifier">block</span>)
+119:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-owned--method" class="method-detail ">
+				<a name="method-i-file_owned%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_owned?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-owned--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 91</span>
+91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_owned?</span>
+92:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">owned?</span>
+93:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-readable--method" class="method-detail ">
+				<a name="method-i-file_readable%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_readable?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-readable--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 121</span>
+121:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_readable?</span>
+122:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">readable?</span>
+123:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-readable-real--method" class="method-detail ">
+				<a name="method-i-file_readable_real%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_readable_real?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-readable-real--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 125</span>
+125:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_readable_real?</span>
+126:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">readable_real?</span>
+127:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-relative--method" class="method-detail ">
+				<a name="method-i-file_relative%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_relative?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-relative--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 129</span>
+129:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_relative?</span>
+130:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">relative?</span>
+131:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-size--method" class="method-detail ">
+				<a name="method-i-file_size%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_size?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-size--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 95</span>
+95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_size?</span>
+96:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">size?</span>
+97:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-sticky--method" class="method-detail ">
+				<a name="method-i-file_sticky%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_sticky?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-sticky--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 99</span>
+ 99:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_sticky?</span>
+100:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">sticky?</span>
+101:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-writable--method" class="method-detail ">
+				<a name="method-i-file_writable%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_writable?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-writable--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 133</span>
+133:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_writable?</span>
+134:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">writable?</span>
+135:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-writable-real--method" class="method-detail ">
+				<a name="method-i-file_writable_real%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_writable_real?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-writable-real--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 137</span>
+137:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_writable_real?</span>
+138:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">writable_real?</span>
+139:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-zero--method" class="method-detail ">
+				<a name="method-i-file_zero%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_zero?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-zero--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 141</span>
+141:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_zero?</span>
+142:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">zero?</span>
+143:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ftype-method" class="method-detail ">
+				<a name="method-i-ftype"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ftype</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ftype-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 145</span>
+145:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ftype</span>
+146:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">ftype</span>.<span class="ruby-identifier">to_s</span>
+147:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mountpoint--method" class="method-detail ">
+				<a name="method-i-mountpoint%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mountpoint?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mountpoint--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 149</span>
+149:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mountpoint?</span>
+150:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">mountpoint?</span>
+151:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mtime-method" class="method-detail ">
+				<a name="method-i-mtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mtime</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mtime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 153</span>
+153:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mtime</span>
+154:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">mtime</span>
+155:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pipe--method" class="method-detail ">
+				<a name="method-i-pipe%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pipe?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pipe--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 157</span>
+157:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pipe?</span>
+158:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">pipe?</span>
+159:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="realpath-method" class="method-detail ">
+				<a name="method-i-realpath"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">realpath</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="realpath-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 161</span>
+161:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">realpath</span>
+162:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">realpath</span>.<span class="ruby-identifier">to_s</span>
+163:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="root--method" class="method-detail ">
+				<a name="method-i-root%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">root?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="root--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 165</span>
+165:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">root?</span>
+166:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">root?</span>
+167:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="socket--method" class="method-detail ">
+				<a name="method-i-socket%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">socket?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="socket--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 169</span>
+169:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">socket?</span>
+170:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">socket?</span>
+171:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="symlink--method" class="method-detail ">
+				<a name="method-i-symlink%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">symlink?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="symlink--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 173</span>
+173:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">symlink?</span>
+174:           <span class="ruby-constant">Pathname</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">symlink?</span>
+175:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-version-method" class="method-detail ">
+				<a name="method-i-to_version"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_version</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-version-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 10</span>
+10:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_version</span>
+11:           <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">to_version!</span>
+12:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-version--method" class="method-detail ">
+				<a name="method-i-to_version%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_version!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-version--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/string.rb, line 14</span>
+14:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_version!</span>
+15:           <span class="ruby-identifier">extend</span> <span class="ruby-constant">Monkey</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>
+16:           <span class="ruby-keyword kw">self</span>
+17:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>File: README.rdoc [backports-2.3.0 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./Enumerable/Enumerator.html">Enumerable::Enumerator</a></li>
+				
+					<li><a href="./Enumerable/MOST_EXTREME_OBJECT_EVER.html">Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+				
+					<li><a href="./Random.html">Random</a></li>
+				
+					<li><a href="./Random/Implementation.html">Random::Implementation</a></li>
+				
+					<li><a href="./Random/MT19937.html">Random::MT19937</a></li>
+				
+					<li><a href="./Enumerator.html">Enumerator</a></li>
+				
+					<li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+					<li><a href="./ARGF.html">ARGF</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./Backports.html">Backports</a></li>
+				
+					<li><a href="./BasicObject.html">BasicObject</a></li>
+				
+					<li><a href="./Binding.html">Binding</a></li>
+				
+					<li><a href="./Dir.html">Dir</a></li>
+				
+					<li><a href="./ENV.html">ENV</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./Fixnum.html">Fixnum</a></li>
+				
+					<li><a href="./Float.html">Float</a></li>
+				
+					<li><a href="./GC.html">GC</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./IO.html">IO</a></li>
+				
+					<li><a href="./Integer.html">Integer</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./MatchData.html">MatchData</a></li>
+				
+					<li><a href="./Math.html">Math</a></li>
+				
+					<li><a href="./Method.html">Method</a></li>
+				
+					<li><a href="./Module.html">Module</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+				
+					<li><a href="./Proc.html">Proc</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./Range.html">Range</a></li>
+				
+					<li><a href="./Regexp.html">Regexp</a></li>
+				
+					<li><a href="./StopIteration.html">StopIteration</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./Struct.html">Struct</a></li>
+				
+					<li><a href="./Symbol.html">Symbol</a></li>
+				
+					<li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1><a href="Backports.html">Backports</a> Library</h1>
+<ul>
+<li><p>
+Yearning to use some of the new cool features in 1.9.2 while using 1.8.x?
+</p>
+</li>
+<li><p>
+One of your client is stuck with Ruby 1.8.6 but you want to use a gem using
+some features of 1.8.7?
+</p>
+</li>
+<li><p>
+Can&#8217;t remember if you can use <a
+href="Array.html#method-i-sample">Array#sample</a> or <a
+href="String.html#method-i-each_char">String#each_char</a> on a
+friend&#8217;s box?
+</p>
+</li>
+</ul>
+<p>
+This gem is for you!
+</p>
+<p>
+The goal of &#8216;backports&#8217; is to make it easier to write ruby code
+that runs across different versions of Ruby. All you need to bring any
+version of Ruby up to today&#8217;s standards:
+</p>
+<pre>
+  require 'backports'
+  
+</pre>
+<p>
+This will bring in all the features of 1.8.7 (for Ruby 1.8.6) and many
+features of Ruby 1.9.1 (for Ruby 1.8.x) and Ruby 1.9.2 (for all earlier
+versions)!
+</p>
+<p>
+<tt>Note</tt>: Although I am a Ruby committer, this gem is a personal
+project and is not endorsed by ruby-core.
+</p>
+<h2>What&#8217;s inside</h2>
+<p>
+Features in this gem:
+</p>
+<ol>
+<li><p>
+Won&#8217;t break older code
+</p>
+</li>
+<li><p>
+Pure Ruby (no C extensions)
+</p>
+</li>
+<li><p>
+Pass <a href="http://github.com/rubyspec/rubyspec">RubySpec</a>
+</p>
+</li>
+</ol>
+<p>
+Let&#8217;s be a bit more precise about the breaking code business. It is
+of course entirely possible that code will break, for example some core
+methods are monkeypatched or if the code relies on a certain call raising
+an exception. Example: <tt>[42].sample rescue &quot;dum example&quot;</tt>
+will return <tt>&quot;dum example&quot;</tt> without this gem and
+<tt>42</tt> with it.
+</p>
+<p>
+A real incompatibility is, for example, <tt>Module::instance_methods</tt>
+which returns strings in 1.8 and symbols in 1.9. No change can be made
+without the risk of breaking existing code. Such incompatibilities are left
+unchanged.
+</p>
+<p>
+All features of 1.8.7 are backported (well, almost all, see the exception
+list bellow), and many of 1.9 are also.
+</p>
+<p>
+Some generic and self-contained features of active-support are also
+included. By simple I mean that String#camelcase is there, but #
+isn&#8217;t.
+</p>
+<h2>Installation &amp; compatibility</h2>
+<p>
+<tt>backports</tt> is can be installed with:
+</p>
+<pre>
+  (sudo) gem install backports
+</pre>
+<p>
+To use:
+</p>
+<pre>
+  require 'rubygems'
+  require 'backports'   # or a subset, see next section
+</pre>
+<p>
+Compatible with Ruby 1.8.6, 1.8.7, 1.9.1, 1.9.2, JRuby and Rubinius.
+</p>
+<h1>Complete List of backports</h1>
+<h2>Ruby 1.8.7</h2>
+<p>
+Complete Ruby 1.8.7 backporting (core language). Refer to the official list
+of <a
+href="http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8_7/NEWS">changes</a>.
+</p>
+<p>
+Only exceptions:
+</p>
+<ul>
+<li><p>
+String#gsub (the form returning an enumerator)
+</p>
+</li>
+<li><p>
+GC.stress=  (not implemented)
+</p>
+</li>
+<li><p>
+Array#choice (removed in 1.8.8, use <a
+href="Array.html#method-i-sample">Array#sample</a> instead)
+</p>
+</li>
+</ul>
+<p>
+To include <em>only</em> these backports, <tt>require
+&quot;backports/1.8.7&quot;</tt>
+</p>
+<h2>Ruby 1.8.8</h2>
+<p>
+Ruby 1.8.8 has been officially cancelled. As of version 2.2, <tt>require
+&quot;backports/1.8.8&quot;</tt> does nothing.
+</p>
+<h2>Ruby 1.9.1</h2>
+<p>
+Additionally, the following Ruby 1.9 features have been backported:
+</p>
+<ul>
+<li><p>
+<a href="Array.html">Array</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>each_with_object</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerator.html">Enumerator</a>
+</p>
+<ul>
+<li><p>
+<tt>new</tt> (with block)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="File.html">File</a>
+</p>
+<ul>
+<li><p>
+<tt>binread</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>to_path</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+All class methods accepting filenames will accept files or anything with a
+<tt>#</tt> method.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>default_proc=</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="IO.html">IO</a>
+</p>
+<ul>
+<li><p>
+<tt>bin_read</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>ungetbyte</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Kernel.html">Kernel</a>
+</p>
+<ul>
+<li><p>
+<tt>require_relative</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Math.html">Math</a>
+</p>
+<ul>
+<li><p>
+<tt>log</tt> (with base)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>log2</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>define_singleton_method</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>public_method</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>public_send</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Proc.html">Proc</a>
+</p>
+<ul>
+<li><p>
+<tt>yield</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>lambda?</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>curry</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>===</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Range.html">Range</a>
+</p>
+<ul>
+<li><p>
+<tt>cover?</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Regexp.html">Regexp</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="String.html">String</a>
+</p>
+<ul>
+<li><p>
+<tt>ascii_only?</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>chr</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>clear</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>codepoints</tt>, <tt>each_codepoint</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>get_byte</tt>, <tt>set_byte</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>ord</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+<tt>Enumerator</tt> can be accessed directly (instead of
+<tt>Enumerable::Enumerator</tt>)
+</p>
+<p>
+To include <em>only</em> these backports and those of the 1.8 line,
+<tt>require &quot;backports/1.9.1&quot;</tt>.
+</p>
+<p>
+Moreover, a pretty good imitation of <a
+href="BasicObject.html">BasicObject</a> is available, but since it is only
+an imitation, it must be required explicitly:
+</p>
+<pre>
+  require 'backports/basic_object'
+</pre>
+<h2>Ruby 1.9.2</h2>
+<p>
+Finally, most of Ruby 1.9.2 features have been backported:
+</p>
+<ul>
+<li><p>
+<a href="Array.html">Array</a>
+</p>
+<ul>
+<li><p>
+<tt>rotate, rotate!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>keep_if, select!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>product</tt> (with block)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>repeated_combination</tt>, <tt>repeated_permutation</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>sort_by!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>uniq, uniq!</tt> (with block)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Dir.html">Dir</a>
+</p>
+<ul>
+<li><p>
+<tt>home</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>chunk</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>flat_map</tt>, <tt>collect_concat</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>join</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>slice_before</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Float::INFINITY, NAN
+</p>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>keep_if</tt>, <tt>select!</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>singleton_class</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Random.html">Random</a> (new class)
+</p>
+</li>
+</ul>
+<p>
+To include all Ruby backports but not those of Rails, <tt>require
+&quot;backports/1.9.2&quot;</tt> (or &#8220;backports/1.9&#8220;)
+</p>
+<h2>Rails</h2>
+<p>
+Some generic methods from Rails methods have been copied:
+</p>
+<ul>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>sum</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>symbolize_keys</tt>, <tt>symbolize_keys!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>reverse_merge</tt>, <tt>reverse_merge!</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Module.html">Module</a>
+</p>
+<ul>
+<li><p>
+<tt>alias_method_chain</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>try</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>returning</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="String.html">String</a>
+</p>
+<ul>
+<li><p>
+<tt>camelize</tt>, <tt>underscore</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>dasherize</tt>, <tt>demodulize</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>constantize</tt>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+To include <em>only</em> these Rails backports but not those of Ruby,
+<tt>require &quot;backports/rails&quot;</tt>.
+</p>
+<h2>Libraries</h2>
+<p>
+Libraries have not been backported. I am aware of the following backport
+gems:
+</p>
+<ul>
+<li><p>
+Net::SMTP for Ruby 1.8.6: <a
+href="http://seattlerb.rubyforge.org/smtp_tls/">smtp_tls</a>
+</p>
+</li>
+<li><p>
+Let me know of others...
+</p>
+</li>
+</ul>
+<h2>Thanks</h2>
+<p>
+Thanks for the bug reports and patches, in particular the repeat offenders:
+</p>
+<ul>
+<li><p>
+Arto Bendiken ( <a href="http://github.com/bendiken">bendiken</a> )
+</p>
+</li>
+<li><p>
+Konstantin Haase ( <a href="https://github.com/rkh">rkh</a>)
+</p>
+</li>
+<li><p>
+Roger Pack ( <a href="http://github.com/rdp">rdp</a> )
+</p>
+</li>
+</ul>
+<p>
+The best way to submit a patch is to also submit a patch to <a
+href="https://github.com/rubyspec/rubyspec">RubySpec</a> and then a patch
+to backports that make it pass the spec. To test rubyspec along with
+backports, one way to test this is:
+</p>
+<pre>
+    mspec path/to/specs -t path/to/ruby186 --unguarded -r path/to/backports 
+</pre>
+<p>
+You must then check manually for which failures are acceptable and which
+are not.
+</p>
+<h1>License</h1>
+<p>
+<tt>backports</tt> is released under the terms of the MIT License, see the
+included <a href="LICENSE.html">LICENSE</a> file.
+</p>
+<table>
+<tr><td valign="top">Author</td><td><p>
+Marc-André Lafortune
+</p>
+</td></tr>
+</table>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

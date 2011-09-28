@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Monkey::Ext::Pathname</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/monkey/ext/pathname_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/monkey/ext/pathname.rb">lib/monkey/ext/pathname.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-cased_path">#cased_path</a></li>
+					
+					<li><a href="#method-i-chdir">#chdir</a></li>
+					
+					<li><a href="#method-i-open">#open</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey/Autoloader.html">Monkey::Autoloader</a></li>
+				
+					<li><a href="../../Monkey/Backend.html">Monkey::Backend</a></li>
+				
+					<li><a href="../../Monkey/Backend/AbstractBackend.html">Monkey::Backend::AbstractBackend</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common.html">Monkey::Backend::Common</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/ExtractOptions.html">Monkey::Backend::Common::ExtractOptions</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Parent.html">Monkey::Backend::Common::Parent</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/SingletonClass.html">Monkey::Backend::Common::SingletonClass</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Tap.html">Monkey::Backend::Common::Tap</a></li>
+				
+					<li><a href="../../Monkey/Engine.html">Monkey::Engine</a></li>
+				
+					<li><a href="../../Monkey/Ext.html">Monkey::Ext</a></li>
+				
+					<li><a href="../../Monkey/Ext/Array.html">Monkey::Ext::Array</a></li>
+				
+					<li><a href="../../Monkey/Ext/Enumerable.html">Monkey::Ext::Enumerable</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL.html">Monkey::Ext::ExtDSL</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL/ClassDsl.html">Monkey::Ext::ExtDSL::ClassDsl</a></li>
+				
+					<li><a href="../../Monkey/Ext/File.html">Monkey::Ext::File</a></li>
+				
+					<li><a href="../../Monkey/Ext/File/ExtClassMethods.html">Monkey::Ext::File::ExtClassMethods</a></li>
+				
+					<li><a href="../../Monkey/Ext/Module.html">Monkey::Ext::Module</a></li>
+				
+					<li><a href="../../Monkey/Ext/Object.html">Monkey::Ext::Object</a></li>
+				
+					<li><a href="../../Monkey/Ext/Pathname.html">Monkey::Ext::Pathname</a></li>
+				
+					<li><a href="../../Monkey/Ext/String.html">Monkey::Ext::String</a></li>
+				
+					<li><a href="../../Monkey/Ext/Symbol.html">Monkey::Ext::Symbol</a></li>
+				
+					<li><a href="../../Monkey/Matcher.html">Monkey::Matcher</a></li>
+				
+					<li><a href="../../Monkey/Version.html">Monkey::Version</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Monkey::Ext::Pathname</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="cased-path-method" class="method-detail ">
+				<a name="method-i-cased_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cased_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [<a href="Pathname.html">Pathname</a>, NilClass] Path with correct
+casing.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cased-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/pathname.rb, line 8</span>
+ 8:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cased_path</span>
+ 9:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">exist?</span>
+10:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-keyword kw">self</span>) { <span class="ruby-constant">Pathname</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>) } <span class="ruby-keyword kw">if</span> <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">path</span>
+11:         <span class="ruby-identifier">files</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">dirname</span>) { <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>(<span class="ruby-value str">'.'</span>).<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">basename</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span> } }
+12:         <span class="ruby-identifier">dirname</span>.<span class="ruby-identifier">cased_path</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">files</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">files</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">basename</span>)
+13:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="chdir-method" class="method-detail ">
+				<a name="method-i-chdir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">chdir</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="chdir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/pathname.rb, line 15</span>
+15:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chdir</span>(&amp;<span class="ruby-identifier">block</span>)
+16:         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_s</span>, &amp;<span class="ruby-identifier">block</span>)
+17:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open-method" class="method-detail ">
+				<a name="method-i-open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open</span><span
+						class="method-args">(mode = "r", &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext/pathname.rb, line 19</span>
+19:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">mode</span> = <span class="ruby-value str">&quot;r&quot;</span>, &amp;<span class="ruby-identifier">block</span>)
+20:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">mode</span>, &amp;<span class="ruby-identifier">block</span>)
+21:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Monkey::Ext::ExtDSL</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/monkey/ext_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/monkey/ext.rb">lib/monkey/ext.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="ExtDSL/ClassDsl.html">Monkey::Ext::ExtDSL::ClassDsl</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-alias_core_method">#alias_core_method</a></li>
+					
+					<li><a href="#method-i-class_methods">#class_methods</a></li>
+					
+					<li><a href="#method-i-core_class">#core_class</a></li>
+					
+					<li><a href="#method-i-each_module">#each_module</a></li>
+					
+					<li><a href="#method-i-each_module">#each_module</a></li>
+					
+					<li><a href="#method-i-expects">#expects</a></li>
+					
+					<li><a href="#method-i-feature">#feature</a></li>
+					
+					<li><a href="#method-i-included">#included</a></li>
+					
+					<li><a href="#method-i-propagate_include">#propagate_include</a></li>
+					
+					<li><a href="#method-i-rename_core_method">#rename_core_method</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey.html">Monkey</a></li>
+				
+					<li><a href="../../Monkey/Autoloader.html">Monkey::Autoloader</a></li>
+				
+					<li><a href="../../Monkey/Backend.html">Monkey::Backend</a></li>
+				
+					<li><a href="../../Monkey/Backend/AbstractBackend.html">Monkey::Backend::AbstractBackend</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common.html">Monkey::Backend::Common</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/ExtractOptions.html">Monkey::Backend::Common::ExtractOptions</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Parent.html">Monkey::Backend::Common::Parent</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/SingletonClass.html">Monkey::Backend::Common::SingletonClass</a></li>
+				
+					<li><a href="../../Monkey/Backend/Common/Tap.html">Monkey::Backend::Common::Tap</a></li>
+				
+					<li><a href="../../Monkey/Engine.html">Monkey::Engine</a></li>
+				
+					<li><a href="../../Monkey/Ext.html">Monkey::Ext</a></li>
+				
+					<li><a href="../../Monkey/Ext/Array.html">Monkey::Ext::Array</a></li>
+				
+					<li><a href="../../Monkey/Ext/Enumerable.html">Monkey::Ext::Enumerable</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL.html">Monkey::Ext::ExtDSL</a></li>
+				
+					<li><a href="../../Monkey/Ext/ExtDSL/ClassDsl.html">Monkey::Ext::ExtDSL::ClassDsl</a></li>
+				
+					<li><a href="../../Monkey/Ext/File.html">Monkey::Ext::File</a></li>
+				
+					<li><a href="../../Monkey/Ext/File/ExtClassMethods.html">Monkey::Ext::File::ExtClassMethods</a></li>
+				
+					<li><a href="../../Monkey/Ext/Module.html">Monkey::Ext::Module</a></li>
+				
+					<li><a href="../../Monkey/Ext/Object.html">Monkey::Ext::Object</a></li>
+				
+					<li><a href="../../Monkey/Ext/Pathname.html">Monkey::Ext::Pathname</a></li>
+				
+					<li><a href="../../Monkey/Ext/String.html">Monkey::Ext::String</a></li>
+				
+					<li><a href="../../Monkey/Ext/Symbol.html">Monkey::Ext::Symbol</a></li>
+				
+					<li><a href="../../Monkey/Matcher.html">Monkey::Matcher</a></li>
+				
+					<li><a href="../../Monkey/Version.html">Monkey::Version</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Monkey::Ext::ExtDSL</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="alias-core-method-method" class="method-detail ">
+				<a name="method-i-alias_core_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alias_core_method</span><span
+						class="method-args">(old_name, new_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="alias-core-method-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 63</span>
+63:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alias_core_method</span>(<span class="ruby-identifier">old_name</span>, <span class="ruby-identifier">new_name</span>)
+64:         <span class="ruby-identifier">new_name</span> = <span class="ruby-identifier">new_name</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">old_name</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+65:         <span class="ruby-identifier">core_class</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:alias_method</span>, <span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">old_name</span>
+66:         <span class="ruby-identifier">old_name</span>
+67:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="class-methods-method" class="method-detail ">
+				<a name="method-i-class_methods"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">class_methods</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="class-methods-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 80</span>
+80:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_methods</span>(&amp;<span class="ruby-identifier">block</span>)
+81:         <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtClassMethods</span>.<span class="ruby-identifier">class_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+82:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="core-class-method" class="method-detail ">
+				<a name="method-i-core_class"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">core_class</span><span
+						class="method-args">(klass = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="core-class-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 16</span>
+16:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">core_class</span>(<span class="ruby-identifier">klass</span> = <span class="ruby-keyword kw">nil</span>)
+17:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">klass</span>
+18:           <span class="ruby-ivar">@core_class</span> = <span class="ruby-identifier">klass</span>
+19:           <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:include</span>, <span class="ruby-keyword kw">self</span>
+20:           <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtClassMethods</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">ClassDsl</span>
+21:           <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtClassMethods</span>.<span class="ruby-identifier">core_class</span> <span class="ruby-ivar">@core_class</span>
+22:           <span class="ruby-ivar">@core_class</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">            def method_missing(meth, *args, &amp;blk)              return super if Monkey::Backend.setup?              Monkey::Backend.setup              __send__(meth, *args, &amp;blk)            end</span>
+23:           <span class="ruby-identifier">propagate_include</span>
+24:         <span class="ruby-keyword kw">end</span>
+25:         <span class="ruby-ivar">@core_class</span>
+26:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-module-method" class="method-detail ">
+				<a name="method-i-each_module"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each_module</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-module-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 35</span>
+35:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_module</span>(&amp;<span class="ruby-identifier">block</span>)
+36:           <span class="ruby-identifier">list</span> = []
+37:           <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">each_object</span>(<span class="ruby-constant">Class</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span> }
+38:           <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+39:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-module-method" class="method-detail ">
+				<a name="method-i-each_module"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each_module</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-module-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_module</span>(&amp;<span class="ruby-identifier">block</span>)
+42:           <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">each_object</span>(<span class="ruby-constant">Module</span>, &amp;<span class="ruby-identifier">block</span>)
+43:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expects-method" class="method-detail ">
+				<a name="method-i-expects"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expects</span><span
+						class="method-args">(*list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="expects-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 84</span>
+84:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expects</span>(*<span class="ruby-identifier">list</span>)
+85:         <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+86:           <span class="ruby-constant">Monkey</span><span class="ruby-operator">::</span><span class="ruby-constant">Ext</span>.<span class="ruby-identifier">expectations</span>[<span class="ruby-identifier">core_class</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+87:         <span class="ruby-keyword kw">end</span>
+88:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="feature-method" class="method-detail ">
+				<a name="method-i-feature"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">feature</span><span
+						class="method-args">(name, mode = :instance, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="feature-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 69</span>
+69:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">feature</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">mode</span> = <span class="ruby-value">:instance</span>, &amp;<span class="ruby-identifier">block</span>)
+70:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">mode</span>
+71:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:instance</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>
+72:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:class</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">class_methods</span>(&amp;<span class="ruby-identifier">block</span>)
+73:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:shared</span>
+74:           <span class="ruby-identifier">feature</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">:instance</span>, &amp;<span class="ruby-identifier">block</span>)
+75:           <span class="ruby-identifier">feature</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">:class</span>, &amp;<span class="ruby-identifier">block</span>)
+76:         <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unkown mode #{mode.inspect}&quot;</span>
+77:         <span class="ruby-keyword kw">end</span>
+78:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="included-method" class="method-detail ">
+				<a name="method-i-included"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">included</span><span
+						class="method-args">(klass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="included-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 54</span>
+54:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">included</span>(<span class="ruby-identifier">klass</span>)
+55:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">extend</span> <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">ExtClassMethods</span>
+56:         <span class="ruby-keyword kw">super</span>
+57:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="propagate-include-method" class="method-detail ">
+				<a name="method-i-propagate_include"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">propagate_include</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="propagate-include-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 46</span>
+46:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">propagate_include</span>
+47:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">core_class</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Class</span>
+48:         <span class="ruby-identifier">each_module</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mod</span><span class="ruby-operator">|</span>
+49:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mod</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">core_class</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">mod</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword kw">self</span>
+50:           <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:include</span>, <span class="ruby-identifier">core_class</span>)
+51:         <span class="ruby-keyword kw">end</span>
+52:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rename-core-method-method" class="method-detail ">
+				<a name="method-i-rename_core_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rename_core_method</span><span
+						class="method-args">(old_name, new_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rename-core-method-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/monkey/ext.rb, line 59</span>
+59:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rename_core_method</span>(<span class="ruby-identifier">old_name</span>, <span class="ruby-identifier">new_name</span>)
+60:         <span class="ruby-identifier">core_class</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:undef_method</span>, <span class="ruby-identifier">alias_core_method</span>(<span class="ruby-identifier">old_name</span>, <span class="ruby-identifier">new_name</span>)
+61:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

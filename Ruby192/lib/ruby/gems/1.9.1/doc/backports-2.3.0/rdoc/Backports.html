@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Module: Backports</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/backports/tools_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/backports/tools.rb">lib/backports/tools.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-alias_method">::alias_method</a></li>
+					
+					<li><a href="#method-c-alias_method_chain">::alias_method_chain</a></li>
+					
+					<li><a href="#method-c-coerce_to">::coerce_to</a></li>
+					
+					<li><a href="#method-c-coerce_to_ary">::coerce_to_ary</a></li>
+					
+					<li><a href="#method-c-coerce_to_comparison">::coerce_to_comparison</a></li>
+					
+					<li><a href="#method-c-coerce_to_int">::coerce_to_int</a></li>
+					
+					<li><a href="#method-c-convert_all_arguments_to_path">::convert_all_arguments_to_path</a></li>
+					
+					<li><a href="#method-c-convert_first_argument_to_path">::convert_first_argument_to_path</a></li>
+					
+					<li><a href="#method-c-convert_to_path">::convert_to_path</a></li>
+					
+					<li><a href="#method-c-make_block_optional">::make_block_optional</a></li>
+					
+					<li><a href="#method-c-require_relative">::require_relative</a></li>
+					
+					<li><a href="#method-c-require_relative_dir">::require_relative_dir</a></li>
+					
+					<li><a href="#method-c-track_lambda">::track_lambda</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./Enumerable/Enumerator.html">Enumerable::Enumerator</a></li>
+				
+					<li><a href="./Enumerable/MOST_EXTREME_OBJECT_EVER.html">Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+				
+					<li><a href="./Random.html">Random</a></li>
+				
+					<li><a href="./Random/Implementation.html">Random::Implementation</a></li>
+				
+					<li><a href="./Random/MT19937.html">Random::MT19937</a></li>
+				
+					<li><a href="./Enumerator.html">Enumerator</a></li>
+				
+					<li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+				
+					<li><a href="./ARGF.html">ARGF</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./Backports.html">Backports</a></li>
+				
+					<li><a href="./BasicObject.html">BasicObject</a></li>
+				
+					<li><a href="./Binding.html">Binding</a></li>
+				
+					<li><a href="./Dir.html">Dir</a></li>
+				
+					<li><a href="./ENV.html">ENV</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./Fixnum.html">Fixnum</a></li>
+				
+					<li><a href="./Float.html">Float</a></li>
+				
+					<li><a href="./GC.html">GC</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./IO.html">IO</a></li>
+				
+					<li><a href="./Integer.html">Integer</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./MatchData.html">MatchData</a></li>
+				
+					<li><a href="./Math.html">Math</a></li>
+				
+					<li><a href="./Method.html">Method</a></li>
+				
+					<li><a href="./Module.html">Module</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./ObjectSpace.html">ObjectSpace</a></li>
+				
+					<li><a href="./Proc.html">Proc</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./Range.html">Range</a></li>
+				
+					<li><a href="./Regexp.html">Regexp</a></li>
+				
+					<li><a href="./StopIteration.html">StopIteration</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./Struct.html">Struct</a></li>
+				
+					<li><a href="./Symbol.html">Symbol</a></li>
+				
+					<li><a href="./UnboundMethod.html">UnboundMethod</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Backports</h1>
+
+		<div id="description">
+			<p>
+Methods used internally by the backports.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Undefined">Undefined</a></dt>
+				
+				<dd class="description"><p>
+Used internally to make it easy to deal with optional arguments (from
+Rubinius)
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="alias-method-method" class="method-detail ">
+				<a name="method-c-alias_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alias_method</span><span
+						class="method-args">(mod, new_name, old_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Used internally. Safe <a
+href="Backports.html#method-c-alias_method">alias_method</a> that will only
+alias if the source exists and destination doesn&#8217;t
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="alias-method-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 172</span>
+172:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">alias_method</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">old_name</span>)
+173:     <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+174:       <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">old_name</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span>(<span class="ruby-identifier">old_name</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">method_defined?</span>(<span class="ruby-identifier">new_name</span>)
+175:     <span class="ruby-keyword kw">end</span>
+176:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="alias-method-chain-method" class="method-detail ">
+				<a name="method-c-alias_method_chain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alias_method_chain</span><span
+						class="method-args">(mod, target, feature)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Modified to avoid polluting <a href="Module.html">Module</a> if so desired
+(from Rails)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="alias-method-chain-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 108</span>
+108:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">alias_method_chain</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">feature</span>)
+109:     <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+110:       <span class="ruby-comment cmt"># Strip out punctuation on predicates or bang methods since</span>
+111:       <span class="ruby-comment cmt"># e.g. target?_without_feature is not a valid method name.</span>
+112:       <span class="ruby-identifier">aliased_target</span>, <span class="ruby-identifier">punctuation</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/([?!=])$/</span>, <span class="ruby-value str">''</span>), <span class="ruby-node">$1</span>
+113:       <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">aliased_target</span>, <span class="ruby-identifier">punctuation</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+114: 
+115:       <span class="ruby-identifier">with_method</span>, <span class="ruby-identifier">without_method</span> = <span class="ruby-node">&quot;#{aliased_target}_with_#{feature}#{punctuation}&quot;</span>, <span class="ruby-node">&quot;#{aliased_target}_without_#{feature}#{punctuation}&quot;</span>
+116: 
+117:       <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">without_method</span>, <span class="ruby-identifier">target</span>
+118:       <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">target</span>, <span class="ruby-identifier">with_method</span>
+119: 
+120:       <span class="ruby-keyword kw">case</span>
+121:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">public_method_defined?</span>(<span class="ruby-identifier">without_method</span>)
+122:           <span class="ruby-identifier">public</span> <span class="ruby-identifier">target</span>
+123:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">protected_method_defined?</span>(<span class="ruby-identifier">without_method</span>)
+124:           <span class="ruby-identifier">protected</span> <span class="ruby-identifier">target</span>
+125:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">private_method_defined?</span>(<span class="ruby-identifier">without_method</span>)
+126:           <span class="ruby-identifier">private</span> <span class="ruby-identifier">target</span>
+127:       <span class="ruby-keyword kw">end</span>
+128:     <span class="ruby-keyword kw">end</span>
+129:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="coerce-to-method" class="method-detail ">
+				<a name="method-c-coerce_to"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">coerce_to</span><span
+						class="method-args">(obj, cls, meth)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Helper method to coerce a value into a specific class. Raises a TypeError
+if the coercion fails or the returned value is not of the right class.
+(from Rubinius)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="coerce-to-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 135</span>
+135:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">cls</span>, <span class="ruby-identifier">meth</span>)
+136:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-identifier">cls</span>)
+137: 
+138:     <span class="ruby-keyword kw">begin</span>
+139:       <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">meth</span>)
+140:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+141:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Coercion error: #{obj.inspect}.#{meth} =&gt; #{cls} failed:\n&quot;</span>                         <span class="ruby-node">&quot;(#{e.message})&quot;</span>
+142:     <span class="ruby-keyword kw">end</span>
+143:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Coercion error: obj.#{meth} did NOT return a #{cls} (was #{ret.class})&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ret</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-identifier">cls</span>
+144:     <span class="ruby-identifier">ret</span>
+145:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="coerce-to-ary-method" class="method-detail ">
+				<a name="method-c-coerce_to_ary"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">coerce_to_ary</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="coerce-to-ary-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 152</span>
+152:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">coerce_to_ary</span>(<span class="ruby-identifier">obj</span>)
+153:     <span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Array</span>, <span class="ruby-value">:to_ary</span>)
+154:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="coerce-to-comparison-method" class="method-detail ">
+				<a name="method-c-coerce_to_comparison"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">coerce_to_comparison</span><span
+						class="method-args">(a, b, cmp = (a <=> b))</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks for a failed comparison (in which case it throws an ArgumentError)
+Additionally, it maps any negative value to -1 and any positive value to +1
+(from Rubinius)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="coerce-to-comparison-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 159</span>
+159:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">coerce_to_comparison</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">cmp</span> = (<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>))
+160:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{a} with #{b} failed&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cmp</span>.<span class="ruby-identifier">nil?</span>
+161:     <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cmp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+162:     <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cmp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+163:     <span class="ruby-value">0</span>
+164:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="coerce-to-int-method" class="method-detail ">
+				<a name="method-c-coerce_to_int"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">coerce_to_int</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="coerce-to-int-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 148</span>
+148:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">coerce_to_int</span>(<span class="ruby-identifier">obj</span>)
+149:     <span class="ruby-identifier">coerce_to</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-value">:to_int</span>)
+150:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-all-arguments-to-path-method" class="method-detail ">
+				<a name="method-c-convert_all_arguments_to_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_all_arguments_to_path</span><span
+						class="method-args">(mod, skip, *methods)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Metaprogramming utility to convert all file arguments to paths
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="convert-all-arguments-to-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 84</span>
+84:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">convert_all_arguments_to_path</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">skip</span>, *<span class="ruby-identifier">methods</span>)
+85:     <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">selector</span><span class="ruby-operator">|</span>
+86:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">selector</span>
+87:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{mod}##{selector} is not defined, so arguments can't converted to path&quot;</span>
+88:         <span class="ruby-keyword kw">next</span>
+89:       <span class="ruby-keyword kw">end</span>
+90:       <span class="ruby-identifier">first_args</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">skip</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;arg_#{i}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;,&quot;</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">skip</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;,&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;&quot;</span>)
+91:       <span class="ruby-identifier">alias_method_chain</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">selector</span>, <span class="ruby-value">:potential_path_arguments</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aliased_target</span>, <span class="ruby-identifier">punctuation</span><span class="ruby-operator">|</span>
+92:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">          def #{aliased_target}_with_potential_path_arguments#{punctuation}(#{first_args}*files, &amp;block)            files = files.map{|f| Backports.convert_to_path f}            #{aliased_target}_without_potential_path_arguments#{punctuation}(#{first_args}*files, &amp;block)          end</span>
+93:       <span class="ruby-keyword kw">end</span>
+94:     <span class="ruby-keyword kw">end</span>
+95:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-first-argument-to-path-method" class="method-detail ">
+				<a name="method-c-convert_first_argument_to_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_first_argument_to_path</span><span
+						class="method-args">(mod, *methods)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Metaprogramming utility to convert the first file argument to path
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="convert-first-argument-to-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">convert_first_argument_to_path</span>(<span class="ruby-identifier">mod</span>, *<span class="ruby-identifier">methods</span>)
+59:     <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">selector</span><span class="ruby-operator">|</span>
+60:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">selector</span>
+61:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{mod}##{selector} is not defined, so argument can't converted to path&quot;</span>
+62:         <span class="ruby-keyword kw">next</span>
+63:       <span class="ruby-keyword kw">end</span>
+64:       <span class="ruby-identifier">arity</span> = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-identifier">selector</span>).<span class="ruby-identifier">arity</span>
+65:       <span class="ruby-identifier">last_arg</span> = []
+66:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arity</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+67:         <span class="ruby-identifier">last_arg</span> = [<span class="ruby-value str">&quot;*rest&quot;</span>]
+68:         <span class="ruby-identifier">arity</span> = <span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">arity</span>
+69:       <span class="ruby-keyword kw">end</span>
+70:       <span class="ruby-identifier">arg_sequence</span> = ([<span class="ruby-value str">&quot;file&quot;</span>] <span class="ruby-operator">+</span> (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">arity</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;arg_#{i}&quot;</span>} <span class="ruby-operator">+</span> <span class="ruby-identifier">last_arg</span> <span class="ruby-operator">+</span> [<span class="ruby-value str">&quot;&amp;block&quot;</span>]).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>)
+71: 
+72:       <span class="ruby-identifier">alias_method_chain</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">selector</span>, <span class="ruby-value">:potential_path_argument</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aliased_target</span>, <span class="ruby-identifier">punctuation</span><span class="ruby-operator">|</span>
+73:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">          def #{aliased_target}_with_potential_path_argument#{punctuation}(#{arg_sequence})            file = Backports.convert_to_path(file)            #{aliased_target}_without_potential_path_argument#{punctuation}(#{arg_sequence})          end</span>
+74:       <span class="ruby-keyword kw">end</span>
+75:     <span class="ruby-keyword kw">end</span>
+76:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-to-path-method" class="method-detail ">
+				<a name="method-c-convert_to_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_to_path</span><span
+						class="method-args">(file_or_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-to-path-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 102</span>
+102:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">convert_to_path</span>(<span class="ruby-identifier">file_or_path</span>)
+103:     <span class="ruby-identifier">file_or_path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_path</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">file_or_path</span>.<span class="ruby-identifier">to_path</span>  <span class="ruby-operator">:</span> <span class="ruby-identifier">file_or_path</span>
+104:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="make-block-optional-method" class="method-detail ">
+				<a name="method-c-make_block_optional"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">make_block_optional</span><span
+						class="method-args">(mod, *methods)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Metaprogramming utility to make block optional. Tests first if block is
+already optional when given options
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="make-block-optional-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">make_block_optional</span>(<span class="ruby-identifier">mod</span>, *<span class="ruby-identifier">methods</span>)
+27:     <span class="ruby-identifier">options</span> = <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+28:     <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">selector</span><span class="ruby-operator">|</span>
+29:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">selector</span>
+30:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{mod}##{selector} is not defined, so block can't be made optional&quot;</span>
+31:         <span class="ruby-keyword kw">next</span>
+32:       <span class="ruby-keyword kw">end</span>
+33:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">empty?</span>
+34:         <span class="ruby-identifier">test_on</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:test_on</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>
+35:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">test_on</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">selector</span>, *<span class="ruby-identifier">options</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:arg</span>, [])) <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">false</span>)
+36:       <span class="ruby-keyword kw">end</span>
+37: 
+38:       <span class="ruby-identifier">arity</span> = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-identifier">selector</span>).<span class="ruby-identifier">arity</span>
+39:       <span class="ruby-identifier">last_arg</span> = []
+40:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arity</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+41:         <span class="ruby-identifier">last_arg</span> = [<span class="ruby-value str">&quot;*rest&quot;</span>]
+42:         <span class="ruby-identifier">arity</span> = <span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">arity</span>
+43:       <span class="ruby-keyword kw">end</span>
+44:       <span class="ruby-identifier">arg_sequence</span> = ((<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">arity</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;arg_#{i}&quot;</span>} <span class="ruby-operator">+</span> <span class="ruby-identifier">last_arg</span> <span class="ruby-operator">+</span> [<span class="ruby-value str">&quot;&amp;block&quot;</span>]).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>)
+45: 
+46:       <span class="ruby-identifier">alias_method_chain</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">selector</span>, <span class="ruby-value">:optional_block</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aliased_target</span>, <span class="ruby-identifier">punctuation</span><span class="ruby-operator">|</span>
+47:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">          def #{aliased_target}_with_optional_block#{punctuation}(#{arg_sequence})            return to_enum(:#{aliased_target}_without_optional_block#{punctuation}, #{arg_sequence}) unless block_given?            #{aliased_target}_without_optional_block#{punctuation}(#{arg_sequence})          end</span>
+48:       <span class="ruby-keyword kw">end</span>
+49:     <span class="ruby-keyword kw">end</span>
+50:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="require-relative-method" class="method-detail ">
+				<a name="method-c-require_relative"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">require_relative</span><span
+						class="method-args">(relative_feature)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adapted from Pragmatic&#8217;s &#8220;Programming Ruby&#8221; (since their
+version was buggy...)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="require-relative-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 5</span>
+ 5:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">require_relative</span>(<span class="ruby-identifier">relative_feature</span>)
+ 6:     <span class="ruby-identifier">file</span> = <span class="ruby-identifier">caller</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/:\d/</span>,<span class="ruby-value">2</span>).<span class="ruby-identifier">first</span>
+ 7:     <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/\A\((.*)\)/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">file</span> <span class="ruby-comment cmt"># eval, etc.</span>
+ 8:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">LoadError</span>, <span class="ruby-node">&quot;require_relative is called in #{$1}&quot;</span>
+ 9:     <span class="ruby-keyword kw">end</span>
+10:     <span class="ruby-identifier">require</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">relative_feature</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>))
+11:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="require-relative-dir-method" class="method-detail ">
+				<a name="method-c-require_relative_dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">require_relative_dir</span><span
+						class="method-args">(relative_dir)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="require-relative-dir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 13</span>
+13:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">require_relative_dir</span>(<span class="ruby-identifier">relative_dir</span>)
+14:     <span class="ruby-identifier">dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">relative_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">caller</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/:\d/</span>,<span class="ruby-value">2</span>).<span class="ruby-identifier">first</span>))
+15:     <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>(<span class="ruby-identifier">dir</span>).
+16:         <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">last_match</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^(.*)\.rb$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">f</span>}.
+17:         <span class="ruby-identifier">compact</span>.
+18:         <span class="ruby-identifier">sort</span>.
+19:         <span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+20:           <span class="ruby-identifier">require</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">dir</span>)
+21:         <span class="ruby-keyword kw">end</span>
+22:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="track-lambda-method" class="method-detail ">
+				<a name="method-c-track_lambda"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">track_lambda</span><span
+						class="method-args">(from, to, default = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Used internally to propagate #
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="track-lambda-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/backports/tools.rb, line 179</span>
+179:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">track_lambda</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>, <span class="ruby-identifier">default</span> = <span class="ruby-keyword kw">false</span>)
+180:     <span class="ruby-identifier">is_lambda</span> = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">instance_variable_get</span> <span class="ruby-value">:@is_lambda</span>
+181:     <span class="ruby-identifier">is_lambda</span> = <span class="ruby-identifier">default</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_lambda</span>.<span class="ruby-identifier">nil?</span>
+182:     <span class="ruby-identifier">to</span>.<span class="ruby-identifier">instance_variable_set</span> <span class="ruby-value">:@is_lambda</span>, <span class="ruby-identifier">is_lambda</span>
+183:     <span class="ruby-identifier">to</span>
+184:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

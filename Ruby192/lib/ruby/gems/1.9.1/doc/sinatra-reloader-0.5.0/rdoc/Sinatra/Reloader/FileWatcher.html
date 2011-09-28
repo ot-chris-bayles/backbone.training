@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sinatra::Reloader::FileWatcher</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sinatra/reloader_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/reloader.rb">lib/sinatra/reloader.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Array</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-each">::each</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-register">::register</a></li>
+					
+					<li><a href="#method-i-changed%3F">#changed?</a></li>
+					
+					<li><a href="#method-i-dont_reload%21">#dont_reload!</a></li>
+					
+					<li><a href="#method-i-inline_templates%21">#inline_templates!</a></li>
+					
+					<li><a href="#method-i-inline_templates%3F">#inline_templates?</a></li>
+					
+					<li><a href="#method-i-reload">#reload</a></li>
+					
+					<li><a href="#method-i-reload%21">#reload!</a></li>
+					
+					<li><a href="#method-i-reload%3F">#reload?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../../Sinatra/Reloader.html">Sinatra::Reloader</a></li>
+				
+					<li><a href="../../Sinatra/Reloader/ClassMethods.html">Sinatra::Reloader::ClassMethods</a></li>
+				
+					<li><a href="../../Sinatra/Reloader/FileWatcher.html">Sinatra::Reloader::FileWatcher</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sinatra::Reloader::FileWatcher</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="file-attribute-method" class="method-detail">
+				<a name="file"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">file</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="mtime-attribute-method" class="method-detail">
+				<a name="mtime"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">mtime</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="inline-templates-attribute-method" class="method-detail">
+				<a name="inline_templates"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">inline_templates</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="app-attribute-method" class="method-detail">
+				<a name="app"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">app</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-c-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 32</span>
+32:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+33:         <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>) 
+34:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(file, app)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 19</span>
+19:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">app</span>)
+20:         <span class="ruby-identifier">file</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">expand_path</span>
+21:         <span class="ruby-keyword kw">begin</span>
+22:           <span class="ruby-identifier">file</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">realpath</span>
+23:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+24:         <span class="ruby-keyword kw">end</span>
+25:         <span class="ruby-ivar">@map</span>[<span class="ruby-identifier">file</span>] <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">super</span>
+26:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(file, app)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 36</span>
+36:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">app</span>)
+37:         <span class="ruby-ivar">@reload</span>, <span class="ruby-ivar">@file</span>, <span class="ruby-ivar">@app</span> = <span class="ruby-keyword kw">true</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">app</span>
+38:         <span class="ruby-ivar">@mtime</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">file</span>) <span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)
+39:         <span class="ruby-keyword kw">super</span>()
+40:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="register-method" class="method-detail ">
+				<a name="method-c-register"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">register</span><span
+						class="method-args">(route)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="register-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 15</span>
+15:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">route</span>)
+16:         <span class="ruby-identifier">new</span>(<span class="ruby-identifier">route</span>.<span class="ruby-identifier">file</span>, <span class="ruby-identifier">route</span>.<span class="ruby-identifier">app</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">route</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">route</span>.<span class="ruby-identifier">file?</span>
+17:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="changed--method" class="method-detail ">
+				<a name="method-i-changed%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">changed?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="changed--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 42</span>
+42:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">changed?</span>
+43:         <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">file</span> <span class="ruby-keyword kw">or</span> <span class="ruby-ivar">@mtime</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">file</span>)
+44:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dont-reload--method" class="method-detail ">
+				<a name="method-i-dont_reload%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dont_reload!</span><span
+						class="method-args">(dont = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dont-reload--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 46</span>
+46:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dont_reload!</span>(<span class="ruby-identifier">dont</span> = <span class="ruby-keyword kw">true</span>)
+47:         <span class="ruby-ivar">@reload</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">dont</span>
+48:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inline-templates--method" class="method-detail ">
+				<a name="method-i-inline_templates%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inline_templates!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inline-templates--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 62</span>
+62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inline_templates!</span>
+63:         <span class="ruby-ivar">@inline_templates</span> = <span class="ruby-keyword kw">true</span>
+64:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inline-templates--method" class="method-detail ">
+				<a name="method-i-inline_templates%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inline_templates?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inline-templates--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 58</span>
+58:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inline_templates?</span>
+59:         <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">inline_templates</span>
+60:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reload-method" class="method-detail ">
+				<a name="method-i-reload"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reload</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="reload-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 54</span>
+54:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reload</span>
+55:         <span class="ruby-identifier">reload!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">reload?</span>
+56:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reload--method" class="method-detail ">
+				<a name="method-i-reload%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reload!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="reload--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reload!</span>
+67:         <span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">route</span><span class="ruby-operator">|</span> <span class="ruby-identifier">route</span>.<span class="ruby-identifier">deactivate</span> }
+68:         <span class="ruby-identifier">$LOADED_FEATURES</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">file</span>
+69:         <span class="ruby-identifier">clear</span>
+70:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">file</span>
+71:           <span class="ruby-identifier">app</span>.<span class="ruby-identifier">set</span> <span class="ruby-value">:inline_templates</span>, <span class="ruby-identifier">file</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">inline_templates?</span>
+72:           <span class="ruby-ivar">@mtime</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">file</span>)
+73:           <span class="ruby-identifier">require</span> <span class="ruby-identifier">file</span>
+74:         <span class="ruby-keyword kw">end</span>
+75:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reload--method" class="method-detail ">
+				<a name="method-i-reload%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reload?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="reload--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/reloader.rb, line 50</span>
+50:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reload?</span>
+51:         <span class="ruby-ivar">@reload</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">changed?</span>
+52:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

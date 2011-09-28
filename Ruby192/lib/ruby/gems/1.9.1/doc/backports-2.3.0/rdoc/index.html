@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>backports-2.3.0 Documentation</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+	
+	<h1>backports-2.3.0 Documentation</h1>
+
+	
+	<div id="main">
+		
+<ul>
+<li><p>
+Yearning to use some of the new cool features in 1.9.2 while using 1.8.x?
+</p>
+</li>
+<li><p>
+One of your client is stuck with Ruby 1.8.6 but you want to use a gem using
+some features of 1.8.7?
+</p>
+</li>
+<li><p>
+Can&#8217;t remember if you can use <a
+href="Array.html#method-i-sample">Array#sample</a> or <a
+href="String.html#method-i-each_char">String#each_char</a> on a
+friend&#8217;s box?
+</p>
+</li>
+</ul>
+<p>
+This gem is for you!
+</p>
+<p>
+The goal of &#8216;backports&#8217; is to make it easier to write ruby code
+that runs across different versions of Ruby. All you need to bring any
+version of Ruby up to today&#8217;s standards:
+</p>
+<pre>
+  require 'backports'
+  
+</pre>
+<p>
+This will bring in all the features of 1.8.7 (for Ruby 1.8.6) and many
+features of Ruby 1.9.1 (for Ruby 1.8.x) and Ruby 1.9.2 (for all earlier
+versions)!
+</p>
+<p>
+<tt>Note</tt>: Although I am a Ruby committer, this gem is a personal
+project and is not endorsed by ruby-core.
+</p>
+<h2>What&#8217;s inside</h2>
+<p>
+Features in this gem:
+</p>
+<ol>
+<li><p>
+Won&#8217;t break older code
+</p>
+</li>
+<li><p>
+Pure Ruby (no C extensions)
+</p>
+</li>
+<li><p>
+Pass <a href="http://github.com/rubyspec/rubyspec">RubySpec</a>
+</p>
+</li>
+</ol>
+<p>
+Let&#8217;s be a bit more precise about the breaking code business. It is
+of course entirely possible that code will break, for example some core
+methods are monkeypatched or if the code relies on a certain call raising
+an exception. Example: <tt>[42].sample rescue &quot;dum example&quot;</tt>
+will return <tt>&quot;dum example&quot;</tt> without this gem and
+<tt>42</tt> with it.
+</p>
+<p>
+A real incompatibility is, for example, <tt>Module::instance_methods</tt>
+which returns strings in 1.8 and symbols in 1.9. No change can be made
+without the risk of breaking existing code. Such incompatibilities are left
+unchanged.
+</p>
+<p>
+All features of 1.8.7 are backported (well, almost all, see the exception
+list bellow), and many of 1.9 are also.
+</p>
+<p>
+Some generic and self-contained features of active-support are also
+included. By simple I mean that String#camelcase is there, but #
+isn&#8217;t.
+</p>
+<h2>Installation &amp; compatibility</h2>
+<p>
+<tt>backports</tt> is can be installed with:
+</p>
+<pre>
+  (sudo) gem install backports
+</pre>
+<p>
+To use:
+</p>
+<pre>
+  require 'rubygems'
+  require 'backports'   # or a subset, see next section
+</pre>
+<p>
+Compatible with Ruby 1.8.6, 1.8.7, 1.9.1, 1.9.2, JRuby and Rubinius.
+</p>
+<h1>Complete List of backports</h1>
+<h2>Ruby 1.8.7</h2>
+<p>
+Complete Ruby 1.8.7 backporting (core language). Refer to the official list
+of <a
+href="http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8_7/NEWS">changes</a>.
+</p>
+<p>
+Only exceptions:
+</p>
+<ul>
+<li><p>
+String#gsub (the form returning an enumerator)
+</p>
+</li>
+<li><p>
+GC.stress=  (not implemented)
+</p>
+</li>
+<li><p>
+Array#choice (removed in 1.8.8, use <a
+href="Array.html#method-i-sample">Array#sample</a> instead)
+</p>
+</li>
+</ul>
+<p>
+To include <em>only</em> these backports, <tt>require
+&quot;backports/1.8.7&quot;</tt>
+</p>
+<h2>Ruby 1.8.8</h2>
+<p>
+Ruby 1.8.8 has been officially cancelled. As of version 2.2, <tt>require
+&quot;backports/1.8.8&quot;</tt> does nothing.
+</p>
+<h2>Ruby 1.9.1</h2>
+<p>
+Additionally, the following Ruby 1.9 features have been backported:
+</p>
+<ul>
+<li><p>
+<a href="Array.html">Array</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>each_with_object</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerator.html">Enumerator</a>
+</p>
+<ul>
+<li><p>
+<tt>new</tt> (with block)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="File.html">File</a>
+</p>
+<ul>
+<li><p>
+<tt>binread</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>to_path</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+All class methods accepting filenames will accept files or anything with a
+<tt>#</tt> method.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>default_proc=</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="IO.html">IO</a>
+</p>
+<ul>
+<li><p>
+<tt>bin_read</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>ungetbyte</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Kernel.html">Kernel</a>
+</p>
+<ul>
+<li><p>
+<tt>require_relative</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Math.html">Math</a>
+</p>
+<ul>
+<li><p>
+<tt>log</tt> (with base)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>log2</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>define_singleton_method</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>public_method</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>public_send</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Proc.html">Proc</a>
+</p>
+<ul>
+<li><p>
+<tt>yield</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>lambda?</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>curry</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>===</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Range.html">Range</a>
+</p>
+<ul>
+<li><p>
+<tt>cover?</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Regexp.html">Regexp</a>
+</p>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="String.html">String</a>
+</p>
+<ul>
+<li><p>
+<tt>ascii_only?</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>chr</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>clear</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>codepoints</tt>, <tt>each_codepoint</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>get_byte</tt>, <tt>set_byte</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>ord</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>try_convert</tt>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+<tt>Enumerator</tt> can be accessed directly (instead of
+<tt>Enumerable::Enumerator</tt>)
+</p>
+<p>
+To include <em>only</em> these backports and those of the 1.8 line,
+<tt>require &quot;backports/1.9.1&quot;</tt>.
+</p>
+<p>
+Moreover, a pretty good imitation of <a
+href="BasicObject.html">BasicObject</a> is available, but since it is only
+an imitation, it must be required explicitly:
+</p>
+<pre>
+  require 'backports/basic_object'
+</pre>
+<h2>Ruby 1.9.2</h2>
+<p>
+Finally, most of Ruby 1.9.2 features have been backported:
+</p>
+<ul>
+<li><p>
+<a href="Array.html">Array</a>
+</p>
+<ul>
+<li><p>
+<tt>rotate, rotate!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>keep_if, select!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>product</tt> (with block)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>repeated_combination</tt>, <tt>repeated_permutation</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>sort_by!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>uniq, uniq!</tt> (with block)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Dir.html">Dir</a>
+</p>
+<ul>
+<li><p>
+<tt>home</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>chunk</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>flat_map</tt>, <tt>collect_concat</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>join</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>slice_before</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Float::INFINITY, NAN
+</p>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>keep_if</tt>, <tt>select!</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>singleton_class</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Random.html">Random</a> (new class)
+</p>
+</li>
+</ul>
+<p>
+To include all Ruby backports but not those of Rails, <tt>require
+&quot;backports/1.9.2&quot;</tt> (or &#8220;backports/1.9&#8220;)
+</p>
+<h2>Rails</h2>
+<p>
+Some generic methods from Rails methods have been copied:
+</p>
+<ul>
+<li><p>
+<a href="Enumerable.html">Enumerable</a>
+</p>
+<ul>
+<li><p>
+<tt>sum</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Hash.html">Hash</a>
+</p>
+<ul>
+<li><p>
+<tt>symbolize_keys</tt>, <tt>symbolize_keys!</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>reverse_merge</tt>, <tt>reverse_merge!</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="Module.html">Module</a>
+</p>
+<ul>
+<li><p>
+<tt>alias_method_chain</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+Object
+</p>
+<ul>
+<li><p>
+<tt>try</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>returning</tt>
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+<a href="String.html">String</a>
+</p>
+<ul>
+<li><p>
+<tt>camelize</tt>, <tt>underscore</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>dasherize</tt>, <tt>demodulize</tt>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<tt>constantize</tt>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+To include <em>only</em> these Rails backports but not those of Ruby,
+<tt>require &quot;backports/rails&quot;</tt>.
+</p>
+<h2>Libraries</h2>
+<p>
+Libraries have not been backported. I am aware of the following backport
+gems:
+</p>
+<ul>
+<li><p>
+Net::SMTP for Ruby 1.8.6: <a
+href="http://seattlerb.rubyforge.org/smtp_tls/">smtp_tls</a>
+</p>
+</li>
+<li><p>
+Let me know of others...
+</p>
+</li>
+</ul>
+<h2>Thanks</h2>
+<p>
+Thanks for the bug reports and patches, in particular the repeat offenders:
+</p>
+<ul>
+<li><p>
+Arto Bendiken ( <a href="http://github.com/bendiken">bendiken</a> )
+</p>
+</li>
+<li><p>
+Konstantin Haase ( <a href="https://github.com/rkh">rkh</a>)
+</p>
+</li>
+<li><p>
+Roger Pack ( <a href="http://github.com/rdp">rdp</a> )
+</p>
+</li>
+</ul>
+<p>
+The best way to submit a patch is to also submit a patch to <a
+href="https://github.com/rubyspec/rubyspec">RubySpec</a> and then a patch
+to backports that make it pass the spec. To test rubyspec along with
+backports, one way to test this is:
+</p>
+<pre>
+    mspec path/to/specs -t path/to/ruby186 --unguarded -r path/to/backports 
+</pre>
+<p>
+You must then check manually for which failures are acceptable and which
+are not.
+</p>
+<h1>License</h1>
+<p>
+<tt>backports</tt> is released under the terms of the MIT License, see the
+included <a href="LICENSE.html">LICENSE</a> file.
+</p>
+<table>
+<tr><td valign="top">Author</td><td><p>
+Marc-André Lafortune
+</p>
+</td></tr>
+</table>
+
+	</div>
+	
+
+	
+	
+	<h2>Files</h2>
+	<ul>
+		
+			<li class="file"><a href="LICENSE.html">LICENSE</a></li>
+		
+			<li class="file"><a href="README_rdoc.html">README.rdoc</a></li>
+		
+	</ul>
+	
+
+	<h2 id="classes">Classes/Modules</h2>
+	<ul>
+		
+		<li class="module"><a href="Enumerable.html">Enumerable</a></li>
+		
+		<li class="class"><a href="Enumerable/Enumerator.html">Enumerable::Enumerator</a></li>
+		
+		<li class="module"><a href="Enumerable/MOST_EXTREME_OBJECT_EVER.html">Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+		
+		<li class="class"><a href="Random.html">Random</a></li>
+		
+		<li class="module"><a href="Random/Implementation.html">Random::Implementation</a></li>
+		
+		<li class="class"><a href="Random/MT19937.html">Random::MT19937</a></li>
+		
+		<li class="class"><a href="Enumerator.html">Enumerator</a></li>
+		
+		<li class="class"><a href="Enumerator/Yielder.html">Enumerator::Yielder</a></li>
+		
+		<li class="module"><a href="ARGF.html">ARGF</a></li>
+		
+		<li class="class"><a href="Array.html">Array</a></li>
+		
+		<li class="module"><a href="Backports.html">Backports</a></li>
+		
+		<li class="class"><a href="BasicObject.html">BasicObject</a></li>
+		
+		<li class="class"><a href="Binding.html">Binding</a></li>
+		
+		<li class="class"><a href="Dir.html">Dir</a></li>
+		
+		<li class="module"><a href="ENV.html">ENV</a></li>
+		
+		<li class="class"><a href="File.html">File</a></li>
+		
+		<li class="class"><a href="Fixnum.html">Fixnum</a></li>
+		
+		<li class="class"><a href="Float.html">Float</a></li>
+		
+		<li class="module"><a href="GC.html">GC</a></li>
+		
+		<li class="class"><a href="Hash.html">Hash</a></li>
+		
+		<li class="class"><a href="IO.html">IO</a></li>
+		
+		<li class="class"><a href="Integer.html">Integer</a></li>
+		
+		<li class="module"><a href="Kernel.html">Kernel</a></li>
+		
+		<li class="class"><a href="MatchData.html">MatchData</a></li>
+		
+		<li class="module"><a href="Math.html">Math</a></li>
+		
+		<li class="class"><a href="Method.html">Method</a></li>
+		
+		<li class="class"><a href="Module.html">Module</a></li>
+		
+		<li class="class"><a href="Numeric.html">Numeric</a></li>
+		
+		<li class="module"><a href="ObjectSpace.html">ObjectSpace</a></li>
+		
+		<li class="class"><a href="Proc.html">Proc</a></li>
+		
+		<li class="module"><a href="Process.html">Process</a></li>
+		
+		<li class="class"><a href="Range.html">Range</a></li>
+		
+		<li class="class"><a href="Regexp.html">Regexp</a></li>
+		
+		<li class="class"><a href="StopIteration.html">StopIteration</a></li>
+		
+		<li class="class"><a href="String.html">String</a></li>
+		
+		<li class="class"><a href="Struct.html">Struct</a></li>
+		
+		<li class="class"><a href="Symbol.html">Symbol</a></li>
+		
+		<li class="class"><a href="UnboundMethod.html">UnboundMethod</a></li>
+		
+	</ul>
+
+	<h2 id="methods">Methods</h2>
+	<ul>
+		
+			<li><a href="Enumerable/MOST_EXTREME_OBJECT_EVER.html#method-c-%3C">::< &mdash; Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+		
+			<li><a href="BasicObject.html#method-c-%3D%3D%3D">::=== &mdash; BasicObject</a></li>
+		
+			<li><a href="Enumerable/MOST_EXTREME_OBJECT_EVER.html#method-c-%3E">::> &mdash; Enumerable::MOST_EXTREME_OBJECT_EVER</a></li>
+		
+			<li><a href="Hash.html#method-c-%5B%5D">::[] &mdash; Hash</a></li>
+		
+			<li><a href="Random/MT19937.html#method-c-%5B%5D">::[] &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Backports.html#method-c-alias_method">::alias_method &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-alias_method_chain">::alias_method_chain &mdash; Backports</a></li>
+		
+			<li><a href="IO.html#method-c-binread">::binread &mdash; IO</a></li>
+		
+			<li><a href="Backports.html#method-c-coerce_to">::coerce_to &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-coerce_to_ary">::coerce_to_ary &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-coerce_to_comparison">::coerce_to_comparison &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-coerce_to_int">::coerce_to_int &mdash; Backports</a></li>
+		
+			<li><a href="Hash.html#method-c-constructor_without_key_value_pair_form">::constructor_without_key_value_pair_form &mdash; Hash</a></li>
+		
+			<li><a href="Backports.html#method-c-convert_all_arguments_to_path">::convert_all_arguments_to_path &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-convert_first_argument_to_path">::convert_first_argument_to_path &mdash; Backports</a></li>
+		
+			<li><a href="Random/MT19937.html#method-c-convert_seed">::convert_seed &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Backports.html#method-c-convert_to_path">::convert_to_path &mdash; Backports</a></li>
+		
+			<li><a href="ARGF.html#method-c-each_char">::each_char &mdash; ARGF</a></li>
+		
+			<li><a href="Dir.html#method-c-home">::home &mdash; Dir</a></li>
+		
+			<li><a href="BasicObject.html#method-c-inherited">::inherited &mdash; BasicObject</a></li>
+		
+			<li><a href="Math.html#method-c-log2">::log2 &mdash; Math</a></li>
+		
+			<li><a href="Math.html#method-c-log_with_optional_base">::log_with_optional_base &mdash; Math</a></li>
+		
+			<li><a href="Backports.html#method-c-make_block_optional">::make_block_optional &mdash; Backports</a></li>
+		
+			<li><a href="Dir.html#method-c-mktmpdir">::mktmpdir &mdash; Dir</a></li>
+		
+			<li><a href="Random/Implementation.html#method-c-new">::new &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-c-new">::new &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Enumerator/Yielder.html#method-c-new">::new &mdash; Enumerator::Yielder</a></li>
+		
+			<li><a href="Random.html#method-c-new_seed">::new_seed &mdash; Random</a></li>
+		
+			<li><a href="Backports.html#method-c-require_relative">::require_relative &mdash; Backports</a></li>
+		
+			<li><a href="Backports.html#method-c-require_relative_dir">::require_relative_dir &mdash; Backports</a></li>
+		
+			<li><a href="GC.html#method-c-stress">::stress &mdash; GC</a></li>
+		
+			<li><a href="GC.html#method-c-stress%3D">::stress= &mdash; GC</a></li>
+		
+			<li><a href="Backports.html#method-c-track_lambda">::track_lambda &mdash; Backports</a></li>
+		
+			<li><a href="IO.html#method-c-try_convert">::try_convert &mdash; IO</a></li>
+		
+			<li><a href="Regexp.html#method-c-try_convert">::try_convert &mdash; Regexp</a></li>
+		
+			<li><a href="String.html#method-c-try_convert">::try_convert &mdash; String</a></li>
+		
+			<li><a href="Hash.html#method-c-try_convert">::try_convert &mdash; Hash</a></li>
+		
+			<li><a href="Array.html#method-c-try_convert">::try_convert &mdash; Array</a></li>
+		
+			<li><a href="Regexp.html#method-c-union_with_array_argument">::union_with_array_argument &mdash; Regexp</a></li>
+		
+			<li><a href="Enumerator/Yielder.html#method-i-%3C%3C">#<< &mdash; Enumerator::Yielder</a></li>
+		
+			<li><a href="Symbol.html#method-i-%3C%3D%3E">#<=> &mdash; Symbol</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-%3D%3D">#== &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Kernel.html#method-i-__callee__">#__callee__ &mdash; Kernel</a></li>
+		
+			<li><a href="Kernel.html#method-i-__method__">#__method__ &mdash; Kernel</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-_rand_range">#_rand_range &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Module.html#method-i-alias_method_chain">#alias_method_chain &mdash; Module</a></li>
+		
+			<li><a href="String.html#method-i-ascii_only%3F">#ascii_only? &mdash; String</a></li>
+		
+			<li><a href="UnboundMethod.html#method-i-bind_with_additional_info">#bind_with_additional_info &mdash; UnboundMethod</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-bytes">#bytes &mdash; Random::Implementation</a></li>
+		
+			<li><a href="String.html#method-i-camelize">#camelize &mdash; String</a></li>
+		
+			<li><a href="Symbol.html#method-i-casecmp">#casecmp &mdash; Symbol</a></li>
+		
+			<li><a href="String.html#method-i-chr">#chr &mdash; String</a></li>
+		
+			<li><a href="Enumerable.html#method-i-chunk">#chunk &mdash; Enumerable</a></li>
+		
+			<li><a href="String.html#method-i-clear">#clear &mdash; String</a></li>
+		
+			<li><a href="String.html#method-i-codepoints">#codepoints &mdash; String</a></li>
+		
+			<li><a href="Array.html#method-i-combination">#combination &mdash; Array</a></li>
+		
+			<li><a href="String.html#method-i-constantize">#constantize &mdash; String</a></li>
+		
+			<li><a href="Enumerable.html#method-i-count">#count &mdash; Enumerable</a></li>
+		
+			<li><a href="Proc.html#method-i-curry">#curry &mdash; Proc</a></li>
+		
+			<li><a href="Enumerable.html#method-i-cycle">#cycle &mdash; Enumerable</a></li>
+		
+			<li><a href="Array.html#method-i-cycle">#cycle &mdash; Array</a></li>
+		
+			<li><a href="String.html#method-i-dasherize">#dasherize &mdash; String</a></li>
+		
+			<li><a href="Hash.html#method-i-default_proc%3D">#default_proc= &mdash; Hash</a></li>
+		
+			<li><a href="Kernel.html#method-i-define_singleton_method">#define_singleton_method &mdash; Kernel</a></li>
+		
+			<li><a href="String.html#method-i-demodulize">#demodulize &mdash; String</a></li>
+		
+			<li><a href="Fixnum.html#method-i-div">#div &mdash; Fixnum</a></li>
+		
+			<li><a href="Enumerable.html#method-i-drop">#drop &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-drop_while">#drop_while &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerator/Yielder.html#method-i-each">#each &mdash; Enumerator::Yielder</a></li>
+		
+			<li><a href="IO.html#method-i-each_char">#each_char &mdash; IO</a></li>
+		
+			<li><a href="String.html#method-i-each_char">#each_char &mdash; String</a></li>
+		
+			<li><a href="Enumerable.html#method-i-each_entry">#each_entry &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-each_with_index_with_optional_args_and_block">#each_with_index_with_optional_args_and_block &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-each_with_object">#each_with_object &mdash; Enumerable</a></li>
+		
+			<li><a href="String.html#method-i-end_with%3F">#end_with? &mdash; String</a></li>
+		
+			<li><a href="Enumerable.html#method-i-entries_with_optional_arguments">#entries_with_optional_arguments &mdash; Enumerable</a></li>
+		
+			<li><a href="Hash.html#method-i-eql%3F">#eql? &mdash; Hash</a></li>
+		
+			<li><a href="Binding.html#method-i-eval">#eval &mdash; Binding</a></li>
+		
+			<li><a href="Integer.html#method-i-even%3F">#even? &mdash; Integer</a></li>
+		
+			<li><a href="Array.html#method-i-extract_options%21">#extract_options! &mdash; Array</a></li>
+		
+			<li><a href="Fixnum.html#method-i-fdiv">#fdiv &mdash; Fixnum</a></li>
+		
+			<li><a href="Enumerable.html#method-i-find_index">#find_index &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-first">#first &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-flat_map">#flat_map &mdash; Enumerable</a></li>
+		
+			<li><a href="Array.html#method-i-flatten_with_optional_argument">#flatten_with_optional_argument &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-flatten_with_optional_argument%21">#flatten_with_optional_argument! &mdash; Array</a></li>
+		
+			<li><a href="Enumerable.html#method-i-group_by">#group_by &mdash; Enumerable</a></li>
+		
+			<li><a href="Hash.html#method-i-hash">#hash &mdash; Hash</a></li>
+		
+			<li><a href="Array.html#method-i-index_with_block">#index_with_block &mdash; Array</a></li>
+		
+			<li><a href="Enumerator.html#method-i-initialize_with_optional_block">#initialize_with_optional_block &mdash; Enumerator</a></li>
+		
+			<li><a href="Enumerable.html#method-i-inject_with_symbol">#inject_with_symbol &mdash; Enumerable</a></li>
+		
+			<li><a href="Random.html#method-i-inspect">#inspect &mdash; Random</a></li>
+		
+			<li><a href="Kernel.html#method-i-instance_exec">#instance_exec &mdash; Kernel</a></li>
+		
+			<li><a href="Module.html#method-i-instance_method_with_additional_info">#instance_method_with_additional_info &mdash; Module</a></li>
+		
+			<li><a href="Enumerable.html#method-i-join">#join &mdash; Enumerable</a></li>
+		
+			<li><a href="Hash.html#method-i-keep_if">#keep_if &mdash; Hash</a></li>
+		
+			<li><a href="Array.html#method-i-keep_if">#keep_if &mdash; Array</a></li>
+		
+			<li><a href="Proc.html#method-i-lambda%3F">#lambda? &mdash; Proc</a></li>
+		
+			<li><a href="Kernel.html#method-i-lambda_with_lambda_tracking">#lambda_with_lambda_tracking &mdash; Kernel</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-left">#left &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-left">#left &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Kernel.html#method-i-loop_with_stop_iteration">#loop_with_stop_iteration &mdash; Kernel</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-marshal_dump">#marshal_dump &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-marshal_dump">#marshal_dump &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-marshal_load">#marshal_load &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-marshal_load">#marshal_load &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-mask_32_bits">#mask_32_bits &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Enumerable.html#method-i-max_by">#max_by &mdash; Enumerable</a></li>
+		
+			<li><a href="Kernel.html#method-i-method_with_additional_info">#method_with_additional_info &mdash; Kernel</a></li>
+		
+			<li><a href="Enumerable.html#method-i-min_by">#min_by &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-minmax">#minmax &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-minmax_by">#minmax_by &mdash; Enumerable</a></li>
+		
+			<li><a href="Module.html#method-i-module_exec">#module_exec &mdash; Module</a></li>
+		
+			<li><a href="Enumerable/Enumerator.html#method-i-next">#next &mdash; Enumerable::Enumerator</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-next_state">#next_state &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Enumerable.html#method-i-none%3F">#none? &mdash; Enumerable</a></li>
+		
+			<li><a href="Integer.html#method-i-odd%3F">#odd? &mdash; Integer</a></li>
+		
+			<li><a href="Enumerable.html#method-i-one%3F">#one? &mdash; Enumerable</a></li>
+		
+			<li><a href="String.html#method-i-ord">#ord &mdash; String</a></li>
+		
+			<li><a href="Integer.html#method-i-ord">#ord &mdash; Integer</a></li>
+		
+			<li><a href="String.html#method-i-partition_with_new_meaning">#partition_with_new_meaning &mdash; String</a></li>
+		
+			<li><a href="Array.html#method-i-permutation">#permutation &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-pop_with_optional_argument">#pop_with_optional_argument &mdash; Array</a></li>
+		
+			<li><a href="Integer.html#method-i-pred">#pred &mdash; Integer</a></li>
+		
+			<li><a href="Kernel.html#method-i-proc_with_lambda_tracking">#proc_with_lambda_tracking &mdash; Kernel</a></li>
+		
+			<li><a href="Array.html#method-i-product">#product &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-product_with_block">#product_with_block &mdash; Array</a></li>
+		
+			<li><a href="Kernel.html#method-i-public_method">#public_method &mdash; Kernel</a></li>
+		
+			<li><a href="Kernel.html#method-i-public_send">#public_send &mdash; Kernel</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-rand">#rand &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-random_32_bits">#random_32_bits &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-random_bytes">#random_bytes &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-random_float">#random_float &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-random_integer">#random_integer &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Array.html#method-i-recursively_flatten_finite">#recursively_flatten_finite &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-repeated_combination">#repeated_combination &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-repeated_permutation">#repeated_permutation &mdash; Array</a></li>
+		
+			<li><a href="Kernel.html#method-i-require_relative">#require_relative &mdash; Kernel</a></li>
+		
+			<li><a href="Kernel.html#method-i-returning">#returning &mdash; Kernel</a></li>
+		
+			<li><a href="Enumerable.html#method-i-reverse_each">#reverse_each &mdash; Enumerable</a></li>
+		
+			<li><a href="Hash.html#method-i-reverse_merge">#reverse_merge &mdash; Hash</a></li>
+		
+			<li><a href="Hash.html#method-i-reverse_merge%21">#reverse_merge! &mdash; Hash</a></li>
+		
+			<li><a href="Enumerable/Enumerator.html#method-i-rewind">#rewind &mdash; Enumerable::Enumerator</a></li>
+		
+			<li><a href="Array.html#method-i-rindex_with_block">#rindex_with_block &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-rotate">#rotate &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-rotate%21">#rotate! &mdash; Array</a></li>
+		
+			<li><a href="String.html#method-i-rpartition">#rpartition &mdash; String</a></li>
+		
+			<li><a href="Array.html#method-i-sample">#sample &mdash; Array</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-seed%3D">#seed= &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Hash.html#method-i-select%21">#select! &mdash; Hash</a></li>
+		
+			<li><a href="Array.html#method-i-select%21">#select! &mdash; Array</a></li>
+		
+			<li><a href="Fixnum.html#method-i-self">#self &mdash; Fixnum</a></li>
+		
+			<li><a href="Array.html#method-i-shift_with_optional_argument">#shift_with_optional_argument &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-shuffle">#shuffle &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-shuffle%21">#shuffle! &mdash; Array</a></li>
+		
+			<li><a href="Kernel.html#method-i-singleton_class">#singleton_class &mdash; Kernel</a></li>
+		
+			<li><a href="File.html#method-i-size">#size &mdash; File</a></li>
+		
+			<li><a href="Enumerable.html#method-i-slice_before">#slice_before &mdash; Enumerable</a></li>
+		
+			<li><a href="Array.html#method-i-sort_by%21">#sort_by! &mdash; Array</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-srand">#srand &mdash; Random::Implementation</a></li>
+		
+			<li><a href="String.html#method-i-start_with%3F">#start_with? &mdash; String</a></li>
+		
+			<li><a href="Random/Implementation.html#method-i-state">#state &mdash; Random::Implementation</a></li>
+		
+			<li><a href="Random/MT19937.html#method-i-state_as_bignum">#state_as_bignum &mdash; Random::MT19937</a></li>
+		
+			<li><a href="Hash.html#method-i-stringify_keys">#stringify_keys &mdash; Hash</a></li>
+		
+			<li><a href="Hash.html#method-i-stringify_keys%21">#stringify_keys! &mdash; Hash</a></li>
+		
+			<li><a href="Enumerable.html#method-i-sum">#sum &mdash; Enumerable</a></li>
+		
+			<li><a href="Hash.html#method-i-symbolize_keys">#symbolize_keys &mdash; Hash</a></li>
+		
+			<li><a href="Hash.html#method-i-symbolize_keys%21">#symbolize_keys! &mdash; Hash</a></li>
+		
+			<li><a href="Enumerable.html#method-i-take">#take &mdash; Enumerable</a></li>
+		
+			<li><a href="Enumerable.html#method-i-take_while">#take_while &mdash; Enumerable</a></li>
+		
+			<li><a href="Kernel.html#method-i-tap">#tap &mdash; Kernel</a></li>
+		
+			<li><a href="Enumerable.html#method-i-to_a_with_optional_arguments">#to_a_with_optional_arguments &mdash; Enumerable</a></li>
+		
+			<li><a href="Symbol.html#method-i-to_proc">#to_proc &mdash; Symbol</a></li>
+		
+			<li><a href="Method.html#method-i-to_proc_with_lambda_tracking">#to_proc_with_lambda_tracking &mdash; Method</a></li>
+		
+			<li><a href="Kernel.html#method-i-try">#try &mdash; Kernel</a></li>
+		
+			<li><a href="Method.html#method-i-unbind_with_additional_info">#unbind_with_additional_info &mdash; Method</a></li>
+		
+			<li><a href="String.html#method-i-underscore">#underscore &mdash; String</a></li>
+		
+			<li><a href="Array.html#method-i-uniq_with_block">#uniq_with_block &mdash; Array</a></li>
+		
+			<li><a href="Array.html#method-i-uniq_with_block%21">#uniq_with_block! &mdash; Array</a></li>
+		
+			<li><a href="String.html#method-i-upto_with_exclusive">#upto_with_exclusive &mdash; String</a></li>
+		
+			<li><a href="Enumerator/Yielder.html#method-i-yield">#yield &mdash; Enumerator::Yielder</a></li>
+		
+	</ul>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
