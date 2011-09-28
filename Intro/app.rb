@@ -7,13 +7,7 @@ require 'sinatra/reloader' if development?
 set :public, File.dirname(__FILE__) + '/public'
 
 get '/' do
-  images = get_images.values
-  if images.length > 0
-    image = images[0]
-    redirect "/images/#{image[:id]}"
-  else
-    redirect "/add"
-  end
+  erb :index
 end
 
 get '/add' do
