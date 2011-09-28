@@ -1,0 +1,25 @@
+        var images = [];
+        images.push({
+          id: 1,
+          url: "http://flickholdr.com/300/200/tools",
+          name: "a rusty wrench",
+          description: "a close up of an old, rusty wrench"
+        });
+        images.push({
+          id: 2,
+          url: "http://flickholdr.com/300/200/island",
+          name: "a drop of water",
+          description: "with a purple flower behind it"
+        });
+        images.push({
+          id: 3,
+          url: "http://flickholdr.com/300/200/mountain",
+          name: "a tree and a mountain",
+          description: "with some clouds about the mountain"
+        });
+        images.push({
+          id: 4,
+          url: "http://flickholdr.com/300/200/tree",
+          name: "some islands",
+          description: "in the sunset"
+        });

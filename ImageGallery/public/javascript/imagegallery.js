@@ -1,12 +1,14 @@
 ImageGallery = {};
 
 ImageGallery.Image = Backbone.Model.extend({
-  urlRoot: "/images",
-
   initialize: function(){
     var memento = new Backbone.Memento(this, {ignore: ["selected"]});
     _.extend(this, memento);
+  },
 
+  urlRoot: "/images",
+
+  initialize: function(){
     var commentData = this.get("comments");
     this.comments = new ImageGallery.Comments(commentData);
     this.unset("comments");
@@ -322,10 +324,6 @@ ImageGallery.ImageView = ImageGallery.jQueryView.extend({
   },
 
   onRender: function(){
-    this.renderComments();
-  },
-
-  renderComments: function(){
     var commentsView = new ImageGallery.ImageCommentsView({
       model: this.model
     });
@@ -486,8 +484,7 @@ ImageGallery.ImageNotFoundView = Backbone.View.extend({
   }
 });
 
-ImageGallery.MainView = function(initialView){
-  this.view = initialView;
+ImageGallery.MainView = function(){
   var el = $("#main");
 
   var openView = function(view){
@@ -606,26 +603,14 @@ ImageGallery.Router = Backbone.Router.extend({
   }
 });
 
-ImageGallery.App = function(initialImages, imageId){
+ImageGallery.App = function(initialImages){
   var vent = _.extend({}, Backbone.Events);
 
   var images = new ImageGallery.Images(initialImages, {
     vent: vent
   });
 
-  var initialView;
-  if (imageId >= 0){
-    var image = images.get(imageId);
-    image.select();
-    var el = $(".image-view", "#main");
-    initialView = new ImageGallery.ImageView({
-      el: el,
-      model: image,
-      vent: vent
-    });
-    initialView.renderComments();
-  }
-  var mainView = new ImageGallery.MainView(initialView);
+  var mainView = new ImageGallery.MainView();
 
   var controller = new ImageGallery.Controller(images, mainView, vent);
 
@@ -637,7 +622,7 @@ ImageGallery.App = function(initialImages, imageId){
 
   var showImage = function(image){
     controller.showImage(image);
-    router.navigate("/images/" + image.id);
+    router.navigate("/image/" + image.id);
   }
 
   vent.bind("image:selected", showImage, this);
@@ -670,6 +655,6 @@ ImageGallery.App = function(initialImages, imageId){
       vent: vent
     });
 
-    Backbone.history.start({pushState: true});
+    Backbone.history.start();
   }
 }

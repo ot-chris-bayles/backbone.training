@@ -1,28 +1,30 @@
-<h1>Edit Image</h1>
-<ul id="edit-image">
-  <li id="image-url">
-    <label for="image-url">Image Url: </label>
-    <input type="text" id="url" name="url" disabled="disabled" value="<%= image[:url] %>">
-    <div id="delete-image">
-      <a href="/delete/<%= image[:id] %>">Delete</a>
-    </div>
-  </li>
-  <li>
-    <label for="preview">Preview: </label>
-    <div id="image-preview">
-      <img id="preview" src="<%= image[:url] %>">
-    </div>
-  </li>
-  <li>
-    <label for="name">Image Name: </label>
-    <input type="text" id="name" name="name" value="<%= image[:name] %>">
-  </li>
-  <li>
-    <label for="description">Description: </label>
-    <textarea id="description" name="description"><%= image[:description] %></textarea>
-  </li>
-  <li class="save-cancel">
-    <a href="/" id="cancel">cancel</a>
-    <input type="submit" id="save" name="Save" value="Save">
-  </li>
-</ul>
+<script id="edit-image-template" type="text/x-jquery-tmpl">
+  <h1>Edit Image</h1>
+  <ul id="edit-image">
+    <li id="image-url">
+      <label for="image-url">Image Url: </label>
+      <input type="text" id="url" disabled="disabled">
+      <div id="delete-image">
+        <a href="#">Delete</a>
+      </div>
+    </li>
+    <li>
+      <label for="preview">Preview: </label>
+      <div id="image-preview">
+        <img id="preview" data-bind="src url; displayed url">
+      </div>
+    </li>
+    <li>
+      <label for="name">Image Name: </label>
+      <input type="text" id="name">
+    </li>
+    <li>
+      <label for="description">Description: </label>
+      <textarea id="description"></textarea>
+    </li>
+    <li class="save-cancel">
+      <a href="#" id="cancel">cancel</a>
+      <button id="save">Save</button>
+    </li>
+  </ul>
+</script>
