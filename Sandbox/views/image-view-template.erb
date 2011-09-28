@@ -1,0 +1,10 @@
+<script id="image-view-template" type="text/x-jquery-tmpl">
+  <h2 data-bind="text name">${name}</h2>
+  <div class="nav-next"><a href="#">&lt;</a></div>
+  <div class="nav-previous"><a href="#">&gt;</a></div>
+  <img src="${url}" width="300" height="200" alt="${description}" data-bind="src url">
+  <div class="image-footer">
+    <div class="description" data-bind="text description">${description}</div>
+    <div class="edit"><a href="#">Edit</a></div>
+  </div>
+</script>
