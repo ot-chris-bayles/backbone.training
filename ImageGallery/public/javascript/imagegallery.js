@@ -577,7 +577,7 @@ ImageGallery.Controller = function(images, mainView, vent){
 ImageGallery.Router = Backbone.Router.extend({
   routes: {
     "": "home",
-    "/image/:id": "showImage",
+    "/images/:id": "showImage",
     "/add": "addImage",
     "/edit/:id": "editImage"
   },
@@ -622,7 +622,7 @@ ImageGallery.App = function(initialImages){
 
   var showImage = function(image){
     controller.showImage(image);
-    router.navigate("/image/" + image.id);
+    router.navigate("/images/" + image.id);
   }
 
   vent.bind("image:selected", showImage, this);
