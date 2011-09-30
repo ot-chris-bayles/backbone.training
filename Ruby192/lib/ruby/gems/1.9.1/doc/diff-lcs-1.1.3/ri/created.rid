@@ -1,0 +1,16 @@
+Thu, 29 Sep 2011 21:16:56 -0500
+lib/diff/lcs/array.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/block.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/callbacks.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/change.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/htmldiff.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/hunk.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/ldiff.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs/string.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff/lcs.rb	Thu, 29 Sep 2011 21:16:45 -0500
+lib/diff-lcs.rb	Thu, 29 Sep 2011 21:16:45 -0500
+Manifest.txt	Thu, 29 Sep 2011 21:16:45 -0500
+docs/COPYING.txt	Thu, 29 Sep 2011 21:16:45 -0500
+History.rdoc	Thu, 29 Sep 2011 21:16:45 -0500
+License.rdoc	Thu, 29 Sep 2011 21:16:45 -0500
+README.rdoc	Thu, 29 Sep 2011 21:16:45 -0500

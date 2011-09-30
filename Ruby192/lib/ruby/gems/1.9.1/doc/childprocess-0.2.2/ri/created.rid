@@ -1,0 +1,23 @@
+Thu, 29 Sep 2011 21:17:01 -0500
+lib/childprocess/abstract_io.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/abstract_process.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/errors.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/ironruby/process.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/ironruby.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/jruby/io.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/jruby/process.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/jruby/redirector.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/jruby.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/unix/io.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/unix/process.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/unix.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/version.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/api.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/constants.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/functions.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/handle.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/io.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/process.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows/structs.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess/windows.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/childprocess.rb	Thu, 29 Sep 2011 21:16:49 -0500

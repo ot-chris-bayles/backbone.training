@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Zip</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/zip/zip_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zip.rb">lib/zip/zip.rb</a></li>
+					
+						<li><a href="./lib/zip/zipfilesystem_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zipfilesystem.rb">lib/zip/zipfilesystem.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/Compressor.html">Zip::Compressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/Decompressor.html">Zip::Decompressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/Deflater.html">Zip::Deflater</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/Inflater.html">Zip::Inflater</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/NullCompressor.html">Zip::NullCompressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/NullDecompressor.html">Zip::NullDecompressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/NullInputStream.html">Zip::NullInputStream</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/PassThruCompressor.html">Zip::PassThruCompressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/PassThruDecompressor.html">Zip::PassThruDecompressor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipEntrySet.html">Zip::ZipEntrySet</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipError.html">Zip::ZipError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipFile.html">Zip::ZipFile</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-c_dir_length">#c_dir_length</a></li>
+					
+					<li><a href="#method-i-c_dir_size">#c_dir_size</a></li>
+					
+					<li><a href="#method-i-create">#create</a></li>
+					
+					<li><a href="#method-i-length">#length</a></li>
+					
+					<li><a href="#method-i-local_length">#local_length</a></li>
+					
+					<li><a href="#method-i-local_size">#local_size</a></li>
+					
+					<li><a href="#method-i-size">#size</a></li>
+					
+					<li><a href="#method-i-to_c_dir_bin">#to_c_dir_bin</a></li>
+					
+					<li><a href="#method-i-to_local_bin">#to_local_bin</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Zip.html">Zip</a></li>
+				
+					<li><a href="./Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+				
+					<li><a href="./Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+				
+					<li><a href="./Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+				
+					<li><a href="./Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+				
+					<li><a href="./Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+				
+					<li><a href="./Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+				
+					<li><a href="./Zip/ZipError.html">Zip::ZipError</a></li>
+				
+					<li><a href="./Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+				
+					<li><a href="./Zip/ZipExtraField/Generic.html">Zip::ZipExtraField::Generic</a></li>
+				
+					<li><a href="./Zip/ZipExtraField/IUnix.html">Zip::ZipExtraField::IUnix</a></li>
+				
+					<li><a href="./Zip/ZipExtraField/UniversalTime.html">Zip::ZipExtraField::UniversalTime</a></li>
+				
+					<li><a href="./Zip/ZipFile.html">Zip::ZipFile</a></li>
+				
+					<li><a href="./Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+				
+					<li><a href="./Zip/ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+				
+					<li><a href="./Zip/ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+				
+					<li><a href="./Zip/ZipFileSystem/ZipFsFile/ZipFsStat.html">Zip::ZipFileSystem::ZipFsFile::ZipFsStat</a></li>
+				
+					<li><a href="./Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+				
+					<li><a href="./Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+				
+					<li><a href="./Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+				
+					<li><a href="./Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+				
+					<li><a href="./Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+				
+					<li><a href="./IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+					<li><a href="./IOExtras/AbstractOutputStream.html">IOExtras::AbstractOutputStream</a></li>
+				
+					<li><a href="./IOExtras/FakeIO.html">IOExtras::FakeIO</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Zip</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RUBY_MINOR_VERSION">RUBY_MINOR_VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RUNNING_ON_WINDOWS">RUNNING_ON_WINDOWS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="EMPTY_FILE_RETURNS_EMPTY_STRING_FIRST">EMPTY_FILE_RETURNS_EMPTY_STRING_FIRST</a></dt>
+				
+				<dd class="description"><p>
+Ruby 1.7.x compatibility In ruby 1.6.x and 1.8.0 reading from an empty
+stream returns  an empty string the first time and then nil.
+</p>
+<pre>
+ not so in 1.7.x</pre></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="c-dir-length-method" class="method-detail ">
+				<a name="method-i-c_dir_length"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">c_dir_length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="c-dir-length-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1862</span>
+1862:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">c_dir_length</span>
+1863:       <span class="ruby-identifier">to_c_dir_bin</span>.<span class="ruby-identifier">length</span>
+1864:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Zip.html#method-i-c_dir_size">c_dir_size</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="c-dir-size-method" class="method-detail method-alias">
+				<a name="method-i-c_dir_size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">c_dir_size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Zip.html#method-i-c_dir_length">c_dir_length</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="create-method" class="method-detail ">
+				<a name="method-i-create"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="create-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1831</span>
+1831:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span>)
+1832:       <span class="ruby-identifier">field_class</span> = <span class="ruby-keyword kw">nil</span>
+1833:       <span class="ruby-constant">ID_MAP</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+1834:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">name</span>
+1835:           <span class="ruby-identifier">field_class</span> = <span class="ruby-identifier">klass</span>
+1836:           <span class="ruby-keyword kw">break</span>
+1837:         <span class="ruby-keyword kw">end</span>
+1838:       }
+1839:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">field_class</span>
+1840:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipError</span>, <span class="ruby-node">&quot;Unknown extra field '#{name}'&quot;</span>
+1841:       <span class="ruby-keyword kw">end</span>
+1842:       <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">field_class</span>.<span class="ruby-identifier">new</span>()
+1843:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="length-method" class="method-detail method-alias">
+				<a name="method-i-length"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Zip.html#method-i-local_length">local_length</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="local-length-method" class="method-detail ">
+				<a name="method-i-local_length"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">local_length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="local-length-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1865</span>
+1865:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">local_length</span>
+1866:       <span class="ruby-identifier">to_local_bin</span>.<span class="ruby-identifier">length</span>
+1867:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Zip.html#method-i-local_size">local_size</a>, <a href="Zip.html#method-i-length">length</a>, <a href="Zip.html#method-i-size">size</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="local-size-method" class="method-detail method-alias">
+				<a name="method-i-local_size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">local_size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Zip.html#method-i-local_length">local_length</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail method-alias">
+				<a name="method-i-size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Zip.html#method-i-local_length">local_length</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="to-c-dir-bin-method" class="method-detail ">
+				<a name="method-i-to_c_dir_bin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_c_dir_bin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-c-dir-bin-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1854</span>
+1854:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_c_dir_bin</span>
+1855:       <span class="ruby-identifier">s</span> = <span class="ruby-value str">&quot;&quot;</span>
+1856:       <span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+1857:         <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_c_dir_bin</span>
+1858:       }
+1859:       <span class="ruby-identifier">s</span>
+1860:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-local-bin-method" class="method-detail ">
+				<a name="method-i-to_local_bin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_local_bin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-local-bin-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1845</span>
+1845:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_local_bin</span>
+1846:       <span class="ruby-identifier">s</span> = <span class="ruby-value str">&quot;&quot;</span>
+1847:       <span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+1848:         <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_local_bin</span>
+1849:       }
+1850:       <span class="ruby-identifier">s</span>
+1851:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Zip.html#method-i-to_s">to_s</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail method-alias">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Zip.html#method-i-to_local_bin">to_local_bin</a>
+				</div>
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

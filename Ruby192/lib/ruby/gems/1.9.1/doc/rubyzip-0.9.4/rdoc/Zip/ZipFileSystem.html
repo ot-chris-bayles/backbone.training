@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Zip::ZipFileSystem</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/zip/zipfilesystem_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zipfilesystem.rb">lib/zip/zipfilesystem.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="ZipFileSystem/ZipFileNameMapper.html">Zip::ZipFileSystem::ZipFileNameMapper</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ZipFileSystem/ZipFsDirIterator.html">Zip::ZipFileSystem::ZipFsDirIterator</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-dir">#dir</a></li>
+					
+					<li><a href="#method-i-file">#file</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Zip.html">Zip</a></li>
+				
+					<li><a href="../Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+				
+					<li><a href="../Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+				
+					<li><a href="../Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+				
+					<li><a href="../Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+				
+					<li><a href="../Zip/ZipError.html">Zip::ZipError</a></li>
+				
+					<li><a href="../Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/Generic.html">Zip::ZipExtraField::Generic</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/IUnix.html">Zip::ZipExtraField::IUnix</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/UniversalTime.html">Zip::ZipExtraField::UniversalTime</a></li>
+				
+					<li><a href="../Zip/ZipFile.html">Zip::ZipFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile/ZipFsStat.html">Zip::ZipFileSystem::ZipFsFile::ZipFsStat</a></li>
+				
+					<li><a href="../Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+				
+					<li><a href="../Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+				
+					<li><a href="../Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+				
+					<li><a href="../Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+				
+					<li><a href="../Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractOutputStream.html">IOExtras::AbstractOutputStream</a></li>
+				
+					<li><a href="../IOExtras/FakeIO.html">IOExtras::FakeIO</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Zip::ZipFileSystem</h1>
+
+		<div id="description">
+			<p>
+The <a href="ZipFileSystem.html">ZipFileSystem</a> API provides an API for
+accessing entries in  a zip archive that is similar to ruby&#8217;s builtin
+File and Dir  classes.
+</p>
+<p>
+Requiring &#8216;zip/zipfilesystem&#8217; includes this module in <a
+href="ZipFile.html">ZipFile</a> making the methods in this module available
+on <a href="ZipFile.html">ZipFile</a> objects.
+</p>
+<p>
+Using this API the following example creates a new zip file 
+<tt>my.zip</tt> containing a normal entry with the name <tt>first.txt</tt>,
+a directory entry named <tt>mydir</tt> and finally another normal entry
+named <tt>second.txt</tt>
+</p>
+<pre>
+  require 'zip/zipfilesystem'
+  
+  Zip::ZipFile.open(&quot;my.zip&quot;, Zip::ZipFile::CREATE) {
+    |zipfile|
+    zipfile.file.open(&quot;first.txt&quot;, &quot;w&quot;) { |f| f.puts &quot;Hello world&quot; }
+    zipfile.dir.mkdir(&quot;mydir&quot;)
+    zipfile.file.open(&quot;mydir/second.txt&quot;, &quot;w&quot;) { |f| f.puts &quot;Hello again&quot; }
+  }
+</pre>
+<p>
+Reading is as easy as writing, as the following example shows. The  example
+writes the contents of <tt>first.txt</tt> from zip archive <tt>my.zip</tt>
+to standard out.
+</p>
+<pre>
+  require 'zip/zipfilesystem'
+  
+  Zip::ZipFile.open(&quot;my.zip&quot;) {
+    |zipfile|
+    puts zipfile.file.read(&quot;first.txt&quot;)
+  }</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="dir-method" class="method-detail ">
+				<a name="method-i-dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dir</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="ZipFileSystem/ZipFsDir.html">ZipFsDir</a> which is much
+like ruby&#8217;s builtin Dir (class) object, except it works on the <a
+href="ZipFile.html">ZipFile</a> on which this method is invoked
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/zip/zipfilesystem.rb, line 50</span>
+50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dir</span>
+51:       <span class="ruby-ivar">@zipFsDir</span>
+52:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-method" class="method-detail ">
+				<a name="method-i-file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="ZipFileSystem/ZipFsFile.html">ZipFsFile</a> which is
+much like ruby&#8217;s builtin File (class) object, except it works on the
+<a href="ZipFile.html">ZipFile</a> on which this method is invoked
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="file-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/zip/zipfilesystem.rb, line 57</span>
+57:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file</span>
+58:       <span class="ruby-ivar">@zipFsFile</span>
+59:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

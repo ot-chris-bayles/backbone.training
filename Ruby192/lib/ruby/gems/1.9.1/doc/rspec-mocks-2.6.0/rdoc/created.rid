@@ -1,0 +1,24 @@
+Thu, 29 Sep 2011 21:17:15 -0500
+lib/rspec/mocks/any_instance.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/argument_expectation.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/argument_matchers.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/errors.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/error_generator.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/extensions/instance_exec.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/extensions/marshal.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/extensions/psych.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/framework.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/message_expectation.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/methods.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/method_double.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/mock.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/order_group.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/proxy.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/serialization.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/space.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/spec_methods.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/standalone.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks/version.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/rspec/mocks.rb	Thu, 29 Sep 2011 21:16:46 -0500
+lib/spec/mocks.rb	Thu, 29 Sep 2011 21:16:46 -0500
+README.md	Thu, 29 Sep 2011 21:16:46 -0500

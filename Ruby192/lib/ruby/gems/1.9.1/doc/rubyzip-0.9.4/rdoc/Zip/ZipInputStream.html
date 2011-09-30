@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Zip::ZipInputStream</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/zip/zip_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zip.rb">lib/zip/zip.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-open">::open</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-eof">#eof</a></li>
+					
+					<li><a href="#method-i-eof%3F">#eof?</a></li>
+					
+					<li><a href="#method-i-get_next_entry">#get_next_entry</a></li>
+					
+					<li><a href="#method-i-input_finished%3F">#input_finished?</a></li>
+					
+					<li><a href="#method-i-open_entry">#open_entry</a></li>
+					
+					<li><a href="#method-i-produce_input">#produce_input</a></li>
+					
+					<li><a href="#method-i-rewind">#rewind</a></li>
+					
+					<li><a href="#method-i-sysread">#sysread</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Zip.html">Zip</a></li>
+				
+					<li><a href="../Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+				
+					<li><a href="../Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+				
+					<li><a href="../Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+				
+					<li><a href="../Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+				
+					<li><a href="../Zip/ZipError.html">Zip::ZipError</a></li>
+				
+					<li><a href="../Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/Generic.html">Zip::ZipExtraField::Generic</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/IUnix.html">Zip::ZipExtraField::IUnix</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/UniversalTime.html">Zip::ZipExtraField::UniversalTime</a></li>
+				
+					<li><a href="../Zip/ZipFile.html">Zip::ZipFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile/ZipFsStat.html">Zip::ZipFileSystem::ZipFsFile::ZipFsStat</a></li>
+				
+					<li><a href="../Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+				
+					<li><a href="../Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+				
+					<li><a href="../Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+				
+					<li><a href="../Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+				
+					<li><a href="../Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractOutputStream.html">IOExtras::AbstractOutputStream</a></li>
+				
+					<li><a href="../IOExtras/FakeIO.html">IOExtras::FakeIO</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Zip::ZipInputStream</h1>
+
+		<div id="description">
+			<p>
+<a href="ZipInputStream.html">ZipInputStream</a> is the basic class for
+reading zip entries in a  zip file. It is possible to create a <a
+href="ZipInputStream.html">ZipInputStream</a> object directly,  passing the
+zip file name to the constructor, but more often than not  the <a
+href="ZipInputStream.html">ZipInputStream</a> will be obtained from a <a
+href="ZipFile.html">ZipFile</a> (perhaps using the  <a
+href="ZipFileSystem.html">ZipFileSystem</a> interface) object for a
+particular entry in the zip  archive.
+</p>
+<p>
+A <a href="ZipInputStream.html">ZipInputStream</a> inherits <a
+href="../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a>
+in order to provide an IO-like interface for reading from a single zip 
+entry. Beyond methods for mimicking an IO-object it contains  the method <a
+href="ZipInputStream.html#method-i-get_next_entry">get_next_entry</a> for
+iterating through the entries of  an archive. <a
+href="ZipInputStream.html#method-i-get_next_entry">get_next_entry</a>
+returns a <a href="ZipEntry.html">ZipEntry</a> object that describes the
+zip entry the <a href="ZipInputStream.html">ZipInputStream</a> is currently
+reading from.
+</p>
+<p>
+Example that creates a zip archive with <a
+href="ZipOutputStream.html">ZipOutputStream</a> and reads it  back again
+with a <a href="ZipInputStream.html">ZipInputStream</a>.
+</p>
+<pre>
+  require 'zip/zip'
+  
+  Zip::ZipOutputStream::open(&quot;my.zip&quot;) { 
+    |io|
+  
+    io.put_next_entry(&quot;first_entry.txt&quot;)
+    io.write &quot;Hello world!&quot;
+  
+    io.put_next_entry(&quot;adir/first_entry.txt&quot;)
+    io.write &quot;Hello again!&quot;
+  }
+
+  
+  Zip::ZipInputStream::open(&quot;my.zip&quot;) {
+    |io|
+  
+    while (entry = io.get_next_entry)
+      puts &quot;Contents of #{entry.name}: '#{io.read}'&quot;
+    end
+  }
+</pre>
+<p>
+java.util.zip.ZipInputStream is the original inspiration for this  class.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(filename, offset = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Opens the indicated zip file. An exception is thrown if the specified
+offset in the specified filename is not a local zip entry header.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">offset</span> = <span class="ruby-value">0</span>)
+84:       <span class="ruby-keyword kw">super</span>()
+85:       <span class="ruby-ivar">@archiveIO</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-value str">&quot;rb&quot;</span>)
+86:       <span class="ruby-ivar">@archiveIO</span>.<span class="ruby-identifier">seek</span>(<span class="ruby-identifier">offset</span>, <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>)
+87:       <span class="ruby-ivar">@decompressor</span> = <span class="ruby-constant">NullDecompressor</span>.<span class="ruby-identifier">instance</span>
+88:       <span class="ruby-ivar">@currentEntry</span> = <span class="ruby-keyword kw">nil</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open-method" class="method-detail ">
+				<a name="method-c-open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as # but if a block is passed the opened stream is passed to the block
+and closed when the block returns.    
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 98</span>
+ 98:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">ZipInputStream</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>)
+ 99:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">new</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+100:       
+101:       <span class="ruby-identifier">zio</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">filename</span>)
+102:       <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">zio</span>
+103:     <span class="ruby-keyword kw">ensure</span>
+104:       <span class="ruby-identifier">zio</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">zio</span>
+105:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 91</span>
+91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+92:       <span class="ruby-ivar">@archiveIO</span>.<span class="ruby-identifier">close</span>
+93:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eof-method" class="method-detail ">
+				<a name="method-i-eof"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eof</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="eof-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 132</span>
+132:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eof</span>
+133:       <span class="ruby-ivar">@outputBuffer</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@decompressor</span>.<span class="ruby-identifier">eof</span>
+134:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="ZipInputStream.html#method-i-eof%3F">eof?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="eof--method" class="method-detail method-alias">
+				<a name="method-i-eof%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eof?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="ZipInputStream.html#method-i-eof">eof</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="get-next-entry-method" class="method-detail ">
+				<a name="method-i-get_next_entry"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_next_entry</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="ZipEntry.html">ZipEntry</a> object. It is necessary to
+call this method on a newly created <a
+href="ZipInputStream.html">ZipInputStream</a> before reading from  the
+first entry in the archive. Returns nil when there are  no more entries.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-next-entry-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 112</span>
+112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_next_entry</span>
+113:       <span class="ruby-ivar">@archiveIO</span>.<span class="ruby-identifier">seek</span>(<span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">next_header_offset</span>, 
+114:                       <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@currentEntry</span>
+115:       <span class="ruby-identifier">open_entry</span>
+116:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rewind-method" class="method-detail ">
+				<a name="method-i-rewind"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rewind</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Rewinds the stream to the beginning of the current entry
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rewind-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 119</span>
+119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rewind</span>
+120:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">nil?</span>
+121:       <span class="ruby-ivar">@lineno</span> = <span class="ruby-value">0</span>
+122:       <span class="ruby-ivar">@archiveIO</span>.<span class="ruby-identifier">seek</span>(<span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">localHeaderOffset</span>, 
+123:                       <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>)
+124:       <span class="ruby-identifier">open_entry</span>
+125:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sysread-method" class="method-detail ">
+				<a name="method-i-sysread"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sysread</span><span
+						class="method-args">(numberOfBytes = nil, buf = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Modeled after IO.sysread
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sysread-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 128</span>
+128:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sysread</span>(<span class="ruby-identifier">numberOfBytes</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">buf</span> = <span class="ruby-keyword kw">nil</span>)
+129:       <span class="ruby-ivar">@decompressor</span>.<span class="ruby-identifier">sysread</span>(<span class="ruby-identifier">numberOfBytes</span>, <span class="ruby-identifier">buf</span>)
+130:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="input-finished--method" class="method-detail ">
+				<a name="method-i-input_finished%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">input_finished?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="input-finished--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 160</span>
+160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">input_finished?</span>
+161:       <span class="ruby-ivar">@decompressor</span>.<span class="ruby-identifier">input_finished?</span>
+162:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open-entry-method" class="method-detail ">
+				<a name="method-i-open_entry"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open_entry</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open-entry-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 139</span>
+139:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_entry</span>
+140:       <span class="ruby-ivar">@currentEntry</span> = <span class="ruby-constant">ZipEntry</span>.<span class="ruby-identifier">read_local_entry</span>(<span class="ruby-ivar">@archiveIO</span>)
+141:       <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@currentEntry</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>) 
+142:         <span class="ruby-ivar">@decompressor</span> = <span class="ruby-constant">NullDecompressor</span>.<span class="ruby-identifier">instance</span>
+143:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">compression_method</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ZipEntry</span><span class="ruby-operator">::</span><span class="ruby-constant">STORED</span>
+144:         <span class="ruby-ivar">@decompressor</span> = <span class="ruby-constant">PassThruDecompressor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@archiveIO</span>, 
+145:                                                  <span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">size</span>)
+146:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@currentEntry</span>.<span class="ruby-identifier">compression_method</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ZipEntry</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFLATED</span>
+147:         <span class="ruby-ivar">@decompressor</span> = <span class="ruby-constant">Inflater</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@archiveIO</span>)
+148:       <span class="ruby-keyword kw">else</span>
+149:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipCompressionMethodError</span>,
+150:           <span class="ruby-node">&quot;Unsupported compression method #{@currentEntry.compression_method}&quot;</span>
+151:       <span class="ruby-keyword kw">end</span>
+152:       <span class="ruby-identifier">flush</span>
+153:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@currentEntry</span>
+154:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="produce-input-method" class="method-detail ">
+				<a name="method-i-produce_input"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">produce_input</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="produce-input-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 156</span>
+156:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">produce_input</span>
+157:       <span class="ruby-ivar">@decompressor</span>.<span class="ruby-identifier">produce_input</span>
+158:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

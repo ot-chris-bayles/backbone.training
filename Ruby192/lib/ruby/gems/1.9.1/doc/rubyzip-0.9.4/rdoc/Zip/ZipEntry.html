@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Zip::ZipEntry</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/zip/zip_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zip.rb">lib/zip/zip.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-read_local_entry">::read_local_entry</a></li>
+					
+					<li><a href="#method-i-%3C%3D%3E">#<=></a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-comment_in">#comment_in</a></li>
+					
+					<li><a href="#method-i-create_directory">#create_directory</a></li>
+					
+					<li><a href="#method-i-create_symlink">#create_symlink</a></li>
+					
+					<li><a href="#method-i-directory%3F">#directory?</a></li>
+					
+					<li><a href="#method-i-extract">#extract</a></li>
+					
+					<li><a href="#method-i-file%3F">#file?</a></li>
+					
+					<li><a href="#method-i-get_input_stream">#get_input_stream</a></li>
+					
+					<li><a href="#method-i-get_raw_input_stream">#get_raw_input_stream</a></li>
+					
+					<li><a href="#method-i-is_directory">#is_directory</a></li>
+					
+					<li><a href="#method-i-mtime">#mtime</a></li>
+					
+					<li><a href="#method-i-name_encoding">#name_encoding</a></li>
+					
+					<li><a href="#method-i-name_in">#name_in</a></li>
+					
+					<li><a href="#method-i-parent_as_string">#parent_as_string</a></li>
+					
+					<li><a href="#method-i-set_time">#set_time</a></li>
+					
+					<li><a href="#method-i-symlink%3F">#symlink?</a></li>
+					
+					<li><a href="#method-i-time">#time</a></li>
+					
+					<li><a href="#method-i-time%3D">#time=</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-write_file">#write_file</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Zip.html">Zip</a></li>
+				
+					<li><a href="../Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+				
+					<li><a href="../Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+				
+					<li><a href="../Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+				
+					<li><a href="../Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+				
+					<li><a href="../Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+				
+					<li><a href="../Zip/ZipError.html">Zip::ZipError</a></li>
+				
+					<li><a href="../Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/Generic.html">Zip::ZipExtraField::Generic</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/IUnix.html">Zip::ZipExtraField::IUnix</a></li>
+				
+					<li><a href="../Zip/ZipExtraField/UniversalTime.html">Zip::ZipExtraField::UniversalTime</a></li>
+				
+					<li><a href="../Zip/ZipFile.html">Zip::ZipFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+				
+					<li><a href="../Zip/ZipFileSystem/ZipFsFile/ZipFsStat.html">Zip::ZipFileSystem::ZipFsFile::ZipFsStat</a></li>
+				
+					<li><a href="../Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+				
+					<li><a href="../Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+				
+					<li><a href="../Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+				
+					<li><a href="../Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+				
+					<li><a href="../Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+					<li><a href="../IOExtras/AbstractOutputStream.html">IOExtras::AbstractOutputStream</a></li>
+				
+					<li><a href="../IOExtras/FakeIO.html">IOExtras::FakeIO</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Zip::ZipEntry</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="STORED">STORED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEFLATED">DEFLATED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_FAT">FSTYPE_FAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_AMIGA">FSTYPE_AMIGA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_VMS">FSTYPE_VMS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_UNIX">FSTYPE_UNIX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_VM_CMS">FSTYPE_VM_CMS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_ATARI">FSTYPE_ATARI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_HPFS">FSTYPE_HPFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_MAC">FSTYPE_MAC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_Z_SYSTEM">FSTYPE_Z_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_CPM">FSTYPE_CPM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_TOPS20">FSTYPE_TOPS20</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_NTFS">FSTYPE_NTFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_QDOS">FSTYPE_QDOS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_ACORN">FSTYPE_ACORN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_VFAT">FSTYPE_VFAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_MVS">FSTYPE_MVS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_BEOS">FSTYPE_BEOS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_TANDEM">FSTYPE_TANDEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_THEOS">FSTYPE_THEOS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_MAC_OSX">FSTYPE_MAC_OSX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPE_ATHEOS">FSTYPE_ATHEOS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FSTYPES">FSTYPES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCAL_ENTRY_SIGNATURE">LOCAL_ENTRY_SIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCAL_ENTRY_STATIC_HEADER_LENGTH">LOCAL_ENTRY_STATIC_HEADER_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCAL_ENTRY_TRAILING_DESCRIPTOR_LENGTH">LOCAL_ENTRY_TRAILING_DESCRIPTOR_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VERSION_NEEDED_TO_EXTRACT">VERSION_NEEDED_TO_EXTRACT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CENTRAL_DIRECTORY_ENTRY_SIGNATURE">CENTRAL_DIRECTORY_ENTRY_SIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CDIR_ENTRY_STATIC_HEADER_LENGTH">CDIR_ENTRY_STATIC_HEADER_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="comment-attribute-method" class="method-detail">
+				<a name="comment"></a>
+				
+				<a name="comment="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">comment</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="compressed-size-attribute-method" class="method-detail">
+				<a name="compressed_size"></a>
+				
+				<a name="compressed_size="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">compressed_size</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="crc-attribute-method" class="method-detail">
+				<a name="crc"></a>
+				
+				<a name="crc="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">crc</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="extra-attribute-method" class="method-detail">
+				<a name="extra"></a>
+				
+				<a name="extra="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">extra</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="compression-method-attribute-method" class="method-detail">
+				<a name="compression_method"></a>
+				
+				<a name="compression_method="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">compression_method</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="name-attribute-method" class="method-detail">
+				<a name="name"></a>
+				
+				<a name="name="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">name</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="size-attribute-method" class="method-detail">
+				<a name="size"></a>
+				
+				<a name="size="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">size</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="local-eader-ffset-attribute-method" class="method-detail">
+				<a name="localHeaderOffset"></a>
+				
+				<a name="localHeaderOffset="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">localHeaderOffset</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="zipfile-attribute-method" class="method-detail">
+				<a name="zipfile"></a>
+				
+				<a name="zipfile="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">zipfile</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="fstype-attribute-method" class="method-detail">
+				<a name="fstype"></a>
+				
+				<a name="fstype="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">fstype</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="external-ile-ttributes-attribute-method" class="method-detail">
+				<a name="externalFileAttributes"></a>
+				
+				<a name="externalFileAttributes="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">externalFileAttributes</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="gp-flags-attribute-method" class="method-detail">
+				<a name="gp_flags"></a>
+				
+				<a name="gp_flags="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">gp_flags</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="header-signature-attribute-method" class="method-detail">
+				<a name="header_signature"></a>
+				
+				<a name="header_signature="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">header_signature</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="follow-symlinks-attribute-method" class="method-detail">
+				<a name="follow_symlinks"></a>
+				
+				<a name="follow_symlinks="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">follow_symlinks</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="restore-times-attribute-method" class="method-detail">
+				<a name="restore_times"></a>
+				
+				<a name="restore_times="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">restore_times</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="restore-permissions-attribute-method" class="method-detail">
+				<a name="restore_permissions"></a>
+				
+				<a name="restore_permissions="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">restore_permissions</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="restore-ownership-attribute-method" class="method-detail">
+				<a name="restore_ownership"></a>
+				
+				<a name="restore_ownership="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">restore_ownership</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="unix-uid-attribute-method" class="method-detail">
+				<a name="unix_uid"></a>
+				
+				<a name="unix_uid="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">unix_uid</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="unix-gid-attribute-method" class="method-detail">
+				<a name="unix_gid"></a>
+				
+				<a name="unix_gid="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">unix_gid</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="unix-perms-attribute-method" class="method-detail">
+				<a name="unix_perms"></a>
+				
+				<a name="unix_perms="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">unix_perms</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(zipfile = "", name = "", comment = "", extra = "", compressed_size = 0, crc = 0, compression_method = ZipEntry::DEFLATED, size = 0, time = Time.now)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 368</span>
+368:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">zipfile</span> = <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">name</span> = <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">comment</span> = <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">extra</span> = <span class="ruby-value str">&quot;&quot;</span>, 
+369:                    <span class="ruby-identifier">compressed_size</span> = <span class="ruby-value">0</span>, <span class="ruby-identifier">crc</span> = <span class="ruby-value">0</span>, 
+370:                    <span class="ruby-identifier">compression_method</span> = <span class="ruby-constant">ZipEntry</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFLATED</span>, <span class="ruby-identifier">size</span> = <span class="ruby-value">0</span>,
+371:                    <span class="ruby-identifier">time</span>  = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>)
+372:       <span class="ruby-keyword kw">super</span>()
+373:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">starts_with</span>(<span class="ruby-value str">&quot;/&quot;</span>)
+374:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipEntryNameError</span>, <span class="ruby-node">&quot;Illegal ZipEntry name '#{name}', name must not start with /&quot;</span> 
+375:       <span class="ruby-keyword kw">end</span>
+376:       <span class="ruby-ivar">@localHeaderOffset</span> = <span class="ruby-value">0</span>
+377:       <span class="ruby-ivar">@local_header_size</span> = <span class="ruby-value">0</span>
+378:       <span class="ruby-ivar">@internalFileAttributes</span> = <span class="ruby-value">1</span>
+379:       <span class="ruby-ivar">@externalFileAttributes</span> = <span class="ruby-value">0</span>
+380:       <span class="ruby-ivar">@version</span> = <span class="ruby-value">52</span> <span class="ruby-comment cmt"># this library's version</span>
+381:       <span class="ruby-ivar">@ftype</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt"># unspecified or unknown</span>
+382:       <span class="ruby-ivar">@filepath</span> = <span class="ruby-keyword kw">nil</span>
+383:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">RUNNING_ON_WINDOWS</span>
+384:         <span class="ruby-ivar">@fstype</span> = <span class="ruby-constant">FSTYPE_FAT</span>
+385:       <span class="ruby-keyword kw">else</span>
+386:         <span class="ruby-ivar">@fstype</span> = <span class="ruby-constant">FSTYPE_UNIX</span>
+387:       <span class="ruby-keyword kw">end</span>
+388:       <span class="ruby-ivar">@zipfile</span> = <span class="ruby-identifier">zipfile</span>
+389:       <span class="ruby-ivar">@comment</span> = <span class="ruby-identifier">comment</span>
+390:       <span class="ruby-ivar">@compressed_size</span> = <span class="ruby-identifier">compressed_size</span>
+391:       <span class="ruby-ivar">@crc</span> = <span class="ruby-identifier">crc</span>
+392:       <span class="ruby-ivar">@extra</span> = <span class="ruby-identifier">extra</span>
+393:       <span class="ruby-ivar">@compression_method</span> = <span class="ruby-identifier">compression_method</span>
+394:       <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+395:       <span class="ruby-ivar">@size</span> = <span class="ruby-identifier">size</span>
+396:       <span class="ruby-ivar">@time</span> = <span class="ruby-identifier">time</span>
+397: 
+398:       <span class="ruby-ivar">@follow_symlinks</span> = <span class="ruby-keyword kw">false</span>
+399: 
+400:       <span class="ruby-ivar">@restore_times</span> = <span class="ruby-keyword kw">true</span>
+401:       <span class="ruby-ivar">@restore_permissions</span> = <span class="ruby-keyword kw">false</span>
+402:       <span class="ruby-ivar">@restore_ownership</span> = <span class="ruby-keyword kw">false</span>
+403: 
+404: <span class="ruby-comment cmt"># BUG: need an extra field to support uid/gid's</span>
+405:       <span class="ruby-ivar">@unix_uid</span> = <span class="ruby-keyword kw">nil</span>
+406:       <span class="ruby-ivar">@unix_gid</span> = <span class="ruby-keyword kw">nil</span>
+407:       <span class="ruby-ivar">@unix_perms</span> = <span class="ruby-keyword kw">nil</span>
+408: <span class="ruby-comment cmt">#      @posix_acl = nil</span>
+409: <span class="ruby-comment cmt">#      @ntfs_acl = nil</span>
+410: 
+411:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name_is_directory?</span>
+412:         <span class="ruby-ivar">@ftype</span> = <span class="ruby-value">:directory</span>
+413:       <span class="ruby-keyword kw">else</span>
+414:         <span class="ruby-ivar">@ftype</span> = <span class="ruby-value">:file</span>
+415:       <span class="ruby-keyword kw">end</span>
+416: 
+417:       <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">ZipExtraField</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@extra</span>
+418:         <span class="ruby-ivar">@extra</span> = <span class="ruby-constant">ZipExtraField</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">to_s</span>)
+419:       <span class="ruby-keyword kw">end</span>
+420:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-local-entry-method" class="method-detail ">
+				<a name="method-c-read_local_entry"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_local_entry</span><span
+						class="method-args">(io)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-local-entry-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 559</span>
+559:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">ZipEntry</span>.<span class="ruby-identifier">read_local_entry</span>(<span class="ruby-identifier">io</span>)
+560:       <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">io</span>.<span class="ruby-identifier">path</span>)
+561:       <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read_local_entry</span>(<span class="ruby-identifier">io</span>)
+562:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">entry</span>
+563:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ZipError</span>
+564:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+565:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3C%3D%3E"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;=&gt;</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 759</span>
+759:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
+760:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_s</span>
+761:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 746</span>
+746:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">other</span>)
+747:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>
+748:       <span class="ruby-comment cmt"># Compares contents of local entry and exposed fields</span>
+749:       (<span class="ruby-ivar">@compression_method</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">compression_method</span> <span class="ruby-operator">&amp;&amp;</span>
+750:        <span class="ruby-ivar">@crc</span>               <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">crc</span>               <span class="ruby-operator">&amp;&amp;</span>
+751:        <span class="ruby-ivar">@compressed_size</span>   <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">compressed_size</span>   <span class="ruby-operator">&amp;&amp;</span>
+752:        <span class="ruby-ivar">@size</span>              <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">size</span>              <span class="ruby-operator">&amp;&amp;</span>
+753:        <span class="ruby-ivar">@name</span>              <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">name</span>              <span class="ruby-operator">&amp;&amp;</span>
+754:        <span class="ruby-ivar">@extra</span>             <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">extra</span>             <span class="ruby-operator">&amp;&amp;</span>
+755:        <span class="ruby-ivar">@filepath</span>          <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">filepath</span>          <span class="ruby-operator">&amp;&amp;</span>
+756:        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">time</span>.<span class="ruby-identifier">dos_equals</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">time</span>))
+757:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="comment-in-method" class="method-detail ">
+				<a name="method-i-comment_in"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">comment_in</span><span
+						class="method-args">(enc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the name in the encoding specified by enc
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="comment-in-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 364</span>
+364:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">comment_in</span>(<span class="ruby-identifier">enc</span>)
+365:       <span class="ruby-constant">Iconv</span>.<span class="ruby-identifier">conv</span>(<span class="ruby-identifier">enc</span>, <span class="ruby-identifier">name_encoding</span>, <span class="ruby-ivar">@name</span>)
+366:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="directory--method" class="method-detail ">
+				<a name="method-i-directory%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">directory?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>true</tt> if the entry is a directory.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="directory--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 442</span>
+442:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory?</span>
+443:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipInternalError</span>, <span class="ruby-node">&quot;current filetype is unknown: #{self.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@ftype</span>
+444:       <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-value">:directory</span>
+445:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="ZipEntry.html#method-i-is_directory">is_directory</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="extract-method" class="method-detail ">
+				<a name="method-i-extract"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract</span><span
+						class="method-args">(destPath = @name, &onExistsProc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts entry to file destPath (defaults to @name).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 482</span>
+482:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">destPath</span> = <span class="ruby-ivar">@name</span>, &amp;<span class="ruby-identifier">onExistsProc</span>)
+483:       <span class="ruby-identifier">onExistsProc</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">proc</span> { <span class="ruby-keyword kw">false</span> }
+484: 
+485:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">directory?</span>
+486:         <span class="ruby-identifier">create_directory</span>(<span class="ruby-identifier">destPath</span>, &amp;<span class="ruby-identifier">onExistsProc</span>)
+487:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">file?</span>
+488:         <span class="ruby-identifier">write_file</span>(<span class="ruby-identifier">destPath</span>, &amp;<span class="ruby-identifier">onExistsProc</span>) 
+489:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">symlink?</span>
+490:         <span class="ruby-identifier">create_symlink</span>(<span class="ruby-identifier">destPath</span>, &amp;<span class="ruby-identifier">onExistsProc</span>)
+491:       <span class="ruby-keyword kw">else</span>
+492:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;unknown file type #{self.inspect}&quot;</span>
+493:       <span class="ruby-keyword kw">end</span>
+494: 
+495:       <span class="ruby-keyword kw">self</span>
+496:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file--method" class="method-detail ">
+				<a name="method-i-file%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>true</tt> if the entry is a file.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="file--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 449</span>
+449:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file?</span>
+450:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipInternalError</span>, <span class="ruby-node">&quot;current filetype is unknown: #{self.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@ftype</span>
+451:       <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-value">:file</span>
+452:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-input-stream-method" class="method-detail ">
+				<a name="method-i-get_input_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_input_stream</span><span
+						class="method-args">(&aProc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an IO like object for the given <a
+href="ZipEntry.html">ZipEntry</a>. Warning: may behave weird with symlinks.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-input-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 765</span>
+765:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_input_stream</span>(&amp;<span class="ruby-identifier">aProc</span>)
+766:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-value">:directory</span>
+767:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-constant">NullInputStream</span>.<span class="ruby-identifier">instance</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+768:           <span class="ruby-keyword kw">return</span> <span class="ruby-constant">NullInputStream</span>.<span class="ruby-identifier">instance</span>
+769:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@filepath</span>
+770:         <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@ftype</span>
+771:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:file</span>
+772:           <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@filepath</span>, <span class="ruby-value str">&quot;rb&quot;</span>, &amp;<span class="ruby-identifier">aProc</span>)
+773: 
+774:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:symlink</span>
+775:           <span class="ruby-identifier">linkpath</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">readlink</span>(<span class="ruby-ivar">@filepath</span>)
+776:           <span class="ruby-identifier">stringio</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">linkpath</span>)
+777:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">stringio</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+778:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">stringio</span>
+779:         <span class="ruby-keyword kw">else</span>
+780:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown @ftype #{@ftype}&quot;</span>
+781:         <span class="ruby-keyword kw">end</span>
+782:       <span class="ruby-keyword kw">else</span>
+783:         <span class="ruby-identifier">zis</span> = <span class="ruby-constant">ZipInputStream</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@zipfile</span>, <span class="ruby-identifier">localHeaderOffset</span>)
+784:         <span class="ruby-identifier">zis</span>.<span class="ruby-identifier">get_next_entry</span>
+785:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+786:           <span class="ruby-keyword kw">begin</span>
+787:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">zis</span>)
+788:           <span class="ruby-keyword kw">ensure</span>
+789:             <span class="ruby-identifier">zis</span>.<span class="ruby-identifier">close</span>
+790:           <span class="ruby-keyword kw">end</span>
+791:         <span class="ruby-keyword kw">else</span>
+792:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">zis</span>
+793:         <span class="ruby-keyword kw">end</span>
+794:       <span class="ruby-keyword kw">end</span>
+795:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-raw-input-stream-method" class="method-detail ">
+				<a name="method-i-get_raw_input_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_raw_input_stream</span><span
+						class="method-args">(&aProc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-raw-input-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 844</span>
+844:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_raw_input_stream</span>(&amp;<span class="ruby-identifier">aProc</span>)
+845:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@zipfile</span>, <span class="ruby-value str">&quot;rb&quot;</span>, &amp;<span class="ruby-identifier">aProc</span>)
+846:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-directory-method" class="method-detail method-alias">
+				<a name="method-i-is_directory"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_directory</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="ZipEntry.html#method-i-directory%3F">directory?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="mtime-method" class="method-detail method-alias">
+				<a name="method-i-mtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mtime</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="ZipEntry.html#method-i-time">time</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="name-encoding-method" class="method-detail ">
+				<a name="method-i-name_encoding"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">name_encoding</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the character encoding used for name and comment
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="name-encoding-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 354</span>
+354:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name_encoding</span>
+355:       (<span class="ruby-ivar">@gp_flags</span> &amp; <span class="ruby-value">0b100000000000</span>) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;utf8&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;CP437//&quot;</span>
+356:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="name-in-method" class="method-detail ">
+				<a name="method-i-name_in"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">name_in</span><span
+						class="method-args">(enc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the name in the encoding specified by enc
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="name-in-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 359</span>
+359:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name_in</span>(<span class="ruby-identifier">enc</span>)
+360:       <span class="ruby-constant">Iconv</span>.<span class="ruby-identifier">conv</span>(<span class="ruby-identifier">enc</span>, <span class="ruby-identifier">name_encoding</span>, <span class="ruby-ivar">@name</span>)
+361:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parent-as-string-method" class="method-detail ">
+				<a name="method-i-parent_as_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parent_as_string</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parent-as-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 838</span>
+838:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parent_as_string</span>
+839:       <span class="ruby-identifier">entry_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-value str">&quot;/&quot;</span>)
+840:       <span class="ruby-identifier">slash_index</span> = <span class="ruby-identifier">entry_name</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-value str">&quot;/&quot;</span>)
+841:       <span class="ruby-identifier">slash_index</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">entry_name</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">slash_index</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+842:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="symlink--method" class="method-detail ">
+				<a name="method-i-symlink%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">symlink?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>true</tt> if the entry is a symlink.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="symlink--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 455</span>
+455:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">symlink?</span>
+456:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipInternalError</span>, <span class="ruby-node">&quot;current filetype is unknown: #{self.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@ftype</span>
+457:       <span class="ruby-ivar">@ftype</span> <span class="ruby-operator">==</span> <span class="ruby-value">:symlink</span>
+458:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="time-method" class="method-detail ">
+				<a name="method-i-time"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">time</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="time-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 422</span>
+422:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time</span>
+423:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra</span>[<span class="ruby-value str">&quot;UniversalTime&quot;</span>]
+424:         <span class="ruby-ivar">@extra</span>[<span class="ruby-value str">&quot;UniversalTime&quot;</span>].<span class="ruby-identifier">mtime</span>
+425:       <span class="ruby-keyword kw">else</span>
+426:         <span class="ruby-comment cmt"># Atandard time field in central directory has local time</span>
+427:         <span class="ruby-comment cmt"># under archive creator. Then, we can't get timezone.</span>
+428:         <span class="ruby-ivar">@time</span>
+429:       <span class="ruby-keyword kw">end</span>
+430:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="ZipEntry.html#method-i-mtime">mtime</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="time--method" class="method-detail ">
+				<a name="method-i-time%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">time=</span><span
+						class="method-args">(aTime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="time--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 433</span>
+433:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time=</span>(<span class="ruby-identifier">aTime</span>)
+434:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-value str">&quot;UniversalTime&quot;</span>)
+435:         <span class="ruby-ivar">@extra</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value str">&quot;UniversalTime&quot;</span>)
+436:       <span class="ruby-keyword kw">end</span>
+437:       <span class="ruby-ivar">@extra</span>[<span class="ruby-value str">&quot;UniversalTime&quot;</span>].<span class="ruby-identifier">mtime</span> = <span class="ruby-identifier">aTime</span>
+438:       <span class="ruby-ivar">@time</span> = <span class="ruby-identifier">aTime</span>
+439:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 498</span>
+498:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+499:       <span class="ruby-ivar">@name</span>
+500:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="create-directory-method" class="method-detail ">
+				<a name="method-i-create_directory"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_directory</span><span
+						class="method-args">(destPath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="create-directory-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 873</span>
+873:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_directory</span>(<span class="ruby-identifier">destPath</span>)
+874:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">destPath</span>
+875:         <span class="ruby-keyword kw">return</span>
+876:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span> <span class="ruby-identifier">destPath</span>
+877:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">destPath</span>)
+878:           <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-identifier">rm_f</span> <span class="ruby-identifier">destPath</span>
+879:         <span class="ruby-keyword kw">else</span>
+880:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipDestinationFileExistsError</span>,
+881:             <span class="ruby-node">&quot;Cannot create directory '#{destPath}'. &quot;</span><span class="ruby-operator">+</span>
+882:             <span class="ruby-value str">&quot;A file already exists with that name&quot;</span>
+883:         <span class="ruby-keyword kw">end</span>
+884:       <span class="ruby-keyword kw">end</span>
+885:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span> <span class="ruby-identifier">destPath</span>
+886:       <span class="ruby-identifier">set_extra_attributes_on_path</span>(<span class="ruby-identifier">destPath</span>)
+887:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="create-symlink-method" class="method-detail ">
+				<a name="method-i-create_symlink"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_symlink</span><span
+						class="method-args">(destPath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+BUG: <a href="ZipEntry.html#method-i-create_symlink">create_symlink</a>()
+does not use &amp;onExistsProc
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-symlink-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 890</span>
+890:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_symlink</span>(<span class="ruby-identifier">destPath</span>)
+891:       <span class="ruby-identifier">stat</span> = <span class="ruby-keyword kw">nil</span>
+892:       <span class="ruby-keyword kw">begin</span>
+893:         <span class="ruby-identifier">stat</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">lstat</span>(<span class="ruby-identifier">destPath</span>)
+894:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+895:       <span class="ruby-keyword kw">end</span>
+896: 
+897:       <span class="ruby-identifier">io</span> = <span class="ruby-identifier">get_input_stream</span>
+898:       <span class="ruby-identifier">linkto</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>
+899: 
+900:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stat</span>
+901:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stat</span>.<span class="ruby-identifier">symlink?</span>
+902:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">readlink</span>(<span class="ruby-identifier">destPath</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">linkto</span>
+903:             <span class="ruby-keyword kw">return</span>
+904:           <span class="ruby-keyword kw">else</span>
+905:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipDestinationFileExistsError</span>,
+906:               <span class="ruby-node">&quot;Cannot create symlink '#{destPath}'. &quot;</span><span class="ruby-operator">+</span>
+907:               <span class="ruby-value str">&quot;A symlink already exists with that name&quot;</span>
+908:           <span class="ruby-keyword kw">end</span>
+909:         <span class="ruby-keyword kw">else</span>
+910:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipDestinationFileExistsError</span>,
+911:             <span class="ruby-node">&quot;Cannot create symlink '#{destPath}'. &quot;</span><span class="ruby-operator">+</span>
+912:             <span class="ruby-value str">&quot;A file already exists with that name&quot;</span>
+913:         <span class="ruby-keyword kw">end</span>
+914:       <span class="ruby-keyword kw">end</span>
+915: 
+916:       <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">symlink</span>(<span class="ruby-identifier">linkto</span>, <span class="ruby-identifier">destPath</span>)
+917:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-time-method" class="method-detail ">
+				<a name="method-i-set_time"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_time</span><span
+						class="method-args">(binaryDosDate, binaryDosTime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-time-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 850</span>
+850:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_time</span>(<span class="ruby-identifier">binaryDosDate</span>, <span class="ruby-identifier">binaryDosTime</span>)
+851:       <span class="ruby-ivar">@time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse_binary_dos_format</span>(<span class="ruby-identifier">binaryDosDate</span>, <span class="ruby-identifier">binaryDosTime</span>)
+852:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span>
+853:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Invalid date/time in zip entry&quot;</span>
+854:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-file-method" class="method-detail ">
+				<a name="method-i-write_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_file</span><span
+						class="method-args">(destPath, continueOnExistsProc = proc { false }</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 856</span>
+856:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_file</span>(<span class="ruby-identifier">destPath</span>, <span class="ruby-identifier">continueOnExistsProc</span> = <span class="ruby-identifier">proc</span> { <span class="ruby-keyword kw">false</span> })
+857:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">destPath</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">destPath</span>)
+858:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ZipDestinationFileExistsError</span>,
+859:           <span class="ruby-node">&quot;Destination '#{destPath}' already exists&quot;</span>
+860:       <span class="ruby-keyword kw">end</span>
+861:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">destPath</span>, <span class="ruby-value str">&quot;wb&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">os</span><span class="ruby-operator">|</span>
+862:         <span class="ruby-identifier">get_input_stream</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">is</span><span class="ruby-operator">|</span>
+863:           <span class="ruby-identifier">set_extra_attributes_on_path</span>(<span class="ruby-identifier">destPath</span>)
+864: 
+865:           <span class="ruby-identifier">buf</span> = <span class="ruby-value str">''</span>
+866:           <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">buf</span> = <span class="ruby-identifier">is</span>.<span class="ruby-identifier">sysread</span>(<span class="ruby-constant">Decompressor</span><span class="ruby-operator">::</span><span class="ruby-constant">CHUNK_SIZE</span>, <span class="ruby-identifier">buf</span>)
+867:             <span class="ruby-identifier">os</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">buf</span>
+868:           <span class="ruby-keyword kw">end</span>
+869:         <span class="ruby-keyword kw">end</span>
+870:       <span class="ruby-keyword kw">end</span>
+871:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

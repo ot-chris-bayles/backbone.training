@@ -1,0 +1,26 @@
+Thu, 29 Sep 2011 21:17:20 -0500
+lib/ffi/autopointer.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/buffer.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/callback.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/enum.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/errno.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/ffi.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/io.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/library.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/managedstruct.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/memorypointer.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/platform.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/pointer.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/struct.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/struct_layout_builder.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/tools/const_generator.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/tools/generator.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/tools/generator_task.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/tools/struct_generator.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/tools/types_generator.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/types.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/union.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi/variadic.rb	Thu, 29 Sep 2011 21:16:49 -0500
+lib/ffi.rb	Thu, 29 Sep 2011 21:16:49 -0500
+README.rdoc	Thu, 29 Sep 2011 21:16:48 -0500
+LICENSE	Thu, 29 Sep 2011 21:16:48 -0500

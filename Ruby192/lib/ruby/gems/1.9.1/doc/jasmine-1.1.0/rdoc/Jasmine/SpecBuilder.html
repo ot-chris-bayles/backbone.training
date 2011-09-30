@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: Jasmine::SpecBuilder</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine_config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine_config.rb">lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine_config.rb</a></li>
+					
+						<li><a href="../lib/generators/jasmine/templates/spec/javascripts/support/jasmine_config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/generators/jasmine/templates/spec/javascripts/support/jasmine_config.rb">lib/generators/jasmine/templates/spec/javascripts/support/jasmine_config.rb</a></li>
+					
+						<li><a href="../lib/jasmine/spec_builder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/jasmine/spec_builder.rb">lib/jasmine/spec_builder.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-declare_spec">#declare_spec</a></li>
+					
+					<li><a href="#method-i-declare_spec">#declare_spec</a></li>
+					
+					<li><a href="#method-i-declare_spec">#declare_spec</a></li>
+					
+					<li><a href="#method-i-declare_suite">#declare_suite</a></li>
+					
+					<li><a href="#method-i-declare_suites">#declare_suites</a></li>
+					
+					<li><a href="#method-i-eval_js">#eval_js</a></li>
+					
+					<li><a href="#method-i-guess_example_locations">#guess_example_locations</a></li>
+					
+					<li><a href="#method-i-json_generate">#json_generate</a></li>
+					
+					<li><a href="#method-i-load_results">#load_results</a></li>
+					
+					<li><a href="#method-i-load_suite_info">#load_suite_info</a></li>
+					
+					<li><a href="#method-i-report_spec">#report_spec</a></li>
+					
+					<li><a href="#method-i-results_for">#results_for</a></li>
+					
+					<li><a href="#method-i-script_path">#script_path</a></li>
+					
+					<li><a href="#method-i-start">#start</a></li>
+					
+					<li><a href="#method-i-stop">#stop</a></li>
+					
+					<li><a href="#method-i-wait_for_suites_to_finish_running">#wait_for_suites_to_finish_running</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../lib/generators/jasmine/examples/USAGE.html">USAGE</a></li>
+				
+					<li class="file"><a href="../lib/generators/jasmine/install/USAGE.html">USAGE</a></li>
+				
+					<li class="file"><a href="../lib/generators/jasmine/templates/INSTALL.html">INSTALL</a></li>
+				
+					<li class="file"><a href="../lib/jasmine/firebug/firebug-license_txt.html">firebug-license.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Jasmine.html">Jasmine</a></li>
+				
+					<li><a href="../Jasmine/CommandLineTool.html">Jasmine::CommandLineTool</a></li>
+				
+					<li><a href="../Jasmine/Config.html">Jasmine::Config</a></li>
+				
+					<li><a href="../Jasmine/FocusedSuite.html">Jasmine::FocusedSuite</a></li>
+				
+					<li><a href="../Jasmine/Generators.html">Jasmine::Generators</a></li>
+				
+					<li><a href="../Jasmine/Generators/ExamplesGenerator.html">Jasmine::Generators::ExamplesGenerator</a></li>
+				
+					<li><a href="../Jasmine/Generators/InstallGenerator.html">Jasmine::Generators::InstallGenerator</a></li>
+				
+					<li><a href="../Jasmine/JsAlert.html">Jasmine::JsAlert</a></li>
+				
+					<li><a href="../Jasmine/Railtie.html">Jasmine::Railtie</a></li>
+				
+					<li><a href="../Jasmine/Redirect.html">Jasmine::Redirect</a></li>
+				
+					<li><a href="../Jasmine/RunAdapter.html">Jasmine::RunAdapter</a></li>
+				
+					<li><a href="../Jasmine/SeleniumDriver.html">Jasmine::SeleniumDriver</a></li>
+				
+					<li><a href="../Jasmine/SpecBuilder.html">Jasmine::SpecBuilder</a></li>
+				
+					<li><a href="../Selenium.html">Selenium</a></li>
+				
+					<li><a href="../Selenium/WebDriver.html">Selenium::WebDriver</a></li>
+				
+					<li><a href="../Selenium/WebDriver/Firefox.html">Selenium::WebDriver::Firefox</a></li>
+				
+					<li><a href="../Selenium/WebDriver/Firefox/Profile.html">Selenium::WebDriver::Firefox::Profile</a></li>
+				
+					<li><a href="../JasmineGenerator.html">JasmineGenerator</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Jasmine::SpecBuilder</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="suites-attribute-method" class="method-detail">
+				<a name="suites"></a>
+				
+				<a name="suites="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">suites</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(config)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 7</span>
+ 7:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">config</span>)
+ 8:       <span class="ruby-ivar">@config</span> = <span class="ruby-identifier">config</span>
+ 9:       <span class="ruby-ivar">@spec_files</span> = <span class="ruby-identifier">config</span>.<span class="ruby-identifier">spec_files</span>
+10:       <span class="ruby-ivar">@runner</span> = <span class="ruby-identifier">config</span>
+11:       <span class="ruby-ivar">@spec_ids</span> = []
+12:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="declare-spec-method" class="method-detail ">
+				<a name="method-i-declare_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">declare_spec</span><span
+						class="method-args">(parent, spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="declare-spec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/generators/jasmine/templates/spec/javascripts/support/jasmine_config.rb, line 13</span>
+13:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">declare_spec</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">spec</span>)
+14:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+15:       <span class="ruby-identifier">example_name</span> = <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;name&quot;</span>]
+16:       <span class="ruby-ivar">@spec_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>]
+17:       <span class="ruby-identifier">backtrace</span> = <span class="ruby-ivar">@example_locations</span>[<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">description</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">example_name</span>]
+18:       <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">it</span> <span class="ruby-identifier">example_name</span>, {} <span class="ruby-keyword kw">do</span>
+19:         <span class="ruby-identifier">me</span>.<span class="ruby-identifier">report_spec</span>(<span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>])
+20:       <span class="ruby-keyword kw">end</span>
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="declare-spec-method" class="method-detail ">
+				<a name="method-i-declare_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">declare_spec</span><span
+						class="method-args">(parent, spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="declare-spec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/generators/jasmine/install/templates/spec/javascripts/support/jasmine_config.rb, line 13</span>
+13:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">declare_spec</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">spec</span>)
+14:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+15:       <span class="ruby-identifier">example_name</span> = <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;name&quot;</span>]
+16:       <span class="ruby-ivar">@spec_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>]
+17:       <span class="ruby-identifier">backtrace</span> = <span class="ruby-ivar">@example_locations</span>[<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">description</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">example_name</span>]
+18:       <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">it</span> <span class="ruby-identifier">example_name</span>, {} <span class="ruby-keyword kw">do</span>
+19:         <span class="ruby-identifier">me</span>.<span class="ruby-identifier">report_spec</span>(<span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>])
+20:       <span class="ruby-keyword kw">end</span>
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="declare-spec-method" class="method-detail ">
+				<a name="method-i-declare_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">declare_spec</span><span
+						class="method-args">(parent, spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="declare-spec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 107</span>
+107:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">declare_spec</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">spec</span>)
+108:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+109:       <span class="ruby-identifier">example_name</span> = <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;name&quot;</span>]
+110:       <span class="ruby-ivar">@spec_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>]
+111:       <span class="ruby-identifier">backtrace</span> = <span class="ruby-ivar">@example_locations</span>[<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">description</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">example_name</span>]
+112:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Jasmine</span><span class="ruby-operator">::</span><span class="ruby-identifier">rspec2?</span>
+113:         <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">it</span> <span class="ruby-identifier">example_name</span>, {} <span class="ruby-keyword kw">do</span>
+114:           <span class="ruby-identifier">me</span>.<span class="ruby-identifier">report_spec</span>(<span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>])
+115:         <span class="ruby-keyword kw">end</span>
+116:       <span class="ruby-keyword kw">else</span>
+117:         <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">it</span> <span class="ruby-identifier">example_name</span>, {}, <span class="ruby-identifier">backtrace</span> <span class="ruby-keyword kw">do</span>
+118:           <span class="ruby-identifier">me</span>.<span class="ruby-identifier">report_spec</span>(<span class="ruby-identifier">spec</span>[<span class="ruby-value str">&quot;id&quot;</span>])
+119:         <span class="ruby-keyword kw">end</span>
+120:       <span class="ruby-keyword kw">end</span>
+121:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="declare-suite-method" class="method-detail ">
+				<a name="method-i-declare_suite"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">declare_suite</span><span
+						class="method-args">(parent, suite)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="declare-suite-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 91</span>
+ 91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">declare_suite</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">suite</span>)
+ 92:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+ 93:       <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">describe</span> <span class="ruby-identifier">suite</span>[<span class="ruby-value str">&quot;name&quot;</span>] <span class="ruby-keyword kw">do</span>
+ 94:         <span class="ruby-identifier">suite</span>[<span class="ruby-value str">&quot;children&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">suite_or_spec</span><span class="ruby-operator">|</span>
+ 95:           <span class="ruby-identifier">type</span> = <span class="ruby-identifier">suite_or_spec</span>[<span class="ruby-value str">&quot;type&quot;</span>]
+ 96:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;suite&quot;</span>
+ 97:             <span class="ruby-identifier">me</span>.<span class="ruby-identifier">declare_suite</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">suite_or_spec</span>)
+ 98:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;spec&quot;</span>
+ 99:             <span class="ruby-identifier">me</span>.<span class="ruby-identifier">declare_spec</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">suite_or_spec</span>)
+100:           <span class="ruby-keyword kw">else</span>
+101:             <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown type #{type} for #{suite_or_spec.inspect}&quot;</span>
+102:           <span class="ruby-keyword kw">end</span>
+103:         <span class="ruby-keyword kw">end</span>
+104:       <span class="ruby-keyword kw">end</span>
+105:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="declare-suites-method" class="method-detail ">
+				<a name="method-i-declare_suites"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">declare_suites</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="declare-suites-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 84</span>
+84:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">declare_suites</span>
+85:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+86:       <span class="ruby-identifier">suites</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">suite</span><span class="ruby-operator">|</span>
+87:         <span class="ruby-identifier">declare_suite</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">suite</span>)
+88:       <span class="ruby-keyword kw">end</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="guess-example-locations-method" class="method-detail ">
+				<a name="method-i-guess_example_locations"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">guess_example_locations</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="guess-example-locations-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">guess_example_locations</span>
+31:       <span class="ruby-ivar">@example_locations</span> = {}
+32: 
+33:       <span class="ruby-identifier">example_name_parts</span> = []
+34:       <span class="ruby-identifier">previous_indent_level</span> = <span class="ruby-value">0</span>
+35:       <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">spec_files_full_paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
+36:         <span class="ruby-identifier">line_number</span> = <span class="ruby-value">1</span>
+37:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-value str">&quot;r&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+38:           <span class="ruby-identifier">file</span>.<span class="ruby-identifier">readlines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+39:             <span class="ruby-identifier">match</span> = <span class="ruby-regexp re">/^(\s*)(describe|it)\s*\(\s*[&quot;'](.*)[&quot;']\s*,\s*function/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">line</span>)
+40:             <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">match</span>)
+41:               <span class="ruby-identifier">indent_level</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+42:               <span class="ruby-identifier">example_name</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">3</span>]
+43:               <span class="ruby-identifier">example_name_parts</span>[<span class="ruby-identifier">indent_level</span>] = <span class="ruby-identifier">example_name</span>
+44: 
+45:               <span class="ruby-identifier">full_example_name</span> = <span class="ruby-identifier">example_name_parts</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">indent_level</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &quot;</span>)
+46:               <span class="ruby-ivar">@example_locations</span>[<span class="ruby-identifier">full_example_name</span>] = <span class="ruby-node">&quot;#{filename}:#{line_number}: in `it'&quot;</span>
+47:             <span class="ruby-keyword kw">end</span>
+48:             <span class="ruby-identifier">line_number</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+49:           <span class="ruby-keyword kw">end</span>
+50:         <span class="ruby-keyword kw">end</span>
+51:       <span class="ruby-keyword kw">end</span>
+52:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-results-method" class="method-detail ">
+				<a name="method-i-load_results"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_results</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load-results-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 69</span>
+69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_results</span>
+70:       <span class="ruby-ivar">@spec_results</span> = {}
+71:       <span class="ruby-ivar">@spec_ids</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">50</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slice</span><span class="ruby-operator">|</span>
+72:         <span class="ruby-ivar">@spec_results</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">eval_js</span>(<span class="ruby-node">&quot;var result = jsApiReporter.resultsForSpecs(#{json_generate(slice)}); if (window.Prototype &amp;&amp; Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result) }&quot;</span>))
+73:       <span class="ruby-keyword kw">end</span>
+74:       <span class="ruby-ivar">@spec_results</span>
+75:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-suite-info-method" class="method-detail ">
+				<a name="method-i-load_suite_info"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_suite_info</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load-suite-info-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 54</span>
+54:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_suite_info</span>
+55:       <span class="ruby-identifier">started</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+56:       <span class="ruby-keyword kw">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">eval_js</span>(<span class="ruby-value str">'return jsApiReporter &amp;&amp; jsApiReporter.started'</span>) <span class="ruby-keyword kw">do</span>
+57:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;couldn't connect to Jasmine after 60 seconds&quot;</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">started</span> <span class="ruby-operator">+</span> <span class="ruby-value">60</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>)
+58:         <span class="ruby-identifier">sleep</span> <span class="ruby-value">0.1</span>
+59:       <span class="ruby-keyword kw">end</span>
+60: 
+61:       <span class="ruby-ivar">@suites</span> = <span class="ruby-identifier">eval_js</span>(<span class="ruby-value str">&quot;var result = jsApiReporter.suites(); if (window.Prototype &amp;&amp; Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result) }&quot;</span>)
+62:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="report-spec-method" class="method-detail ">
+				<a name="method-i-report_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">report_spec</span><span
+						class="method-args">(spec_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="report-spec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">report_spec</span>(<span class="ruby-identifier">spec_id</span>)
+124:       <span class="ruby-identifier">spec_results</span> = <span class="ruby-identifier">results_for</span>(<span class="ruby-identifier">spec_id</span>)
+125:       <span class="ruby-identifier">out</span> = <span class="ruby-value str">&quot;&quot;</span>
+126:       <span class="ruby-identifier">messages</span> = <span class="ruby-identifier">spec_results</span>[<span class="ruby-value str">'messages'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">message</span><span class="ruby-operator">|</span>
+127:         <span class="ruby-keyword kw">case</span>
+128:           <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;type&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;log&quot;</span>
+129:             <span class="ruby-identifier">puts</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;text&quot;</span>]
+130:             <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\n&quot;</span>
+131:           <span class="ruby-keyword kw">else</span>
+132:             <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;message&quot;</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^Passed.$/</span>
+133:               <span class="ruby-constant">STDERR</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;message&quot;</span>]
+134:               <span class="ruby-constant">STDERR</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+135: 
+136:               <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;message&quot;</span>]
+137:               <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+138:             <span class="ruby-keyword kw">end</span>
+139: 
+140:             <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;passed&quot;</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;trace&quot;</span>][<span class="ruby-value str">&quot;stack&quot;</span>]
+141:               <span class="ruby-identifier">stack_trace</span> = <span class="ruby-identifier">message</span>[<span class="ruby-value str">&quot;trace&quot;</span>][<span class="ruby-value str">&quot;stack&quot;</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&lt;br \/&gt;/</span>, <span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&lt;\/?b&gt;/</span>, <span class="ruby-value str">&quot; &quot;</span>)
+142:               <span class="ruby-constant">STDERR</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">stack_trace</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\(.*\)@http:\/\/localhost:[0-9]+\/specs\//</span>, <span class="ruby-value str">&quot;/spec/&quot;</span>)
+143:               <span class="ruby-constant">STDERR</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+144:             <span class="ruby-keyword kw">end</span>
+145:         <span class="ruby-keyword kw">end</span>
+146: 
+147:       <span class="ruby-keyword kw">end</span>
+148:       <span class="ruby-identifier">fail</span> <span class="ruby-identifier">out</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">spec_results</span>[<span class="ruby-value str">'result'</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'passed'</span>
+149:       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">out</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">out</span>.<span class="ruby-identifier">empty?</span>
+150:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="results-for-method" class="method-detail ">
+				<a name="method-i-results_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">results_for</span><span
+						class="method-args">(spec_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="results-for-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">results_for</span>(<span class="ruby-identifier">spec_id</span>)
+65:       <span class="ruby-ivar">@spec_results</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">load_results</span>
+66:       <span class="ruby-ivar">@spec_results</span>[<span class="ruby-identifier">spec_id</span>.<span class="ruby-identifier">to_s</span>]
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="script-path-method" class="method-detail ">
+				<a name="method-i-script_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">script_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="script-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 26</span>
+26:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">script_path</span>
+27:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-keyword kw">__FILE__</span>)
+28:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-method" class="method-detail ">
+				<a name="method-i-start"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="start-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 14</span>
+14:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start</span>
+15:       <span class="ruby-identifier">guess_example_locations</span>
+16: 
+17:       <span class="ruby-ivar">@runner</span>.<span class="ruby-identifier">start</span>
+18:       <span class="ruby-identifier">load_suite_info</span>
+19:       <span class="ruby-identifier">wait_for_suites_to_finish_running</span>
+20:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stop-method" class="method-detail ">
+				<a name="method-i-stop"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stop</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="stop-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 22</span>
+22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop</span>
+23:       <span class="ruby-ivar">@runner</span>.<span class="ruby-identifier">stop</span>
+24:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-for-suites-to-finish-running-method" class="method-detail ">
+				<a name="method-i-wait_for_suites_to_finish_running"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_for_suites_to_finish_running</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wait-for-suites-to-finish-running-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait_for_suites_to_finish_running</span>
+78:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Waiting for suite to finish in browser ...&quot;</span>
+79:       <span class="ruby-keyword kw">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">eval_js</span>(<span class="ruby-value str">'return jsApiReporter.finished'</span>) <span class="ruby-keyword kw">do</span>
+80:         <span class="ruby-identifier">sleep</span> <span class="ruby-value">0.1</span>
+81:       <span class="ruby-keyword kw">end</span>
+82:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="eval-js-method" class="method-detail ">
+				<a name="method-i-eval_js"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eval_js</span><span
+						class="method-args">(js)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="eval-js-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eval_js</span>(<span class="ruby-identifier">js</span>)
+155:       <span class="ruby-ivar">@runner</span>.<span class="ruby-identifier">eval_js</span>(<span class="ruby-identifier">js</span>)
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="json-generate-method" class="method-detail ">
+				<a name="method-i-json_generate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">json_generate</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="json-generate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jasmine/spec_builder.rb, line 158</span>
+158:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">json_generate</span>(<span class="ruby-identifier">obj</span>)
+159:       <span class="ruby-ivar">@runner</span>.<span class="ruby-identifier">json_generate</span>(<span class="ruby-identifier">obj</span>)
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

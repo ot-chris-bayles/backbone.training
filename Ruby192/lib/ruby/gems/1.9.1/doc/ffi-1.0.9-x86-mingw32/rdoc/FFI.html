@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: FFI</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/ffi/autopointer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/autopointer.rb">lib/ffi/autopointer.rb</a></li>
+					
+						<li><a href="./lib/ffi/enum_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/enum.rb">lib/ffi/enum.rb</a></li>
+					
+						<li><a href="./lib/ffi/errno_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/errno.rb">lib/ffi/errno.rb</a></li>
+					
+						<li><a href="./lib/ffi/io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/io.rb">lib/ffi/io.rb</a></li>
+					
+						<li><a href="./lib/ffi/library_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/library.rb">lib/ffi/library.rb</a></li>
+					
+						<li><a href="./lib/ffi/managedstruct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/managedstruct.rb">lib/ffi/managedstruct.rb</a></li>
+					
+						<li><a href="./lib/ffi/memorypointer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/memorypointer.rb">lib/ffi/memorypointer.rb</a></li>
+					
+						<li><a href="./lib/ffi/platform_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/platform.rb">lib/ffi/platform.rb</a></li>
+					
+						<li><a href="./lib/ffi/pointer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/pointer.rb">lib/ffi/pointer.rb</a></li>
+					
+						<li><a href="./lib/ffi/struct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/struct.rb">lib/ffi/struct.rb</a></li>
+					
+						<li><a href="./lib/ffi/struct_layout_builder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/struct_layout_builder.rb">lib/ffi/struct_layout_builder.rb</a></li>
+					
+						<li><a href="./lib/ffi/tools/const_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/tools/const_generator.rb">lib/ffi/tools/const_generator.rb</a></li>
+					
+						<li><a href="./lib/ffi/tools/generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/tools/generator.rb">lib/ffi/tools/generator.rb</a></li>
+					
+						<li><a href="./lib/ffi/tools/struct_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/tools/struct_generator.rb">lib/ffi/tools/struct_generator.rb</a></li>
+					
+						<li><a href="./lib/ffi/tools/types_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/tools/types_generator.rb">lib/ffi/tools/types_generator.rb</a></li>
+					
+						<li><a href="./lib/ffi/types_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/types.rb">lib/ffi/types.rb</a></li>
+					
+						<li><a href="./lib/ffi/union_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/union.rb">lib/ffi/union.rb</a></li>
+					
+						<li><a href="./lib/ffi/variadic_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/variadic.rb">lib/ffi/variadic.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="FFI/IO.html">FFI::IO</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="FFI/Library.html">FFI::Library</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="FFI/Platform.html">FFI::Platform</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Enum.html">FFI::Enum</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Enums.html">FFI::Enums</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Generator.html">FFI::Generator</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/PlatformError.html">FFI::PlatformError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Pointer.html">FFI::Pointer</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Struct.html">FFI::Struct</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/StructLayout.html">FFI::StructLayout</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/Union.html">FFI::Union</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-add_typedef">::add_typedef</a></li>
+					
+					<li><a href="#method-c-errno">::errno</a></li>
+					
+					<li><a href="#method-c-errno%3D">::errno=</a></li>
+					
+					<li><a href="#method-c-find_type">::find_type</a></li>
+					
+					<li><a href="#method-c-map_library_name">::map_library_name</a></li>
+					
+					<li><a href="#method-c-type_size">::type_size</a></li>
+					
+					<li><a href="#method-c-typedef">::typedef</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./FFI.html">FFI</a></li>
+				
+					<li><a href="./FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+				
+					<li><a href="./FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+				
+					<li><a href="./FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+				
+					<li><a href="./FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+				
+					<li><a href="./FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+				
+					<li><a href="./FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+				
+					<li><a href="./FFI/Enum.html">FFI::Enum</a></li>
+				
+					<li><a href="./FFI/Enums.html">FFI::Enums</a></li>
+				
+					<li><a href="./FFI/Generator.html">FFI::Generator</a></li>
+				
+					<li><a href="./FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+				
+					<li><a href="./FFI/IO.html">FFI::IO</a></li>
+				
+					<li><a href="./FFI/Library.html">FFI::Library</a></li>
+				
+					<li><a href="./FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+				
+					<li><a href="./FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+				
+					<li><a href="./FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+				
+					<li><a href="./FFI/Platform.html">FFI::Platform</a></li>
+				
+					<li><a href="./FFI/PlatformError.html">FFI::PlatformError</a></li>
+				
+					<li><a href="./FFI/Pointer.html">FFI::Pointer</a></li>
+				
+					<li><a href="./FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+				
+					<li><a href="./FFI/Struct.html">FFI::Struct</a></li>
+				
+					<li><a href="./FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+				
+					<li><a href="./FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+				
+					<li><a href="./FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+				
+					<li><a href="./FFI/StructLayout.html">FFI::StructLayout</a></li>
+				
+					<li><a href="./FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+				
+					<li><a href="./FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+				
+					<li><a href="./FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+				
+					<li><a href="./FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+				
+					<li><a href="./FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+				
+					<li><a href="./FFI/Union.html">FFI::Union</a></li>
+				
+					<li><a href="./FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">FFI</h1>
+
+		<div id="description">
+			<p>
+Copyright (C) 2008-2010 Wayne Meissner Copyright (C) 2008 Mike Dalessio
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2009, 2010 Wayne Meissner Copyright (C) 2009 Luc Heinrich
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008-2010 Wayne Meissner
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008, 2009 Wayne Meissner
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008-2010 Wayne Meissner Copyright (C) 2008 Luc Heinrich
+<luc@honk-honk.com>
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008-2010 Wayne Meissner
+</p>
+<p>
+All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008-2010 Wayne Meissner All rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+<hr style="height: 1px"></hr><p>
+Copyright (C) 2008, 2009 Wayne Meissner Copyright (C) 2009 Luc Heinrich All
+rights reserved.
+</p>
+<p>
+This file is part of ruby-ffi.
+</p>
+<p>
+This code is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License version 3 only, as
+published by the Free Software Foundation.
+</p>
+<p>
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License version 3 for more details.
+</p>
+<p>
+You should have received a copy of the GNU Lesser General Public License
+version 3 along with this work.  If not, see <<a
+href="http://www.gnu.org/licenses/">www.gnu.org/licenses/</a>>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CURRENT_PROCESS">CURRENT_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ARCH">ARCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="add-typedef-method" class="method-detail ">
+				<a name="method-c-add_typedef"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_typedef</span><span
+						class="method-args">(old, add)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="add-typedef-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/types.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">add_typedef</span>(<span class="ruby-identifier">old</span>, <span class="ruby-identifier">add</span>)
+27:     <span class="ruby-identifier">typedef</span> <span class="ruby-identifier">old</span>, <span class="ruby-identifier">add</span>
+28:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="errno-method" class="method-detail ">
+				<a name="method-c-errno"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">errno</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="errno-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/errno.rb, line 22</span>
+22:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">errno</span>
+23:     <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">LastError</span>.<span class="ruby-identifier">error</span>
+24:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="errno--method" class="method-detail ">
+				<a name="method-c-errno%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">errno=</span><span
+						class="method-args">(error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="errno--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/errno.rb, line 25</span>
+25:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">errno=</span>(<span class="ruby-identifier">error</span>)
+26:     <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">LastError</span>.<span class="ruby-identifier">error</span> = <span class="ruby-identifier">error</span>
+27:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-type-method" class="method-detail ">
+				<a name="method-c-find_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_type</span><span
+						class="method-args">(name, type_map = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-type-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/types.rb, line 31</span>
+31:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type_map</span> = <span class="ruby-keyword kw">nil</span>)
+32:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span>)
+33:       <span class="ruby-identifier">name</span>
+34: 
+35:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">type_map</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type_map</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+36:       <span class="ruby-identifier">type_map</span>[<span class="ruby-identifier">name</span>]
+37: 
+38:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">TypeDefs</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+39:       <span class="ruby-constant">TypeDefs</span>[<span class="ruby-identifier">name</span>]
+40: 
+41:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">DataConverter</span>)
+42:       (<span class="ruby-identifier">type_map</span> <span class="ruby-operator">||</span> <span class="ruby-constant">TypeDefs</span>)[<span class="ruby-identifier">name</span>] = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapped</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>)
+43:     
+44:     <span class="ruby-keyword kw">else</span>
+45:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;unable to resolve type '#{name}'&quot;</span>
+46:     <span class="ruby-keyword kw">end</span>
+47:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="map-library-name-method" class="method-detail ">
+				<a name="method-c-map_library_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map_library_name</span><span
+						class="method-args">(lib)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="map-library-name-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 24</span>
+24:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map_library_name</span>(<span class="ruby-identifier">lib</span>)
+25:     <span class="ruby-comment cmt"># Mangle the library name to reflect the native library naming conventions</span>
+26:     <span class="ruby-identifier">lib</span> = <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)
+27:     <span class="ruby-identifier">lib</span> = <span class="ruby-constant">Library</span><span class="ruby-operator">::</span><span class="ruby-constant">LIBC</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lib</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'c'</span>
+28: 
+29:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lib</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">lib</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">lib</span>
+30:       <span class="ruby-identifier">lib</span> = <span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">LIBPREFIX</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lib</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">lib</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#{Platform::LIBPREFIX}/</span>
+31:       <span class="ruby-identifier">r</span> = <span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">IS_LINUX</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;\\.so($|\\.[1234567890]+)&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;\\.#{Platform::LIBSUFFIX}$&quot;</span>
+32:       <span class="ruby-identifier">lib</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;.#{Platform::LIBSUFFIX}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">lib</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{r}/</span>
+33:     <span class="ruby-keyword kw">end</span>
+34: 
+35:     <span class="ruby-identifier">lib</span>
+36:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="type-size-method" class="method-detail ">
+				<a name="method-c-type_size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">type_size</span><span
+						class="method-args">(type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="type-size-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/types.rb, line 136</span>
+136:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-identifier">type</span>)
+137:     <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>).<span class="ruby-identifier">size</span>
+138:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="typedef-method" class="method-detail ">
+				<a name="method-c-typedef"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">typedef</span><span
+						class="method-args">(old, add)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="typedef-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/types.rb, line 22</span>
+22:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">typedef</span>(<span class="ruby-identifier">old</span>, <span class="ruby-identifier">add</span>)
+23:     <span class="ruby-constant">TypeDefs</span>[<span class="ruby-identifier">add</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">old</span>)
+24:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

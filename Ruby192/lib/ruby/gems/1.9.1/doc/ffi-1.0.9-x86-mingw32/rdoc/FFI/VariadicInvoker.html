@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: FFI::VariadicInvoker</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/ffi/variadic_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/variadic.rb">lib/ffi/variadic.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-attach">#attach</a></li>
+					
+					<li><a href="#method-i-call">#call</a></li>
+					
+					<li><a href="#method-i-init">#init</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../FFI.html">FFI</a></li>
+				
+					<li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+				
+					<li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+				
+					<li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+				
+					<li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+				
+					<li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+				
+					<li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+				
+					<li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+				
+					<li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+				
+					<li><a href="../FFI/IO.html">FFI::IO</a></li>
+				
+					<li><a href="../FFI/Library.html">FFI::Library</a></li>
+				
+					<li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+				
+					<li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+				
+					<li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+				
+					<li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+				
+					<li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+				
+					<li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+				
+					<li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+				
+					<li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+				
+					<li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+				
+					<li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+				
+					<li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+				
+					<li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+				
+					<li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+				
+					<li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+				
+					<li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+				
+					<li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+				
+					<li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+				
+					<li><a href="../FFI/Union.html">FFI::Union</a></li>
+				
+					<li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">FFI::VariadicInvoker</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="attach-method" class="method-detail ">
+				<a name="method-i-attach"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attach</span><span
+						class="method-args">(mod, mname)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attach the invoker to module <tt>mod</tt> as <tt>mname</tt>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="attach-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/variadic.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attach</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">mname</span>)
+50:       <span class="ruby-identifier">invoker</span> = <span class="ruby-keyword kw">self</span>
+51:       <span class="ruby-identifier">params</span> = <span class="ruby-value str">&quot;*args&quot;</span>
+52:       <span class="ruby-identifier">call</span> = <span class="ruby-value str">&quot;call&quot;</span>
+53:       <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">      @@#{mname} = invoker      def self.#{mname}(#{params})        @@#{mname}.#{call}(#{params})      end      def #{mname}(#{params})        @@#{mname}.#{call}(#{params})      end</span>
+54:       <span class="ruby-identifier">invoker</span>
+55:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="method-i-call"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/variadic.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+32:       <span class="ruby-identifier">param_types</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fixed</span>)
+33:       <span class="ruby-identifier">param_values</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+34:       <span class="ruby-ivar">@fixed</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+35:         <span class="ruby-identifier">param_values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-identifier">i</span>]
+36:       <span class="ruby-keyword kw">end</span>
+37:       <span class="ruby-identifier">i</span> = <span class="ruby-ivar">@fixed</span>.<span class="ruby-identifier">length</span>
+38:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span>
+39:         <span class="ruby-identifier">param_types</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">args</span>[<span class="ruby-identifier">i</span>], <span class="ruby-ivar">@type_map</span>)
+40:         <span class="ruby-identifier">param_values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+41:         <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+42:       <span class="ruby-keyword kw">end</span>
+43:       <span class="ruby-identifier">invoke</span>(<span class="ruby-identifier">param_types</span>, <span class="ruby-identifier">param_values</span>, &amp;<span class="ruby-identifier">block</span>)
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="init-method" class="method-detail ">
+				<a name="method-i-init"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init</span><span
+						class="method-args">(arg_types, type_map)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="init-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/variadic.rb, line 22</span>
+22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init</span>(<span class="ruby-identifier">arg_types</span>, <span class="ruby-identifier">type_map</span>)
+23:       <span class="ruby-ivar">@fixed</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+24:       <span class="ruby-ivar">@type_map</span> = <span class="ruby-identifier">type_map</span>
+25:       <span class="ruby-identifier">arg_types</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+26:         <span class="ruby-ivar">@fixed</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">type</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">VARARGS</span>
+27:       <span class="ruby-keyword kw">end</span>
+28:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

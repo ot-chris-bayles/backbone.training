@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: FFI::Library</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/ffi/library_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/library.rb">lib/ffi/library.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-extended">::extended</a></li>
+					
+					<li><a href="#method-i-attach_function">#attach_function</a></li>
+					
+					<li><a href="#method-i-attach_variable">#attach_variable</a></li>
+					
+					<li><a href="#method-i-callback">#callback</a></li>
+					
+					<li><a href="#method-i-enum">#enum</a></li>
+					
+					<li><a href="#method-i-enum_type">#enum_type</a></li>
+					
+					<li><a href="#method-i-enum_value">#enum_value</a></li>
+					
+					<li><a href="#method-i-ffi_convention">#ffi_convention</a></li>
+					
+					<li><a href="#method-i-ffi_lib">#ffi_lib</a></li>
+					
+					<li><a href="#method-i-ffi_lib_flags">#ffi_lib_flags</a></li>
+					
+					<li><a href="#method-i-ffi_libraries">#ffi_libraries</a></li>
+					
+					<li><a href="#method-i-find_type">#find_type</a></li>
+					
+					<li><a href="#method-i-typedef">#typedef</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../FFI.html">FFI</a></li>
+				
+					<li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+				
+					<li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+				
+					<li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+				
+					<li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+				
+					<li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+				
+					<li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+				
+					<li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+				
+					<li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+				
+					<li><a href="../FFI/IO.html">FFI::IO</a></li>
+				
+					<li><a href="../FFI/Library.html">FFI::Library</a></li>
+				
+					<li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+				
+					<li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+				
+					<li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+				
+					<li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+				
+					<li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+				
+					<li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+				
+					<li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+				
+					<li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+				
+					<li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+				
+					<li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+				
+					<li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+				
+					<li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+				
+					<li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+				
+					<li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+				
+					<li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+				
+					<li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+				
+					<li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+				
+					<li><a href="../FFI/Union.html">FFI::Union</a></li>
+				
+					<li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">FFI::Library</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CURRENT_PROCESS">CURRENT_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LIBC">LIBC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FlagsMap">FlagsMap</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="extended-method" class="method-detail ">
+				<a name="method-c-extended"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extended</span><span
+						class="method-args">(mod)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="extended-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 48</span>
+48:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extended</span>(<span class="ruby-identifier">mod</span>)
+49:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;must only be extended by module&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Module</span>)
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="attach-function-method" class="method-detail ">
+				<a name="method-i-attach_function"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attach_function</span><span
+						class="method-args">(mname, a2, a3, a4=nil, a5 = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attach C function to this module.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="attach-function-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 112</span>
+112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attach_function</span>(<span class="ruby-identifier">mname</span>, <span class="ruby-identifier">a2</span>, <span class="ruby-identifier">a3</span>, <span class="ruby-identifier">a4</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">a5</span> = <span class="ruby-keyword kw">nil</span>)
+113:       <span class="ruby-identifier">cname</span>, <span class="ruby-identifier">arg_types</span>, <span class="ruby-identifier">ret_type</span>, <span class="ruby-identifier">opts</span> = (<span class="ruby-identifier">a4</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">a2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">a2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>))) <span class="ruby-operator">?</span> [ <span class="ruby-identifier">a2</span>, <span class="ruby-identifier">a3</span>, <span class="ruby-identifier">a4</span>, <span class="ruby-identifier">a5</span> ] <span class="ruby-operator">:</span> [ <span class="ruby-identifier">mname</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">a2</span>, <span class="ruby-identifier">a3</span>, <span class="ruby-identifier">a4</span> ]
+114: 
+115:       <span class="ruby-comment cmt"># Convert :foo to the native type</span>
+116:       <span class="ruby-identifier">arg_types</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">e</span>) }
+117:       <span class="ruby-identifier">options</span> = {
+118:         <span class="ruby-value">:convention</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_convention</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@ffi_convention</span> <span class="ruby-operator">:</span> <span class="ruby-value">:default</span>,
+119:         <span class="ruby-value">:type_map</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_typedefs</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@ffi_typedefs</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>,
+120:         <span class="ruby-value">:blocking</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@blocking</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@blocking</span>,
+121:         <span class="ruby-value">:enums</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_enums</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@ffi_enums</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>,
+122:       }
+123:       
+124:       <span class="ruby-ivar">@blocking</span> = <span class="ruby-keyword kw">false</span>
+125:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">opts</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+126: 
+127:       <span class="ruby-comment cmt"># Try to locate the function in any of the libraries</span>
+128:       <span class="ruby-identifier">invokers</span> = []
+129:       <span class="ruby-identifier">ffi_libraries</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lib</span><span class="ruby-operator">|</span>
+130:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">invokers</span>.<span class="ruby-identifier">empty?</span>
+131:           <span class="ruby-keyword kw">begin</span>
+132:             <span class="ruby-identifier">function</span> = <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">find_function</span>(<span class="ruby-identifier">cname</span>.<span class="ruby-identifier">to_s</span>)
+133:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">LoadError</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">function</span>
+134: 
+135:             <span class="ruby-identifier">invokers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg_types</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg_types</span>[<span class="ruby-identifier">arg_types</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NativeType</span><span class="ruby-operator">::</span><span class="ruby-constant">VARARGS</span>
+136:               <span class="ruby-constant">VariadicInvoker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">function</span>, <span class="ruby-identifier">arg_types</span>, <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">ret_type</span>), <span class="ruby-identifier">options</span>)
+137: 
+138:             <span class="ruby-keyword kw">else</span>
+139:               <span class="ruby-constant">Function</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">ret_type</span>), <span class="ruby-identifier">arg_types</span>, <span class="ruby-identifier">function</span>, <span class="ruby-identifier">options</span>)
+140:             <span class="ruby-keyword kw">end</span>
+141: 
+142:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+143:           <span class="ruby-keyword kw">end</span>
+144:         <span class="ruby-keyword kw">end</span>
+145:       <span class="ruby-keyword kw">end</span>
+146:       <span class="ruby-identifier">invoker</span> = <span class="ruby-identifier">invokers</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">shift</span>
+147:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NotFoundError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cname</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">ffi_libraries</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">lib</span><span class="ruby-operator">|</span> <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">name</span> }) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">invoker</span>
+148: 
+149:       <span class="ruby-identifier">invoker</span>.<span class="ruby-identifier">attach</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">mname</span>.<span class="ruby-identifier">to_s</span>)
+150:       <span class="ruby-identifier">invoker</span>
+151:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="attach-variable-method" class="method-detail ">
+				<a name="method-i-attach_variable"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attach_variable</span><span
+						class="method-args">(mname, a1, a2 = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="attach-variable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attach_variable</span>(<span class="ruby-identifier">mname</span>, <span class="ruby-identifier">a1</span>, <span class="ruby-identifier">a2</span> = <span class="ruby-keyword kw">nil</span>)
+155:       <span class="ruby-identifier">cname</span>, <span class="ruby-identifier">type</span> = <span class="ruby-identifier">a2</span> <span class="ruby-operator">?</span> [ <span class="ruby-identifier">a1</span>, <span class="ruby-identifier">a2</span> ] <span class="ruby-operator">:</span> [ <span class="ruby-identifier">mname</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">a1</span> ]
+156:       <span class="ruby-identifier">address</span> = <span class="ruby-keyword kw">nil</span>
+157:       <span class="ruby-identifier">ffi_libraries</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lib</span><span class="ruby-operator">|</span>
+158:         <span class="ruby-keyword kw">begin</span>
+159:           <span class="ruby-identifier">address</span> = <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">find_variable</span>(<span class="ruby-identifier">cname</span>.<span class="ruby-identifier">to_s</span>)
+160:           <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">address</span>.<span class="ruby-identifier">nil?</span>
+161:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+162:         <span class="ruby-keyword kw">end</span>
+163:       <span class="ruby-keyword kw">end</span>
+164: 
+165:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NotFoundError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cname</span>, <span class="ruby-identifier">ffi_libraries</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">address</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">address</span>.<span class="ruby-identifier">null?</span>
+166:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Struct</span>
+167:         <span class="ruby-comment cmt"># If it is a global struct, just attach directly to the pointer</span>
+168:         <span class="ruby-identifier">s</span> = <span class="ruby-identifier">type</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">address</span>)
+169:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">          @@ffi_gvar_#{mname} = s          def self.#{mname}            @@ffi_gvar_#{mname}          end</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span>
+170: 
+171:       <span class="ruby-keyword kw">else</span>
+172:         <span class="ruby-identifier">sc</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Struct</span>)
+173:         <span class="ruby-identifier">sc</span>.<span class="ruby-identifier">layout</span> <span class="ruby-value">:gvar</span>, <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>)
+174:         <span class="ruby-identifier">s</span> = <span class="ruby-identifier">sc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">address</span>)
+175:         <span class="ruby-comment cmt">#</span>
+176:         <span class="ruby-comment cmt"># Attach to this module as mname/mname=</span>
+177:         <span class="ruby-comment cmt">#</span>
+178:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-value str">          @@ffi_gvar_#{mname} = s          def self.#{mname}            @@ffi_gvar_#{mname}[:gvar]          end          def self.#{mname}=(value)            @@ffi_gvar_#{mname}[:gvar] = value          end</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span>
+179: 
+180:       <span class="ruby-keyword kw">end</span>
+181: 
+182:       <span class="ruby-identifier">address</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="callback-method" class="method-detail ">
+				<a name="method-i-callback"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">callback</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="callback-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 198</span>
+198:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span>(*<span class="ruby-identifier">args</span>)
+199:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;wrong number of arguments&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>
+200:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">ret</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+201:         <span class="ruby-identifier">args</span>
+202:       <span class="ruby-keyword kw">else</span>
+203:         [ <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>] ]
+204:       <span class="ruby-keyword kw">end</span>
+205: 
+206:       <span class="ruby-identifier">options</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+207:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:convention</span>] = <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_convention</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@ffi_convention</span> <span class="ruby-operator">:</span> <span class="ruby-value">:default</span>
+208:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:enums</span>] = <span class="ruby-ivar">@ffi_enums</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_enums</span>)
+209:       <span class="ruby-identifier">cb</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">CallbackInfo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">ret</span>), <span class="ruby-identifier">params</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">e</span>) }, <span class="ruby-identifier">options</span>)
+210: 
+211:       <span class="ruby-comment cmt"># Add to the symbol -&gt; type map (unless there was no name)</span>
+212:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+213:         <span class="ruby-identifier">typedef</span> <span class="ruby-identifier">cb</span>, <span class="ruby-identifier">name</span>
+214:       <span class="ruby-keyword kw">end</span>
+215: 
+216:       <span class="ruby-identifier">cb</span>
+217:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-method" class="method-detail ">
+				<a name="method-i-enum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enum-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 243</span>
+243:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum</span>(*<span class="ruby-identifier">args</span>)
+244:       <span class="ruby-comment cmt">#</span>
+245:       <span class="ruby-comment cmt"># enum can be called as:</span>
+246:       <span class="ruby-comment cmt"># enum :zero, :one, :two  # unnamed enum</span>
+247:       <span class="ruby-comment cmt"># enum [ :zero, :one, :two ] # equivalent to above</span>
+248:       <span class="ruby-comment cmt"># enum :foo, [ :zero, :one, :two ] create an enum named :foo</span>
+249:       <span class="ruby-comment cmt">#</span>
+250:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+251:         [ <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>] ]
+252:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+253:         [ <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>] ]
+254:       <span class="ruby-keyword kw">else</span>
+255:         [ <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">args</span> ]
+256:       <span class="ruby-keyword kw">end</span>
+257:       <span class="ruby-ivar">@ffi_enums</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Enums</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_enums</span>)
+258:       <span class="ruby-ivar">@ffi_enums</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">e</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Enum</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">values</span>, <span class="ruby-identifier">name</span>))
+259: 
+260:       <span class="ruby-comment cmt"># If called as enum :foo, [ :zero, :one, :two ], add a typedef alias</span>
+261:       <span class="ruby-identifier">typedef</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">name</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>
+262:       <span class="ruby-identifier">e</span>
+263:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-type-method" class="method-detail ">
+				<a name="method-i-enum_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum_type</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enum-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 265</span>
+265:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum_type</span>(<span class="ruby-identifier">name</span>)
+266:       <span class="ruby-ivar">@ffi_enums</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_enums</span>)
+267:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-value-method" class="method-detail ">
+				<a name="method-i-enum_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum_value</span><span
+						class="method-args">(symbol)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enum-value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 269</span>
+269:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum_value</span>(<span class="ruby-identifier">symbol</span>)
+270:       <span class="ruby-ivar">@ffi_enums</span>.<span class="ruby-identifier">__map_symbol</span>(<span class="ruby-identifier">symbol</span>)
+271:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ffi-convention-method" class="method-detail ">
+				<a name="method-i-ffi_convention"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ffi_convention</span><span
+						class="method-args">(convention)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ffi-convention-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 87</span>
+87:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ffi_convention</span>(<span class="ruby-identifier">convention</span>)
+88:       <span class="ruby-ivar">@ffi_convention</span> = <span class="ruby-identifier">convention</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ffi-lib-method" class="method-detail ">
+				<a name="method-i-ffi_lib"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ffi_lib</span><span
+						class="method-args">(*names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ffi-lib-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ffi_lib</span>(*<span class="ruby-identifier">names</span>)
+53:       <span class="ruby-identifier">lib_flags</span> = <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_lib_flags</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@ffi_lib_flags</span> <span class="ruby-operator">:</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span><span class="ruby-operator">::</span><span class="ruby-constant">RTLD_LAZY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span><span class="ruby-operator">::</span><span class="ruby-constant">RTLD_LOCAL</span>
+54:       <span class="ruby-identifier">ffi_libs</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+55: 
+56:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">CURRENT_PROCESS</span>
+57:           <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span>.<span class="ruby-identifier">open</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span><span class="ruby-operator">::</span><span class="ruby-constant">RTLD_LAZY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span><span class="ruby-operator">::</span><span class="ruby-constant">RTLD_LOCAL</span>)
+58: 
+59:         <span class="ruby-keyword kw">else</span>
+60:           <span class="ruby-identifier">libnames</span> = (<span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Array</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">:</span> [ <span class="ruby-identifier">name</span> ]).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> [ <span class="ruby-identifier">n</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">map_library_name</span>(<span class="ruby-identifier">n</span>) ].<span class="ruby-identifier">uniq</span> }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+61:           <span class="ruby-identifier">lib</span> = <span class="ruby-keyword kw">nil</span>
+62:           <span class="ruby-identifier">errors</span> = {}
+63: 
+64:           <span class="ruby-identifier">libnames</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">libname</span><span class="ruby-operator">|</span>
+65:             <span class="ruby-keyword kw">begin</span>
+66:               <span class="ruby-identifier">lib</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">DynamicLibrary</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">libname</span>, <span class="ruby-identifier">lib_flags</span>)
+67:               <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lib</span>
+68: 
+69:             <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+70:               <span class="ruby-identifier">errors</span>[<span class="ruby-identifier">libname</span>] = <span class="ruby-identifier">ex</span>
+71:             <span class="ruby-keyword kw">end</span>
+72:           <span class="ruby-keyword kw">end</span>
+73: 
+74:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lib</span>.<span class="ruby-identifier">nil?</span>
+75:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">LoadError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'. '</span>))
+76:           <span class="ruby-keyword kw">end</span>
+77: 
+78:           <span class="ruby-comment cmt"># return the found lib</span>
+79:           <span class="ruby-identifier">lib</span>
+80:         <span class="ruby-keyword kw">end</span>
+81:       <span class="ruby-keyword kw">end</span>
+82: 
+83:       <span class="ruby-ivar">@ffi_libs</span> = <span class="ruby-identifier">ffi_libs</span>
+84:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ffi-lib-flags-method" class="method-detail ">
+				<a name="method-i-ffi_lib_flags"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ffi_lib_flags</span><span
+						class="method-args">(*flags)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ffi-lib-flags-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ffi_lib_flags</span>(*<span class="ruby-identifier">flags</span>)
+105:       <span class="ruby-ivar">@ffi_lib_flags</span> = <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">result</span>, <span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FlagsMap</span>[<span class="ruby-identifier">f</span>] }
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ffi-libraries-method" class="method-detail ">
+				<a name="method-i-ffi_libraries"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ffi_libraries</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ffi-libraries-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ffi_libraries</span>
+93:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">LoadError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;no library specified&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_libs</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@ffi_libs</span>.<span class="ruby-identifier">empty?</span>
+94:       <span class="ruby-ivar">@ffi_libs</span>
+95:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-type-method" class="method-detail ">
+				<a name="method-i-find_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_type</span><span
+						class="method-args">(t)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 273</span>
+273:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">t</span>)
+274:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Type</span>)
+275:         <span class="ruby-identifier">t</span>
+276:       
+277:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_typedefs</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@ffi_typedefs</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">t</span>)
+278:         <span class="ruby-ivar">@ffi_typedefs</span>[<span class="ruby-identifier">t</span>]
+279: 
+280:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Struct</span>
+281:         <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">POINTER</span>
+282: 
+283:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">DataConverter</span>)
+284:         <span class="ruby-comment cmt"># Add a typedef so next time the converter is used, it hits the cache</span>
+285:         <span class="ruby-identifier">typedef</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapped</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">t</span>), <span class="ruby-identifier">t</span>
+286:       
+287:       <span class="ruby-keyword kw">end</span> <span class="ruby-operator">||</span> <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">t</span>)
+288:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="typedef-method" class="method-detail ">
+				<a name="method-i-typedef"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">typedef</span><span
+						class="method-args">(old, add, info=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="typedef-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/library.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">typedef</span>(<span class="ruby-identifier">old</span>, <span class="ruby-identifier">add</span>, <span class="ruby-identifier">info</span>=<span class="ruby-keyword kw">nil</span>)
+220:       <span class="ruby-ivar">@ffi_typedefs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@ffi_typedefs</span>)
+221: 
+222:       <span class="ruby-ivar">@ffi_typedefs</span>[<span class="ruby-identifier">add</span>] = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">old</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>)
+223:         <span class="ruby-identifier">old</span>
+224: 
+225:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@ffi_typedefs</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">old</span>)
+226:         <span class="ruby-ivar">@ffi_typedefs</span>[<span class="ruby-identifier">old</span>]
+227: 
+228:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">old</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">DataConverter</span>)
+229:         <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapped</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">old</span>)
+230: 
+231:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">old</span> <span class="ruby-operator">==</span> <span class="ruby-value">:enum</span>
+232:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">add</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+233:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">enum</span>(<span class="ruby-identifier">add</span>)
+234:         <span class="ruby-keyword kw">else</span>
+235:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">enum</span>(<span class="ruby-identifier">info</span>, <span class="ruby-identifier">add</span>)
+236:         <span class="ruby-keyword kw">end</span>
+237: 
+238:       <span class="ruby-keyword kw">else</span>
+239:         <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">old</span>)
+240:       <span class="ruby-keyword kw">end</span>
+241:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

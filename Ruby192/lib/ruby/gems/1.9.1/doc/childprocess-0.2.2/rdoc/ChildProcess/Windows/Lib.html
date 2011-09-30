@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChildProcess::Windows::Lib</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/childprocess/windows/constants_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/constants.rb">lib/childprocess/windows/constants.rb</a></li>
+					
+						<li><a href="../../lib/childprocess/windows/functions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/functions.rb">lib/childprocess/windows/functions.rb</a></li>
+					
+						<li><a href="../../lib/childprocess/windows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows.rb">lib/childprocess/windows.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-create_proc">::create_proc</a></li>
+					
+					<li><a href="#method-c-duplicate_handle">::duplicate_handle</a></li>
+					
+					<li><a href="#method-c-handle_for">::handle_for</a></li>
+					
+					<li><a href="#method-c-io_for">::io_for</a></li>
+					
+					<li><a href="#method-c-last_error_message">::last_error_message</a></li>
+					
+					<li><a href="#method-c-msvcrt_name">::msvcrt_name</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChildProcess.html">ChildProcess</a></li>
+				
+					<li><a href="../../ChildProcess/AbstractIO.html">ChildProcess::AbstractIO</a></li>
+				
+					<li><a href="../../ChildProcess/AbstractProcess.html">ChildProcess::AbstractProcess</a></li>
+				
+					<li><a href="../../ChildProcess/Error.html">ChildProcess::Error</a></li>
+				
+					<li><a href="../../ChildProcess/IronRuby.html">ChildProcess::IronRuby</a></li>
+				
+					<li><a href="../../ChildProcess/IronRuby/Process.html">ChildProcess::IronRuby::Process</a></li>
+				
+					<li><a href="../../ChildProcess/JRuby.html">ChildProcess::JRuby</a></li>
+				
+					<li><a href="../../ChildProcess/JRuby/IO.html">ChildProcess::JRuby::IO</a></li>
+				
+					<li><a href="../../ChildProcess/JRuby/Process.html">ChildProcess::JRuby::Process</a></li>
+				
+					<li><a href="../../ChildProcess/JRuby/Redirector.html">ChildProcess::JRuby::Redirector</a></li>
+				
+					<li><a href="../../ChildProcess/SubclassResponsibility.html">ChildProcess::SubclassResponsibility</a></li>
+				
+					<li><a href="../../ChildProcess/TimeoutError.html">ChildProcess::TimeoutError</a></li>
+				
+					<li><a href="../../ChildProcess/Unix.html">ChildProcess::Unix</a></li>
+				
+					<li><a href="../../ChildProcess/Unix/IO.html">ChildProcess::Unix::IO</a></li>
+				
+					<li><a href="../../ChildProcess/Unix/Process.html">ChildProcess::Unix::Process</a></li>
+				
+					<li><a href="../../ChildProcess/Windows.html">ChildProcess::Windows</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/Handle.html">ChildProcess::Windows::Handle</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/IO.html">ChildProcess::Windows::IO</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/Lib.html">ChildProcess::Windows::Lib</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/Process.html">ChildProcess::Windows::Process</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/ProcessInfo.html">ChildProcess::Windows::ProcessInfo</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/SecurityAttributes.html">ChildProcess::Windows::SecurityAttributes</a></li>
+				
+					<li><a href="../../ChildProcess/Windows/StartupInfo.html">ChildProcess::Windows::StartupInfo</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChildProcess::Windows::Lib</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="create-proc-method" class="method-detail ">
+				<a name="method-c-create_proc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_proc</span><span
+						class="method-args">(cmd, opts = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="create-proc-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess/windows/functions.rb, line 5</span>
+ 5:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_proc</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">opts</span> = {})
+ 6:         <span class="ruby-identifier">cmd_ptr</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">from_string</span> <span class="ruby-identifier">cmd</span>
+ 7: 
+ 8:         <span class="ruby-identifier">flags</span>   = <span class="ruby-value">0</span>
+ 9:         <span class="ruby-identifier">inherit</span> = <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">opts</span>[<span class="ruby-value">:inherit</span>]
+10: 
+11:         <span class="ruby-identifier">flags</span> <span class="ruby-operator">|=</span> <span class="ruby-constant">DETACHED_PROCESS</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:detach</span>]
+12: 
+13:         <span class="ruby-identifier">si</span> = <span class="ruby-constant">StartupInfo</span>.<span class="ruby-identifier">new</span>
+14:         <span class="ruby-identifier">pi</span> = <span class="ruby-constant">ProcessInfo</span>.<span class="ruby-identifier">new</span>
+15: 
+16:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:stdout</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:stderr</span>]
+17:           <span class="ruby-identifier">si</span>[<span class="ruby-value">:dwFlags</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+18:           <span class="ruby-identifier">si</span>[<span class="ruby-value">:dwFlags</span>] <span class="ruby-operator">|=</span> <span class="ruby-constant">STARTF_USESTDHANDLES</span>
+19:           <span class="ruby-identifier">inherit</span> = <span class="ruby-keyword kw">true</span>
+20: 
+21:           <span class="ruby-identifier">si</span>[<span class="ruby-value">:hStdOutput</span>] = <span class="ruby-identifier">handle_for</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:stdout</span>].<span class="ruby-identifier">fileno</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:stdout</span>]
+22:           <span class="ruby-identifier">si</span>[<span class="ruby-value">:hStdError</span>]  = <span class="ruby-identifier">handle_for</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:stderr</span>].<span class="ruby-identifier">fileno</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:stderr</span>]
+23:         <span class="ruby-keyword kw">end</span>
+24: 
+25:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:duplex</span>]
+26:           <span class="ruby-identifier">read_pipe_ptr</span>  = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:pointer</span>)
+27:           <span class="ruby-identifier">write_pipe_ptr</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:pointer</span>)
+28:           <span class="ruby-identifier">sa</span>         = <span class="ruby-constant">SecurityAttributes</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:inherit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>)
+29: 
+30:           <span class="ruby-identifier">ok</span> = <span class="ruby-identifier">create_pipe</span>(<span class="ruby-identifier">read_pipe_ptr</span>, <span class="ruby-identifier">write_pipe_ptr</span>, <span class="ruby-identifier">sa</span>, <span class="ruby-value">0</span>)
+31:           <span class="ruby-identifier">ok</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">last_error_message</span>
+32: 
+33:           <span class="ruby-identifier">read_pipe</span> = <span class="ruby-identifier">read_pipe_ptr</span>.<span class="ruby-identifier">read_pointer</span>
+34:           <span class="ruby-identifier">write_pipe</span> = <span class="ruby-identifier">write_pipe_ptr</span>.<span class="ruby-identifier">read_pointer</span>
+35: 
+36:           <span class="ruby-identifier">si</span>[<span class="ruby-value">:hStdInput</span>] = <span class="ruby-identifier">read_pipe</span>
+37:         <span class="ruby-keyword kw">end</span>
+38: 
+39:         <span class="ruby-identifier">ok</span> = <span class="ruby-identifier">create_process</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">cmd_ptr</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">inherit</span>, <span class="ruby-identifier">flags</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">si</span>, <span class="ruby-identifier">pi</span>)
+40:         <span class="ruby-identifier">ok</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">last_error_message</span>
+41: 
+42:         <span class="ruby-identifier">close_handle</span> <span class="ruby-identifier">pi</span>[<span class="ruby-value">:hProcess</span>]
+43:         <span class="ruby-identifier">close_handle</span> <span class="ruby-identifier">pi</span>[<span class="ruby-value">:hThread</span>]
+44: 
+45:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:duplex</span>]
+46:           <span class="ruby-identifier">opts</span>[<span class="ruby-value">:stdin</span>] = <span class="ruby-identifier">io_for</span>(<span class="ruby-identifier">duplicate_handle</span>(<span class="ruby-identifier">write_pipe</span>), <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">WRONLY</span>)
+47:           <span class="ruby-identifier">close_handle</span> <span class="ruby-identifier">read_pipe</span>
+48:           <span class="ruby-identifier">close_handle</span> <span class="ruby-identifier">write_pipe</span>
+49:         <span class="ruby-keyword kw">end</span>
+50: 
+51:         <span class="ruby-identifier">pi</span>[<span class="ruby-value">:dwProcessId</span>]
+52:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="duplicate-handle-method" class="method-detail ">
+				<a name="method-c-duplicate_handle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">duplicate_handle</span><span
+						class="method-args">(handle)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="duplicate-handle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/childprocess/windows/functions.rb, line 102</span>
+102:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">duplicate_handle</span>(<span class="ruby-identifier">handle</span>)
+103:         <span class="ruby-identifier">dup</span>  = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:pointer</span>)
+104:         <span class="ruby-identifier">proc</span> = <span class="ruby-identifier">current_process</span>
+105: 
+106:         <span class="ruby-identifier">ok</span> = <span class="ruby-identifier">_duplicate_handle</span>(
+107:           <span class="ruby-identifier">proc</span>, <span class="ruby-identifier">handle</span>, <span class="ruby-identifier">proc</span>, <span class="ruby-identifier">dup</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-constant">DUPLICATE_SAME_ACCESS</span>)
+108: 
+109:         <span class="ruby-identifier">ok</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">last_error_message</span>
+110: 
+111:         <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">read_pointer</span>
+112:       <span class="ruby-keyword kw">ensure</span>
+113:         <span class="ruby-identifier">close_handle</span> <span class="ruby-identifier">proc</span>
+114:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-for-method" class="method-detail ">
+				<a name="method-c-handle_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_for</span><span
+						class="method-args">(fd_or_io)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="handle-for-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess/windows/functions.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">handle_for</span>(<span class="ruby-identifier">fd_or_io</span>)
+67:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fd_or_io</span>
+68:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">IO</span>
+69:           <span class="ruby-identifier">handle</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">fd</span>.<span class="ruby-identifier">fileno</span>)
+70:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Fixnum</span>
+71:           <span class="ruby-identifier">handle</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">fd_or_io</span>)
+72:         <span class="ruby-keyword kw">else</span>
+73:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fd_or_io</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_io</span>)
+74:             <span class="ruby-identifier">io</span> = <span class="ruby-identifier">fd_or_io</span>.<span class="ruby-identifier">to_io</span>
+75: 
+76:             <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">IO</span>)
+77:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected #to_io to return an instance of IO&quot;</span>
+78:             <span class="ruby-keyword kw">end</span>
+79: 
+80:             <span class="ruby-identifier">handle</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">io</span>.<span class="ruby-identifier">fileno</span>)
+81:           <span class="ruby-keyword kw">else</span>
+82:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid type: #{fd_or_io.inspect}&quot;</span>
+83:           <span class="ruby-keyword kw">end</span>
+84:         <span class="ruby-keyword kw">end</span>
+85: 
+86:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">handle</span> <span class="ruby-operator">==</span> <span class="ruby-constant">INVALID_HANDLE_VALUE</span>
+87:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">last_error_message</span>
+88:         <span class="ruby-keyword kw">end</span>
+89: 
+90:         <span class="ruby-identifier">handle</span>
+91:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="io-for-method" class="method-detail ">
+				<a name="method-c-io_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">io_for</span><span
+						class="method-args">(handle, flags = File::RDONLY)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="io-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/childprocess/windows/functions.rb, line 93</span>
+ 93:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">io_for</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">flags</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">RDONLY</span>)
+ 94:         <span class="ruby-identifier">fd</span> = <span class="ruby-identifier">open_osfhandle</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">flags</span>)
+ 95:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fd</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+ 96:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-identifier">last_error_message</span>
+ 97:         <span class="ruby-keyword kw">end</span>
+ 98: 
+ 99:         <span class="ruby-operator">::</span><span class="ruby-constant">IO</span>.<span class="ruby-identifier">for_fd</span> <span class="ruby-identifier">fd</span>, <span class="ruby-identifier">flags</span>
+100:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="last-error-message-method" class="method-detail ">
+				<a name="method-c-last_error_message"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">last_error_message</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="last-error-message-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess/windows/functions.rb, line 54</span>
+54:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">last_error_message</span>
+55:         <span class="ruby-identifier">errnum</span> = <span class="ruby-identifier">get_last_error</span>
+56:         <span class="ruby-identifier">buf</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:char</span>, <span class="ruby-value">512</span>
+57: 
+58:         <span class="ruby-identifier">size</span> = <span class="ruby-identifier">format_message</span>(
+59:           <span class="ruby-constant">FORMAT_MESSAGE_FROM_SYSTEM</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FORMAT_MESSAGE_ARGUMENT_ARRAY</span>,
+60:           <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">errnum</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span>, <span class="ruby-keyword kw">nil</span>
+61:         )
+62: 
+63:         <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">read_string</span>(<span class="ruby-identifier">size</span>).<span class="ruby-identifier">strip</span>
+64:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="msvcrt-name-method" class="method-detail ">
+				<a name="method-c-msvcrt_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">msvcrt_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="msvcrt-name-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess/windows.rb, line 9</span>
+ 9:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">msvcrt_name</span>
+10:         <span class="ruby-identifier">host_part</span> = <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;_&quot;</span>)[<span class="ruby-value">1</span>]
+11:         <span class="ruby-identifier">manifest</span>  = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'bindir'</span>], <span class="ruby-value str">'ruby.exe.manifest'</span>)
+12: 
+13:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">host_part</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">host_part</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">80</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">manifest</span>)
+14:           <span class="ruby-node">&quot;msvcr#{host_part}&quot;</span>
+15:         <span class="ruby-keyword kw">else</span>
+16:           <span class="ruby-value str">&quot;msvcrt&quot;</span>
+17:         <span class="ruby-keyword kw">end</span>
+18:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

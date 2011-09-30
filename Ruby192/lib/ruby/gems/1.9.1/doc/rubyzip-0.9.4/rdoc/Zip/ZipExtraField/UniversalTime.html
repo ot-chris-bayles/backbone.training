@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Zip::ZipExtraField::UniversalTime</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/zip/zip_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/zip/zip.rb">lib/zip/zip.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Generic.html">Zip::ZipExtraField::Generic</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-merge">#merge</a></li>
+					
+					<li><a href="#method-i-pack_for_c_dir">#pack_for_c_dir</a></li>
+					
+					<li><a href="#method-i-pack_for_local">#pack_for_local</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Zip.html">Zip</a></li>
+				
+					<li><a href="../../Zip/ZipCentralDirectory.html">Zip::ZipCentralDirectory</a></li>
+				
+					<li><a href="../../Zip/ZipCompressionMethodError.html">Zip::ZipCompressionMethodError</a></li>
+				
+					<li><a href="../../Zip/ZipDestinationFileExistsError.html">Zip::ZipDestinationFileExistsError</a></li>
+				
+					<li><a href="../../Zip/ZipEntry.html">Zip::ZipEntry</a></li>
+				
+					<li><a href="../../Zip/ZipEntryExistsError.html">Zip::ZipEntryExistsError</a></li>
+				
+					<li><a href="../../Zip/ZipEntryNameError.html">Zip::ZipEntryNameError</a></li>
+				
+					<li><a href="../../Zip/ZipError.html">Zip::ZipError</a></li>
+				
+					<li><a href="../../Zip/ZipExtraField.html">Zip::ZipExtraField</a></li>
+				
+					<li><a href="../../Zip/ZipExtraField/Generic.html">Zip::ZipExtraField::Generic</a></li>
+				
+					<li><a href="../../Zip/ZipExtraField/IUnix.html">Zip::ZipExtraField::IUnix</a></li>
+				
+					<li><a href="../../Zip/ZipExtraField/UniversalTime.html">Zip::ZipExtraField::UniversalTime</a></li>
+				
+					<li><a href="../../Zip/ZipFile.html">Zip::ZipFile</a></li>
+				
+					<li><a href="../../Zip/ZipFileSystem.html">Zip::ZipFileSystem</a></li>
+				
+					<li><a href="../../Zip/ZipFileSystem/ZipFsDir.html">Zip::ZipFileSystem::ZipFsDir</a></li>
+				
+					<li><a href="../../Zip/ZipFileSystem/ZipFsFile.html">Zip::ZipFileSystem::ZipFsFile</a></li>
+				
+					<li><a href="../../Zip/ZipFileSystem/ZipFsFile/ZipFsStat.html">Zip::ZipFileSystem::ZipFsFile::ZipFsStat</a></li>
+				
+					<li><a href="../../Zip/ZipInputStream.html">Zip::ZipInputStream</a></li>
+				
+					<li><a href="../../Zip/ZipInternalError.html">Zip::ZipInternalError</a></li>
+				
+					<li><a href="../../Zip/ZipOutputStream.html">Zip::ZipOutputStream</a></li>
+				
+					<li><a href="../../Zip/ZipStreamableDirectory.html">Zip::ZipStreamableDirectory</a></li>
+				
+					<li><a href="../../Zip/ZipStreamableStream.html">Zip::ZipStreamableStream</a></li>
+				
+					<li><a href="../../IOExtras/AbstractInputStream.html">IOExtras::AbstractInputStream</a></li>
+				
+					<li><a href="../../IOExtras/AbstractOutputStream.html">IOExtras::AbstractOutputStream</a></li>
+				
+					<li><a href="../../IOExtras/FakeIO.html">IOExtras::FakeIO</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Zip::ZipExtraField::UniversalTime</h1>
+
+		<div id="description">
+			<p>
+Info-ZIP Additional timestamp field
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="HEADER_ID">HEADER_ID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="atime-attribute-method" class="method-detail">
+				<a name="atime"></a>
+				
+				<a name="atime="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">atime</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="ctime-attribute-method" class="method-detail">
+				<a name="ctime"></a>
+				
+				<a name="ctime="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">ctime</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="mtime-attribute-method" class="method-detail">
+				<a name="mtime"></a>
+				
+				<a name="mtime="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">mtime</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="flag-attribute-method" class="method-detail">
+				<a name="flag"></a>
+				
+				<a name="flag="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">flag</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(binstr = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1717</span>
+1717:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">binstr</span> = <span class="ruby-keyword kw">nil</span>)
+1718:         <span class="ruby-ivar">@ctime</span> = <span class="ruby-keyword kw">nil</span>
+1719:         <span class="ruby-ivar">@mtime</span> = <span class="ruby-keyword kw">nil</span>
+1720:         <span class="ruby-ivar">@atime</span> = <span class="ruby-keyword kw">nil</span>
+1721:         <span class="ruby-ivar">@flag</span>  = <span class="ruby-keyword kw">nil</span>
+1722:         <span class="ruby-identifier">binstr</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">binstr</span>)
+1723:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1736</span>
+1736:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+1737:         <span class="ruby-ivar">@mtime</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">mtime</span> <span class="ruby-operator">&amp;&amp;</span>
+1738:         <span class="ruby-ivar">@atime</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">atime</span> <span class="ruby-operator">&amp;&amp;</span>
+1739:         <span class="ruby-ivar">@ctime</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">ctime</span>
+1740:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="merge-method" class="method-detail ">
+				<a name="method-i-merge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">merge</span><span
+						class="method-args">(binstr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="merge-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1726</span>
+1726:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">binstr</span>)
+1727:         <span class="ruby-identifier">binstr</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span>
+1728:         <span class="ruby-identifier">size</span>, <span class="ruby-identifier">content</span> = <span class="ruby-identifier">initial_parse</span>(<span class="ruby-identifier">binstr</span>)
+1729:         <span class="ruby-identifier">size</span> <span class="ruby-keyword kw">or</span> <span class="ruby-keyword kw">return</span>
+1730:         <span class="ruby-ivar">@flag</span>, <span class="ruby-identifier">mtime</span>, <span class="ruby-identifier">atime</span>, <span class="ruby-identifier">ctime</span> = <span class="ruby-identifier">content</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;CVVV&quot;</span>)
+1731:         <span class="ruby-identifier">mtime</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@mtime</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">mtime</span>)
+1732:         <span class="ruby-identifier">atime</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@atime</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">atime</span>)
+1733:         <span class="ruby-identifier">ctime</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@ctime</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">ctime</span>)
+1734:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pack-for-c-dir-method" class="method-detail ">
+				<a name="method-i-pack_for_c_dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pack_for_c_dir</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pack-for-c-dir-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1750</span>
+1750:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pack_for_c_dir</span>
+1751:         <span class="ruby-identifier">s</span> = [<span class="ruby-ivar">@flag</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;C&quot;</span>)
+1752:         <span class="ruby-ivar">@flag</span> &amp; <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@mtime</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;V&quot;</span>)
+1753:         <span class="ruby-identifier">s</span>
+1754:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pack-for-local-method" class="method-detail ">
+				<a name="method-i-pack_for_local"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pack_for_local</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pack-for-local-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/zip/zip.rb, line 1742</span>
+1742:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pack_for_local</span>
+1743:         <span class="ruby-identifier">s</span> = [<span class="ruby-ivar">@flag</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;C&quot;</span>)
+1744:         <span class="ruby-ivar">@flag</span> &amp; <span class="ruby-value">1</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@mtime</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;V&quot;</span>)
+1745:         <span class="ruby-ivar">@flag</span> &amp; <span class="ruby-value">2</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@atime</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;V&quot;</span>)
+1746:         <span class="ruby-ivar">@flag</span> &amp; <span class="ruby-value">4</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@ctime</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;V&quot;</span>)
+1747:         <span class="ruby-identifier">s</span>
+1748:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: Jasmine::CommandLineTool</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/jasmine/command_line_tool_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/jasmine/command_line_tool.rb">lib/jasmine/command_line_tool.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-copy_unless_exists">#copy_unless_exists</a></li>
+					
+					<li><a href="#method-i-cwd">#cwd</a></li>
+					
+					<li><a href="#method-i-dest_path">#dest_path</a></li>
+					
+					<li><a href="#method-i-expand">#expand</a></li>
+					
+					<li><a href="#method-i-process">#process</a></li>
+					
+					<li><a href="#method-i-template_path">#template_path</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../lib/generators/jasmine/examples/USAGE.html">USAGE</a></li>
+				
+					<li class="file"><a href="../lib/generators/jasmine/install/USAGE.html">USAGE</a></li>
+				
+					<li class="file"><a href="../lib/generators/jasmine/templates/INSTALL.html">INSTALL</a></li>
+				
+					<li class="file"><a href="../lib/jasmine/firebug/firebug-license_txt.html">firebug-license.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Jasmine.html">Jasmine</a></li>
+				
+					<li><a href="../Jasmine/CommandLineTool.html">Jasmine::CommandLineTool</a></li>
+				
+					<li><a href="../Jasmine/Config.html">Jasmine::Config</a></li>
+				
+					<li><a href="../Jasmine/FocusedSuite.html">Jasmine::FocusedSuite</a></li>
+				
+					<li><a href="../Jasmine/Generators.html">Jasmine::Generators</a></li>
+				
+					<li><a href="../Jasmine/Generators/ExamplesGenerator.html">Jasmine::Generators::ExamplesGenerator</a></li>
+				
+					<li><a href="../Jasmine/Generators/InstallGenerator.html">Jasmine::Generators::InstallGenerator</a></li>
+				
+					<li><a href="../Jasmine/JsAlert.html">Jasmine::JsAlert</a></li>
+				
+					<li><a href="../Jasmine/Railtie.html">Jasmine::Railtie</a></li>
+				
+					<li><a href="../Jasmine/Redirect.html">Jasmine::Redirect</a></li>
+				
+					<li><a href="../Jasmine/RunAdapter.html">Jasmine::RunAdapter</a></li>
+				
+					<li><a href="../Jasmine/SeleniumDriver.html">Jasmine::SeleniumDriver</a></li>
+				
+					<li><a href="../Jasmine/SpecBuilder.html">Jasmine::SpecBuilder</a></li>
+				
+					<li><a href="../Selenium.html">Selenium</a></li>
+				
+					<li><a href="../Selenium/WebDriver.html">Selenium::WebDriver</a></li>
+				
+					<li><a href="../Selenium/WebDriver/Firefox.html">Selenium::WebDriver::Firefox</a></li>
+				
+					<li><a href="../Selenium/WebDriver/Firefox/Profile.html">Selenium::WebDriver::Firefox::Profile</a></li>
+				
+					<li><a href="../JasmineGenerator.html">JasmineGenerator</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Jasmine::CommandLineTool</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="copy-unless-exists-method" class="method-detail ">
+				<a name="method-i-copy_unless_exists"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">copy_unless_exists</span><span
+						class="method-args">(relative_path, dest_path = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="copy-unless-exists-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 19</span>
+19:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-identifier">relative_path</span>, <span class="ruby-identifier">dest_path</span> = <span class="ruby-keyword kw">nil</span>)
+20:       <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">dest_path</span>(<span class="ruby-identifier">relative_path</span>))
+21:         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">template_path</span>(<span class="ruby-identifier">relative_path</span>), <span class="ruby-identifier">dest_path</span>(<span class="ruby-identifier">dest_path</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">relative_path</span>))
+22:       <span class="ruby-keyword kw">end</span>
+23:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cwd-method" class="method-detail ">
+				<a name="method-i-cwd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cwd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="cwd-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 3</span>
+3:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cwd</span>
+4:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword kw">__FILE__</span>), <span class="ruby-value str">'../..'</span>))
+5:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dest-path-method" class="method-detail ">
+				<a name="method-i-dest_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dest_path</span><span
+						class="method-args">(filepath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dest-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dest_path</span>(<span class="ruby-identifier">filepath</span>)
+16:       <span class="ruby-identifier">expand</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>, <span class="ruby-identifier">filepath</span>)
+17:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-method" class="method-detail ">
+				<a name="method-i-expand"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand</span><span
+						class="method-args">(*paths)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="expand-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 7</span>
+7:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand</span>(*<span class="ruby-identifier">paths</span>)
+8:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(*<span class="ruby-identifier">paths</span>))
+9:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="process-method" class="method-detail ">
+				<a name="method-i-process"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process</span><span
+						class="method-args">(argv)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="process-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">argv</span>)
+26:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'init'</span>
+27:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'fileutils'</span>
+28: 
+29:         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">makedirs</span>(<span class="ruby-value str">'public/javascripts'</span>)
+30:         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">makedirs</span>(<span class="ruby-value str">'spec/javascripts'</span>)
+31:         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">makedirs</span>(<span class="ruby-value str">'spec/javascripts/support'</span>)
+32:         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">makedirs</span>(<span class="ruby-value str">'spec/javascripts/helpers'</span>)
+33: 
+34:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'jasmine-example/src/Player.js'</span>, <span class="ruby-value str">'public/javascripts/Player.js'</span>)
+35:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'jasmine-example/src/Song.js'</span>, <span class="ruby-value str">'public/javascripts/Song.js'</span>)
+36:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'jasmine-example/spec/PlayerSpec.js'</span>, <span class="ruby-value str">'spec/javascripts/PlayerSpec.js'</span>)
+37:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'jasmine-example/spec/SpecHelper.js'</span>, <span class="ruby-value str">'spec/javascripts/helpers/SpecHelper.js'</span>)
+38:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'spec/javascripts/support/jasmine_runner.rb'</span>)
+39:         <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'spec/javascripts/support/jasmine_config.rb'</span>)
+40: 
+41:         <span class="ruby-identifier">rails_tasks_dir</span> = <span class="ruby-identifier">dest_path</span>(<span class="ruby-value str">'lib/tasks'</span>)
+42:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">rails_tasks_dir</span>)
+43:           <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'lib/tasks/jasmine.rake'</span>)
+44:           <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'spec/javascripts/support/jasmine-rails.yml'</span>, <span class="ruby-value str">'spec/javascripts/support/jasmine.yml'</span>)
+45:         <span class="ruby-keyword kw">else</span>
+46:           <span class="ruby-identifier">copy_unless_exists</span>(<span class="ruby-value str">'spec/javascripts/support/jasmine.yml'</span>)
+47:           <span class="ruby-identifier">require</span> <span class="ruby-value str">'rake'</span>
+48:           <span class="ruby-identifier">write_mode</span> = <span class="ruby-value str">'w'</span>
+49:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">dest_path</span>(<span class="ruby-value str">'Rakefile'</span>))
+50:             <span class="ruby-identifier">load</span> <span class="ruby-identifier">dest_path</span>(<span class="ruby-value str">'Rakefile'</span>)
+51:             <span class="ruby-identifier">write_mode</span> = <span class="ruby-value str">'a'</span>
+52:           <span class="ruby-keyword kw">end</span>
+53: 
+54:           <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">Task</span>.<span class="ruby-identifier">task_defined?</span>(<span class="ruby-value str">'jasmine'</span>)
+55:             <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">dest_path</span>(<span class="ruby-value str">'Rakefile'</span>), <span class="ruby-identifier">write_mode</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+56:               <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">template_path</span>(<span class="ruby-value str">'lib/tasks/jasmine.rake'</span>)))
+57:             <span class="ruby-keyword kw">end</span>
+58:           <span class="ruby-keyword kw">end</span>
+59:         <span class="ruby-keyword kw">end</span>
+60:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">template_path</span>(<span class="ruby-value str">'INSTALL'</span>), <span class="ruby-value str">'r'</span>).<span class="ruby-identifier">each_line</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+61:           <span class="ruby-identifier">puts</span> <span class="ruby-identifier">line</span>
+62:         <span class="ruby-keyword kw">end</span>
+63:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;license&quot;</span>
+64:         <span class="ruby-identifier">puts</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">expand</span>(<span class="ruby-identifier">cwd</span>, <span class="ruby-value str">&quot;MIT.LICENSE&quot;</span>)).<span class="ruby-identifier">read</span>
+65:       <span class="ruby-keyword kw">else</span>
+66:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;unknown command #{argv}&quot;</span>
+67:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Usage: jasmine init&quot;</span>
+68:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;               license&quot;</span>
+69:       <span class="ruby-keyword kw">end</span>
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="template-path-method" class="method-detail ">
+				<a name="method-i-template_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">template_path</span><span
+						class="method-args">(filepath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="template-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jasmine/command_line_tool.rb, line 11</span>
+11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template_path</span>(<span class="ruby-identifier">filepath</span>)
+12:       <span class="ruby-identifier">expand</span>(<span class="ruby-identifier">cwd</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;generators/jasmine/templates&quot;</span>, <span class="ruby-identifier">filepath</span>))
+13:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

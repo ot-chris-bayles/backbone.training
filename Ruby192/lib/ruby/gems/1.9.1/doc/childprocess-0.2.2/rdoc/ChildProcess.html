@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChildProcess</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/childprocess/abstract_io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/abstract_io.rb">lib/childprocess/abstract_io.rb</a></li>
+					
+						<li><a href="./lib/childprocess/abstract_process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/abstract_process.rb">lib/childprocess/abstract_process.rb</a></li>
+					
+						<li><a href="./lib/childprocess/errors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/errors.rb">lib/childprocess/errors.rb</a></li>
+					
+						<li><a href="./lib/childprocess/ironruby/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/ironruby/process.rb">lib/childprocess/ironruby/process.rb</a></li>
+					
+						<li><a href="./lib/childprocess/ironruby_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/ironruby.rb">lib/childprocess/ironruby.rb</a></li>
+					
+						<li><a href="./lib/childprocess/jruby/io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/jruby/io.rb">lib/childprocess/jruby/io.rb</a></li>
+					
+						<li><a href="./lib/childprocess/jruby/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/jruby/process.rb">lib/childprocess/jruby/process.rb</a></li>
+					
+						<li><a href="./lib/childprocess/jruby/redirector_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/jruby/redirector.rb">lib/childprocess/jruby/redirector.rb</a></li>
+					
+						<li><a href="./lib/childprocess/jruby_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/jruby.rb">lib/childprocess/jruby.rb</a></li>
+					
+						<li><a href="./lib/childprocess/unix/io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/unix/io.rb">lib/childprocess/unix/io.rb</a></li>
+					
+						<li><a href="./lib/childprocess/unix/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/unix/process.rb">lib/childprocess/unix/process.rb</a></li>
+					
+						<li><a href="./lib/childprocess/unix_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/unix.rb">lib/childprocess/unix.rb</a></li>
+					
+						<li><a href="./lib/childprocess/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/version.rb">lib/childprocess/version.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows/api_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/api.rb">lib/childprocess/windows/api.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows/functions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/functions.rb">lib/childprocess/windows/functions.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows/handle_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/handle.rb">lib/childprocess/windows/handle.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows/io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/io.rb">lib/childprocess/windows/io.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows/process.rb">lib/childprocess/windows/process.rb</a></li>
+					
+						<li><a href="./lib/childprocess/windows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess/windows.rb">lib/childprocess/windows.rb</a></li>
+					
+						<li><a href="./lib/childprocess_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/childprocess.rb">lib/childprocess.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="ChildProcess/IronRuby.html">ChildProcess::IronRuby</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="ChildProcess/JRuby.html">ChildProcess::JRuby</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="ChildProcess/Unix.html">ChildProcess::Unix</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="ChildProcess/Windows.html">ChildProcess::Windows</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ChildProcess/AbstractIO.html">ChildProcess::AbstractIO</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ChildProcess/AbstractProcess.html">ChildProcess::AbstractProcess</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ChildProcess/Error.html">ChildProcess::Error</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ChildProcess/SubclassResponsibility.html">ChildProcess::SubclassResponsibility</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ChildProcess/TimeoutError.html">ChildProcess::TimeoutError</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-close_on_exec">::close_on_exec</a></li>
+					
+					<li><a href="#method-c-jruby%3F">::jruby?</a></li>
+					
+					<li><a href="#method-c-jruby_on_unix%3F">::jruby_on_unix?</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-os">::os</a></li>
+					
+					<li><a href="#method-c-platform">::platform</a></li>
+					
+					<li><a href="#method-c-unix%3F">::unix?</a></li>
+					
+					<li><a href="#method-c-windows%3F">::windows?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./ChildProcess.html">ChildProcess</a></li>
+				
+					<li><a href="./ChildProcess/AbstractIO.html">ChildProcess::AbstractIO</a></li>
+				
+					<li><a href="./ChildProcess/AbstractProcess.html">ChildProcess::AbstractProcess</a></li>
+				
+					<li><a href="./ChildProcess/Error.html">ChildProcess::Error</a></li>
+				
+					<li><a href="./ChildProcess/IronRuby.html">ChildProcess::IronRuby</a></li>
+				
+					<li><a href="./ChildProcess/IronRuby/Process.html">ChildProcess::IronRuby::Process</a></li>
+				
+					<li><a href="./ChildProcess/JRuby.html">ChildProcess::JRuby</a></li>
+				
+					<li><a href="./ChildProcess/JRuby/IO.html">ChildProcess::JRuby::IO</a></li>
+				
+					<li><a href="./ChildProcess/JRuby/Process.html">ChildProcess::JRuby::Process</a></li>
+				
+					<li><a href="./ChildProcess/JRuby/Redirector.html">ChildProcess::JRuby::Redirector</a></li>
+				
+					<li><a href="./ChildProcess/SubclassResponsibility.html">ChildProcess::SubclassResponsibility</a></li>
+				
+					<li><a href="./ChildProcess/TimeoutError.html">ChildProcess::TimeoutError</a></li>
+				
+					<li><a href="./ChildProcess/Unix.html">ChildProcess::Unix</a></li>
+				
+					<li><a href="./ChildProcess/Unix/IO.html">ChildProcess::Unix::IO</a></li>
+				
+					<li><a href="./ChildProcess/Unix/Process.html">ChildProcess::Unix::Process</a></li>
+				
+					<li><a href="./ChildProcess/Windows.html">ChildProcess::Windows</a></li>
+				
+					<li><a href="./ChildProcess/Windows/Handle.html">ChildProcess::Windows::Handle</a></li>
+				
+					<li><a href="./ChildProcess/Windows/IO.html">ChildProcess::Windows::IO</a></li>
+				
+					<li><a href="./ChildProcess/Windows/Lib.html">ChildProcess::Windows::Lib</a></li>
+				
+					<li><a href="./ChildProcess/Windows/Process.html">ChildProcess::Windows::Process</a></li>
+				
+					<li><a href="./ChildProcess/Windows/ProcessInfo.html">ChildProcess::Windows::ProcessInfo</a></li>
+				
+					<li><a href="./ChildProcess/Windows/SecurityAttributes.html">ChildProcess::Windows::SecurityAttributes</a></li>
+				
+					<li><a href="./ChildProcess/Windows/StartupInfo.html">ChildProcess::Windows::StartupInfo</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChildProcess</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="close-on-exec-method" class="method-detail ">
+				<a name="method-c-close_on_exec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close_on_exec</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+By default, a child process will inherit open file descriptors from the
+parent process. This helper provides a cross-platform way of making sure
+that doesn&#8217;t happen for the given file/io.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="close-on-exec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close_on_exec</span>(<span class="ruby-identifier">file</span>)
+90:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:close_on_exec=</span>)
+91:         <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close_on_exec</span> = <span class="ruby-keyword kw">true</span>
+92:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:fcntl</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">FD_CLOEXEC</span>)
+93:         <span class="ruby-identifier">file</span>.<span class="ruby-identifier">fcntl</span> <span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">F_SETFD</span>, <span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">FD_CLOEXEC</span>
+94:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">windows?</span>
+95:         <span class="ruby-constant">Windows</span>.<span class="ruby-identifier">dont_inherit</span> <span class="ruby-identifier">file</span>
+96:       <span class="ruby-keyword kw">else</span>
+97:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;not sure how to set close-on-exec for #{file.inspect} on #{platform.inspect}&quot;</span>
+98:       <span class="ruby-keyword kw">end</span>
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="jruby--method" class="method-detail ">
+				<a name="method-c-jruby%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">jruby?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="jruby--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 48</span>
+48:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">jruby?</span>
+49:       <span class="ruby-identifier">platform</span> <span class="ruby-operator">==</span> <span class="ruby-value">:jruby</span>
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="jruby-on-unix--method" class="method-detail ">
+				<a name="method-c-jruby_on_unix%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">jruby_on_unix?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="jruby-on-unix--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">jruby_on_unix?</span>
+53:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">jruby?</span>
+54:       <span class="ruby-comment cmt"># patterns grabbed from http://lopica.sourceforge.net/os.html</span>
+55:       <span class="ruby-identifier">require</span> <span class="ruby-value str">&quot;java&quot;</span>
+56:       <span class="ruby-identifier">name</span> = <span class="ruby-identifier">java</span>.<span class="ruby-identifier">lang</span>.<span class="ruby-constant">System</span>.<span class="ruby-identifier">getProperty</span>(<span class="ruby-value str">&quot;os.name&quot;</span>).<span class="ruby-identifier">downcase</span>
+57:       <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/mac os|linux|solaris|bsd/</span>
+58:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 14</span>
+14:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>)
+15:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">platform</span>
+16:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:jruby</span>
+17:         <span class="ruby-constant">JRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">Process</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>)
+18:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:ironruby</span>
+19:         <span class="ruby-constant">IronRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">Process</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>)
+20:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:windows</span>
+21:         <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">Process</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>)
+22:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:macosx</span>, <span class="ruby-value">:linux</span>, <span class="ruby-value">:unix</span>, <span class="ruby-value">:cygwin</span>
+23:         <span class="ruby-constant">Unix</span><span class="ruby-operator">::</span><span class="ruby-constant">Process</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>)
+24:       <span class="ruby-keyword kw">else</span>
+25:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;unsupported platform #{platform.inspect}&quot;</span>
+26:       <span class="ruby-keyword kw">end</span>
+27:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="os-method" class="method-detail ">
+				<a name="method-c-os"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">os</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="os-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">os</span>
+65:       <span class="ruby-ivar">@os</span> <span class="ruby-operator">||=</span> (
+66:         <span class="ruby-identifier">require</span> <span class="ruby-value str">&quot;rbconfig&quot;</span>
+67:         <span class="ruby-identifier">host_os</span> = <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>]
+68: 
+69:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">host_os</span>
+70:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/mswin|msys|mingw32|cygwin/</span>
+71:           <span class="ruby-value">:windows</span>
+72:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/darwin|mac os/</span>
+73:           <span class="ruby-value">:macosx</span>
+74:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/linux/</span>
+75:           <span class="ruby-value">:linux</span>
+76:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/solaris|bsd/</span>
+77:           <span class="ruby-value">:unix</span>
+78:         <span class="ruby-keyword kw">else</span>
+79:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;unknown os: #{host_os.inspect}&quot;</span>
+80:         <span class="ruby-keyword kw">end</span>
+81:       )
+82:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="platform-method" class="method-detail ">
+				<a name="method-c-platform"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">platform</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="platform-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">platform</span>
+31:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;java&quot;</span>
+32:         <span class="ruby-value">:jruby</span>
+33:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;ironruby&quot;</span>
+34:         <span class="ruby-value">:ironruby</span>
+35:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/mswin|msys|mingw32/</span>
+36:         <span class="ruby-value">:windows</span>
+37:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/cygwin/</span>
+38:         <span class="ruby-value">:cygwin</span>
+39:       <span class="ruby-keyword kw">else</span>
+40:         <span class="ruby-identifier">os</span>
+41:       <span class="ruby-keyword kw">end</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unix--method" class="method-detail ">
+				<a name="method-c-unix%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unix?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="unix--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 44</span>
+44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unix?</span>
+45:       <span class="ruby-operator">!</span><span class="ruby-identifier">jruby?</span> <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-value">:macosx</span>, <span class="ruby-value">:linux</span>, <span class="ruby-value">:unix</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">os</span>)
+46:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-c-windows%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/childprocess.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows?</span>
+61:       <span class="ruby-operator">!</span><span class="ruby-identifier">jruby?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">os</span> <span class="ruby-operator">==</span> <span class="ruby-value">:windows</span>
+62:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

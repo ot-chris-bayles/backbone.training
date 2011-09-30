@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: FFI::Struct</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/ffi/struct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ffi/struct.rb">lib/ffi/struct.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-align">::align</a></li>
+					
+					<li><a href="#method-c-aligned">::aligned</a></li>
+					
+					<li><a href="#method-c-alignment">::alignment</a></li>
+					
+					<li><a href="#method-c-array_layout">::array_layout</a></li>
+					
+					<li><a href="#method-c-auto_ptr">::auto_ptr</a></li>
+					
+					<li><a href="#method-c-by_ref">::by_ref</a></li>
+					
+					<li><a href="#method-c-by_value">::by_value</a></li>
+					
+					<li><a href="#method-c-callback">::callback</a></li>
+					
+					<li><a href="#method-c-enclosing_module">::enclosing_module</a></li>
+					
+					<li><a href="#method-c-find_field_type">::find_field_type</a></li>
+					
+					<li><a href="#method-c-find_type">::find_type</a></li>
+					
+					<li><a href="#method-c-hash_layout">::hash_layout</a></li>
+					
+					<li><a href="#method-c-in">::in</a></li>
+					
+					<li><a href="#method-c-layout">::layout</a></li>
+					
+					<li><a href="#method-c-members">::members</a></li>
+					
+					<li><a href="#method-c-offset_of">::offset_of</a></li>
+					
+					<li><a href="#method-c-offsets">::offsets</a></li>
+					
+					<li><a href="#method-c-out">::out</a></li>
+					
+					<li><a href="#method-c-packed">::packed</a></li>
+					
+					<li><a href="#method-c-ptr">::ptr</a></li>
+					
+					<li><a href="#method-c-size">::size</a></li>
+					
+					<li><a href="#method-c-size%3D">::size=</a></li>
+					
+					<li><a href="#method-c-val">::val</a></li>
+					
+					<li><a href="#method-i-align">#align</a></li>
+					
+					<li><a href="#method-i-alignment">#alignment</a></li>
+					
+					<li><a href="#method-i-clear">#clear</a></li>
+					
+					<li><a href="#method-i-members">#members</a></li>
+					
+					<li><a href="#method-i-offset_of">#offset_of</a></li>
+					
+					<li><a href="#method-i-offsets">#offsets</a></li>
+					
+					<li><a href="#method-i-size">#size</a></li>
+					
+					<li><a href="#method-i-to_ptr">#to_ptr</a></li>
+					
+					<li><a href="#method-i-values">#values</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../FFI.html">FFI</a></li>
+				
+					<li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a></li>
+				
+					<li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a></li>
+				
+					<li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a></li>
+				
+					<li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a></li>
+				
+					<li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a></li>
+				
+					<li><a href="../FFI/Enum.html">FFI::Enum</a></li>
+				
+					<li><a href="../FFI/Enums.html">FFI::Enums</a></li>
+				
+					<li><a href="../FFI/Generator.html">FFI::Generator</a></li>
+				
+					<li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a></li>
+				
+					<li><a href="../FFI/IO.html">FFI::IO</a></li>
+				
+					<li><a href="../FFI/Library.html">FFI::Library</a></li>
+				
+					<li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a></li>
+				
+					<li><a href="../FFI/MemoryPointer.html">FFI::MemoryPointer</a></li>
+				
+					<li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a></li>
+				
+					<li><a href="../FFI/Platform.html">FFI::Platform</a></li>
+				
+					<li><a href="../FFI/PlatformError.html">FFI::PlatformError</a></li>
+				
+					<li><a href="../FFI/Pointer.html">FFI::Pointer</a></li>
+				
+					<li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a></li>
+				
+					<li><a href="../FFI/Struct.html">FFI::Struct</a></li>
+				
+					<li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a></li>
+				
+					<li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a></li>
+				
+					<li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a></li>
+				
+					<li><a href="../FFI/StructLayout.html">FFI::StructLayout</a></li>
+				
+					<li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a></li>
+				
+					<li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a></li>
+				
+					<li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a></li>
+				
+					<li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a></li>
+				
+					<li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a></li>
+				
+					<li><a href="../FFI/Union.html">FFI::Union</a></li>
+				
+					<li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">FFI::Struct</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="align-method" class="method-detail ">
+				<a name="method-c-align"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">align</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="align-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 126</span>
+126:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">align</span>
+127:       <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">alignment</span>
+128:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="alignment-method" class="method-detail ">
+				<a name="method-c-alignment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alignment</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="alignment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 122</span>
+122:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">alignment</span>
+123:       <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">alignment</span>
+124:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-ptr-method" class="method-detail ">
+				<a name="method-c-auto_ptr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_ptr</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="auto-ptr-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 180</span>
+180:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_ptr</span>
+181:       <span class="ruby-ivar">@managed_type</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapped</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ManagedStructConverter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>))
+182:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="by-ref-method" class="method-detail ">
+				<a name="method-c-by_ref"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">by_ref</span><span
+						class="method-args">(flags = :inout)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="by-ref-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 162</span>
+162:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">by_ref</span>(<span class="ruby-identifier">flags</span> = <span class="ruby-value">:inout</span>)
+163:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ptr</span>(<span class="ruby-identifier">flags</span>)
+164:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="by-value-method" class="method-detail ">
+				<a name="method-c-by_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">by_value</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="by-value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 158</span>
+158:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">by_value</span>
+159:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">val</span>
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="in-method" class="method-detail ">
+				<a name="method-c-in"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">in</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="in-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 142</span>
+142:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-keyword kw">in</span>
+143:       <span class="ruby-identifier">ptr</span>(<span class="ruby-value">:in</span>)
+144:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="layout-method" class="method-detail ">
+				<a name="method-c-layout"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">layout</span><span
+						class="method-args">(*spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="layout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 188</span>
+188:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">layout</span>(*<span class="ruby-identifier">spec</span>)
+189: <span class="ruby-comment cmt">#        raise RuntimeError, &quot;struct layout already defined for #{self.inspect}&quot; if defined?(@layout)</span>
+190:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@layout</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+191: 
+192:         <span class="ruby-identifier">builder</span> = <span class="ruby-constant">StructLayoutBuilder</span>.<span class="ruby-identifier">new</span>
+193:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">union</span> = <span class="ruby-keyword kw">self</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Union</span>
+194:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">packed</span> = <span class="ruby-ivar">@packed</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@packed</span>)
+195:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">alignment</span> = <span class="ruby-ivar">@min_alignment</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@min_alignment</span>)
+196: 
+197:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spec</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+198:           <span class="ruby-identifier">hash_layout</span>(<span class="ruby-identifier">builder</span>, <span class="ruby-identifier">spec</span>)
+199:         <span class="ruby-keyword kw">else</span>
+200:           <span class="ruby-identifier">array_layout</span>(<span class="ruby-identifier">builder</span>, <span class="ruby-identifier">spec</span>)
+201:         <span class="ruby-keyword kw">end</span>
+202:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">size</span> = <span class="ruby-ivar">@size</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@size</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">size</span>
+203:         <span class="ruby-identifier">cspec</span> = <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build</span>
+204:         <span class="ruby-ivar">@layout</span> = <span class="ruby-identifier">cspec</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Struct</span>
+205:         <span class="ruby-ivar">@size</span> = <span class="ruby-identifier">cspec</span>.<span class="ruby-identifier">size</span>
+206:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">cspec</span>
+207:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="members-method" class="method-detail ">
+				<a name="method-c-members"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">members</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="members-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">members</span>
+131:       <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">members</span>
+132:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offset-of-method" class="method-detail ">
+				<a name="method-c-offset_of"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offset_of</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="offset-of-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 138</span>
+138:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">offset_of</span>(<span class="ruby-identifier">name</span>)
+139:       <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">offset_of</span>(<span class="ruby-identifier">name</span>)
+140:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offsets-method" class="method-detail ">
+				<a name="method-c-offsets"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offsets</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="offsets-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">offsets</span>
+135:       <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">offsets</span>
+136:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="out-method" class="method-detail ">
+				<a name="method-c-out"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">out</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="out-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 146</span>
+146:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">out</span>
+147:       <span class="ruby-identifier">ptr</span>(<span class="ruby-value">:out</span>)
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ptr-method" class="method-detail ">
+				<a name="method-c-ptr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ptr</span><span
+						class="method-args">(flags = :inout)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ptr-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ptr</span>(<span class="ruby-identifier">flags</span> = <span class="ruby-value">:inout</span>)
+151:       <span class="ruby-ivar">@ref_data_type</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapped</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">StructByReference</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>))
+152:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail ">
+				<a name="method-c-size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="size-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 113</span>
+113:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">size</span>
+114:       <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@layout</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@layout</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@size</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@size</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+115:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="size--method" class="method-detail ">
+				<a name="method-c-size%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size=</span><span
+						class="method-args">(size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="size--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 117</span>
+117:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">size=</span>(<span class="ruby-identifier">size</span>)
+118:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Size already set&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@size</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@layout</span>)
+119:       <span class="ruby-ivar">@size</span> = <span class="ruby-identifier">size</span>
+120:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="val-method" class="method-detail ">
+				<a name="method-c-val"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">val</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="val-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">val</span>
+155:       <span class="ruby-ivar">@val_data_type</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">StructByValue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-class-method-details" class="method-section section">
+			<h3 class="section-header">Protected Class Methods</h3>
+
+		
+			<div id="aligned-method" class="method-detail ">
+				<a name="method-c-aligned"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">aligned</span><span
+						class="method-args">(alignment = 1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="aligned-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 222</span>
+222:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">aligned</span>(<span class="ruby-identifier">alignment</span> = <span class="ruby-value">1</span>)
+223:         <span class="ruby-ivar">@min_alignment</span> = <span class="ruby-identifier">alignment</span>
+224:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="callback-method" class="method-detail ">
+				<a name="method-c-callback"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">callback</span><span
+						class="method-args">(params, ret)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="callback-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 212</span>
+212:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span>(<span class="ruby-identifier">params</span>, <span class="ruby-identifier">ret</span>)
+213:         <span class="ruby-identifier">mod</span> = <span class="ruby-identifier">enclosing_module</span>
+214:         <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">CallbackInfo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">ret</span>, <span class="ruby-identifier">mod</span>), <span class="ruby-identifier">params</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">mod</span>) })
+215:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enclosing-module-method" class="method-detail ">
+				<a name="method-c-enclosing_module"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enclosing_module</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enclosing-module-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 227</span>
+227:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enclosing_module</span>
+228:         <span class="ruby-keyword kw">begin</span>
+229:           <span class="ruby-identifier">mod</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;::&quot;</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>].<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Object</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span>, <span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">c</span>) }
+230:           <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:find_type</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">mod</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+231:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+232:           <span class="ruby-keyword kw">nil</span>
+233:         <span class="ruby-keyword kw">end</span>
+234:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-field-type-method" class="method-detail ">
+				<a name="method-c-find_field_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_field_type</span><span
+						class="method-args">(type, mod = enclosing_module)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-field-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 237</span>
+237:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_field_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">mod</span> = <span class="ruby-identifier">enclosing_module</span>)
+238:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Struct</span>
+239:           <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Struct</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>)
+240: 
+241:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">StructLayout</span><span class="ruby-operator">::</span><span class="ruby-constant">Field</span>
+242:           <span class="ruby-identifier">type</span>
+243: 
+244:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Array</span>)
+245:           <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">find_field_type</span>(<span class="ruby-identifier">type</span>[<span class="ruby-value">0</span>]), <span class="ruby-identifier">type</span>[<span class="ruby-value">1</span>])
+246: 
+247:         <span class="ruby-keyword kw">else</span>
+248:           <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">mod</span>)
+249:         <span class="ruby-keyword kw">end</span>
+250:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-type-method" class="method-detail ">
+				<a name="method-c-find_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_type</span><span
+						class="method-args">(type, mod = enclosing_module)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 252</span>
+252:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">mod</span> = <span class="ruby-identifier">enclosing_module</span>)
+253:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mod</span>
+254:           <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>)
+255:         <span class="ruby-keyword kw">end</span> <span class="ruby-operator">||</span> <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-identifier">type</span>)
+256:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="packed-method" class="method-detail ">
+				<a name="method-c-packed"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">packed</span><span
+						class="method-args">(packed = 1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="packed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 217</span>
+217:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">packed</span>(<span class="ruby-identifier">packed</span> = <span class="ruby-value">1</span>)
+218:         <span class="ruby-ivar">@packed</span> = <span class="ruby-identifier">packed</span>
+219:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="array-layout-method" class="method-detail ">
+				<a name="method-c-array_layout"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">array_layout</span><span
+						class="method-args">(builder, spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="array-layout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 267</span>
+267:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">array_layout</span>(<span class="ruby-identifier">builder</span>, <span class="ruby-identifier">spec</span>)
+268:         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+269:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">size</span>
+270:           <span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span> = <span class="ruby-identifier">spec</span>[<span class="ruby-identifier">i</span>, <span class="ruby-value">2</span>]
+271:           <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+272: 
+273:           <span class="ruby-comment cmt"># If the next param is a Integer, it specifies the offset</span>
+274:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spec</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>)
+275:             <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">spec</span>[<span class="ruby-identifier">i</span>]
+276:             <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+277:           <span class="ruby-keyword kw">else</span>
+278:             <span class="ruby-identifier">offset</span> = <span class="ruby-keyword kw">nil</span>
+279:           <span class="ruby-keyword kw">end</span>
+280: 
+281:           <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">find_field_type</span>(<span class="ruby-identifier">type</span>), <span class="ruby-identifier">offset</span>
+282:         <span class="ruby-keyword kw">end</span>
+283:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hash-layout-method" class="method-detail ">
+				<a name="method-c-hash_layout"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hash_layout</span><span
+						class="method-args">(builder, spec)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hash-layout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 260</span>
+260:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash_layout</span>(<span class="ruby-identifier">builder</span>, <span class="ruby-identifier">spec</span>)
+261:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Ruby version not supported&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/1.8.*/</span>
+262:         <span class="ruby-identifier">spec</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span><span class="ruby-operator">|</span>
+263:           <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">find_field_type</span>(<span class="ruby-identifier">type</span>), <span class="ruby-keyword kw">nil</span>
+264:         <span class="ruby-keyword kw">end</span>
+265:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="align-method" class="method-detail method-alias">
+				<a name="method-i-align"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">align</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Struct.html#method-i-alignment">alignment</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="alignment-method" class="method-detail ">
+				<a name="method-i-alignment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alignment</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="alignment-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alignment</span>
+84:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">alignment</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Struct.html#method-i-align">align</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="clear-method" class="method-detail ">
+				<a name="method-i-clear"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clear</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="clear-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear</span>
+105:       <span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">clear</span>
+106:       <span class="ruby-keyword kw">self</span>
+107:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="members-method" class="method-detail ">
+				<a name="method-i-members"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">members</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="members-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">members</span>
+93:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">members</span>
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offset-of-method" class="method-detail ">
+				<a name="method-i-offset_of"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offset_of</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="offset-of-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 88</span>
+88:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offset_of</span>(<span class="ruby-identifier">name</span>)
+89:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">offset_of</span>(<span class="ruby-identifier">name</span>)
+90:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offsets-method" class="method-detail ">
+				<a name="method-i-offsets"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offsets</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="offsets-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offsets</span>
+101:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">offsets</span>
+102:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail ">
+				<a name="method-i-size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="size-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 79</span>
+79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
+80:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">size</span>
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-ptr-method" class="method-detail ">
+				<a name="method-i-to_ptr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_ptr</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-ptr-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_ptr</span>
+110:       <span class="ruby-identifier">pointer</span>
+111:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="values-method" class="method-detail ">
+				<a name="method-i-values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">values</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="values-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ffi/struct.rb, line 96</span>
+96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">values</span>
+97:       <span class="ruby-identifier">members</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">m</span>] }
+98:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
