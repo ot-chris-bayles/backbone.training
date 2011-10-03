@@ -1,14 +1,12 @@
 ImageGallery = {};
 
 ImageGallery.Image = Backbone.Model.extend({
-  initialize: function(){
-    var memento = new Backbone.Memento(this, {ignore: ["selected"]});
-    _.extend(this, memento);
-  },
-
   urlRoot: "/images",
 
   initialize: function(){
+    var memento = new Backbone.Memento(this, {ignore: ["selected"]});
+    _.extend(this, memento);
+
     var commentData = this.get("comments");
     this.comments = new ImageGallery.Comments(commentData);
     this.unset("comments");
