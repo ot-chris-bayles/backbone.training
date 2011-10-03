@@ -1,6 +1,6 @@
 describe("editing an image", function(){
   beforeEach(function(){
-    loadFixtures("edit-image-template.erb");
+    loadTemplate("edit-image-template");
     this.vent = _.extend({}, Backbone.Events);
     this.image = new ImageGallery.Image(imageList[0]);
     this.view = new ImageGallery.EditImageView({
