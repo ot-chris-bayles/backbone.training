@@ -1,5 +1,13 @@
 ## Backbone.Training
 
+A 2-day, hands-on training course from Derick Bailey
+
+* http://backbonetraining.net
+* http://mutedsolutions.com
+* http://derickbailey.lostechies.com
+* derickbailey@gmail.com
+* twitter: @derickbailey
+
 ### The ImageGallery App
 
 The "ImageGallery" code and resources used in this training course was extracted
