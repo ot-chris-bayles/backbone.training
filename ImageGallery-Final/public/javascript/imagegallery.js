@@ -122,10 +122,11 @@ ImageGallery.MenuView = Backbone.View.extend({
   el: "#menu",
 
   events: {
-    "click a": "addImage"
+    "click #add-image": "addImage"
   },
 
   addImage: function(e){
+    console.log("menu a click");
     e.preventDefault();
     this.options.vent.trigger("image:add");
   }
@@ -580,9 +581,9 @@ ImageGallery.Controller = function(images, mainView, vent){
 ImageGallery.Router = Backbone.Router.extend({
   routes: {
     "": "home",
-    "/image/:id": "showImage",
-    "/add": "addImage",
-    "/edit/:id": "editImage"
+    "images/:id": "showImage",
+    "add": "addImage",
+    "edit/:id": "editImage"
   },
 
   initialize: function(options){
@@ -637,7 +638,12 @@ ImageGallery.App = function(initialImages, imageId){
 
   var showImage = function(image){
     controller.showImage(image);
-    router.navigate("/images/" + image.id);
+
+    var newPath = "/images/" + image.id;
+    var oldPath = location.pathname;
+    if (newPath != oldPath){
+      router.navigate("/images/" + image.id);
+    }
   }
 
   vent.bind("image:selected", showImage, this);
