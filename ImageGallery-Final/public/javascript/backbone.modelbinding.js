@@ -1,4 +1,4 @@
-// Backbone.ModelBinding v0.3.7
+// Backbone.ModelBinding v0.3.10
 //
 // Copyright (C)2011 Derick Bailey, Muted Solutions, LLC
 // Distributed Under MIT Liscene
@@ -9,7 +9,7 @@
 // ----------------------------
 // Backbone.ModelBinding
 // ----------------------------
-Backbone.ModelBinding = (function(){
+Backbone.ModelBinding = (function(Backbone){
   function handleConventionBindings(view, model){
     var conventions = Backbone.ModelBinding.Conventions;
     for (var conventionName in conventions){
@@ -37,7 +37,7 @@ Backbone.ModelBinding = (function(){
   }
 
   return {
-    version: "0.3.7",
+    version: "0.3.10",
 
     bind: function(view, options){
       Backbone.ModelBinding.Configuration.configureBindingAttributes(options);
@@ -48,13 +48,13 @@ Backbone.ModelBinding = (function(){
     unbind: function(view){
       handleUnbinding(view, view.model);
     }
-  }
-})();
+  };
+})(Backbone);
 
 // ----------------------------
 // Model Binding Configuration
 // ----------------------------
-Backbone.ModelBinding.Configuration = (function(){
+Backbone.ModelBinding.Configuration = (function(_){
   var bindingAttrConfig = {
 	  text: "id",
 	  textarea: "id",
@@ -96,20 +96,20 @@ Backbone.ModelBinding.Configuration = (function(){
         delete this._config;
       }
     },
-    
+
     getBindingAttr: function(type){ return bindingAttrConfig[type]; },
 
     getBindingValue: function(element, type){
       var bindingAttr = this.getBindingAttr(type);
       return element.attr(bindingAttr);
     }
-  }
-})();
+  };
+})(_);
 
 // ----------------------------
 // Text, Textarea, and Password Bi-Directional Binding Methods
 // ----------------------------
-Backbone.ModelBinding.StandardBinding = (function(){
+Backbone.ModelBinding.StandardBinding = (function(Backbone){
   var methods = {};
 
   methods._getElementType = function(element) {
@@ -117,11 +117,11 @@ Backbone.ModelBinding.StandardBinding = (function(){
     if (type == "input"){
       type = element.attr("type");
       if (type == undefined || type == ''){
-        type = 'text'
+        type = 'text';
       }
     }
     return type;
-  }
+  };
 
   methods._modelChange = function(changed_model, val){
     this.element.val(val);
@@ -154,7 +154,7 @@ Backbone.ModelBinding.StandardBinding = (function(){
       // repeated through the rest of the binding objects.
       var config = {element: element};
       model.bind("change:" + attribute_name, methods._modelChange, config);
-      
+
       // bind the form changes to the model
       element.bind("change", function(ev){
         var data = {};
@@ -171,17 +171,17 @@ Backbone.ModelBinding.StandardBinding = (function(){
   };
 
   return methods;
-})();
+})(Backbone);
 
 // ----------------------------
 // Select Box Bi-Directional Binding Methods
 // ----------------------------
-Backbone.ModelBinding.SelectBoxBinding = (function(){
+Backbone.ModelBinding.SelectBoxBinding = (function(Backbone){
   var methods = {};
 
   methods._modelChange = function(changed_model, val){
     this.element.val(val);
-  }
+  };
 
   methods.unbind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -189,7 +189,7 @@ Backbone.ModelBinding.SelectBoxBinding = (function(){
       var attribute_name = Backbone.ModelBinding.Configuration.getBindingValue(element, 'select');
       model.unbind("change:" + attribute_name, methods._modelChange);
     });
-  }
+  };
 
   methods.bind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -213,23 +213,29 @@ Backbone.ModelBinding.SelectBoxBinding = (function(){
       var attr_value = model.get(attribute_name);
       if (typeof attr_value !== "undefined" && attr_value !== null) {
         element.val(attr_value);
+
+        if (element.val() != attr_value) {
+          var data = {};
+          data[attribute_name] = element.val();
+          model.set(data);
+        }
       }
     });
   };
 
   return methods;
-})();
+})(Backbone);
 
 // ----------------------------
 // Radio Button Group Bi-Directional Binding Methods
 // ----------------------------
-Backbone.ModelBinding.RadioGroupBinding = (function(){
+Backbone.ModelBinding.RadioGroupBinding = (function(Backbone){
   var methods = {};
 
   methods._modelChange = function(model, val){
     var value_selector = "input[type=radio][" + this.bindingAttr + "=" + this.group_name + "][value=" + val + "]";
     this.view.$(value_selector).attr("checked", "checked");
-  }
+  };
 
   methods.unbind = function(selector, view, model){
     var foundElements = [];
@@ -242,7 +248,7 @@ Backbone.ModelBinding.RadioGroupBinding = (function(){
         model.unbind("change:" + group_name, methods._modelChange);
       }
     });
-  }
+  };
 
   methods.bind = function(selector, view, model){
     var foundElements = [];
@@ -266,7 +272,7 @@ Backbone.ModelBinding.RadioGroupBinding = (function(){
         var group_selector = "input[type=radio][" + bindingAttr + "=" + group_name + "]";
         view.$(group_selector).bind("change", function(ev){
           var element = view.$(ev.currentTarget);
-          if (element.attr("checked")){
+          if (element.is(":checked")){
             var data = {};
             data[group_name] = element.val();
             model.set(data);
@@ -284,12 +290,12 @@ Backbone.ModelBinding.RadioGroupBinding = (function(){
   };
 
   return methods;
-})();
+})(Backbone);
 
 // ----------------------------
 // Checkbox Bi-Directional Binding Methods
 // ----------------------------
-Backbone.ModelBinding.CheckboxBinding = (function(){
+Backbone.ModelBinding.CheckboxBinding = (function(Backbone){
   var methods = {};
 
   methods._modelChange = function(model, val){
@@ -299,7 +305,7 @@ Backbone.ModelBinding.CheckboxBinding = (function(){
     else{
       this.element.removeAttr("checked");
     }
-  }
+  };
 
   methods.unbind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -307,7 +313,7 @@ Backbone.ModelBinding.CheckboxBinding = (function(){
       var attribute_name = Backbone.ModelBinding.Configuration.getBindingValue(element, 'checkbox');
       model.unbind("change:" + attribute_name, methods._modelChange);
     });
-  }
+  };
 
   methods.bind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -322,7 +328,7 @@ Backbone.ModelBinding.CheckboxBinding = (function(){
       element.bind("change", function(ev){
         var data = {};
         var changedElement = view.$(ev.target);
-        var checked = changedElement.attr("checked")? true : false;
+        var checked = changedElement.is(":checked")? true : false;
         data[attribute_name] = checked;
         model.set(data);
       });
@@ -339,36 +345,36 @@ Backbone.ModelBinding.CheckboxBinding = (function(){
         }
       }
     });
-  }
+  };
 
   return methods;
-})();
+})(Backbone);
 
 // ----------------------------
 // Data-Bind Binding Methods
 // ----------------------------
-Backbone.ModelBinding.DataBindBinding = (function(){
+Backbone.ModelBinding.DataBindBinding = (function(Backbone, _, $){
   var methods = {};
 
   var dataBindSubstConfig = {
     "default": ""
-  }
+  };
 
   Backbone.ModelBinding.Configuration.dataBindSubst = function(config){
     this.storeDataBindSubstConfig();
     _.extend(dataBindSubstConfig, config);
-  }
+  };
 
   Backbone.ModelBinding.Configuration.storeDataBindSubstConfig = function(){
     Backbone.ModelBinding.Configuration._dataBindSubstConfig = _.clone(dataBindSubstConfig);
-  }
+  };
 
   Backbone.ModelBinding.Configuration.restoreDataBindSubstConfig = function(){
     if (Backbone.ModelBinding.Configuration._dataBindSubstConfig){
       dataBindSubstConfig = Backbone.ModelBinding.Configuration._dataBindSubstConfig;
       delete Backbone.ModelBinding.Configuration._dataBindSubstConfig;
     }
-  }
+  };
 
   Backbone.ModelBinding.Configuration.getDataBindSubst = function(elementType, value){
     var returnValue = value;
@@ -380,11 +386,11 @@ Backbone.ModelBinding.DataBindBinding = (function(){
       }
     }
     return returnValue;
-  }
+  };
 
   methods._modelChange = function(model, val){
     methods._setOnElement(this.element, this.elementAttr, val);
-  }
+  };
 
   methods._setOnElement = function(element, attr, val){
     var valBefore = val;
@@ -408,14 +414,14 @@ Backbone.ModelBinding.DataBindBinding = (function(){
       default:
         element.attr(attr, val);
     }
-  }
+  };
 
   methods._splitBindingAttr = function(element)
   {
     var dataBindConfigList = [];
     var databindList = element.attr("data-bind").split(";");
     _.each(databindList, function(attrbind){
-      var databind = attrbind.trim().split(" ");
+      var databind = $.trim(attrbind).split(" ");
 
       // make the default special case "text" if none specified
       if( databind.length == 1 ) databind.unshift("text");
@@ -426,7 +432,7 @@ Backbone.ModelBinding.DataBindBinding = (function(){
       });
     });
     return dataBindConfigList;
-  }
+  };
 
   methods.bind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -444,7 +450,7 @@ Backbone.ModelBinding.DataBindBinding = (function(){
         methods._setOnElement(element, databind.elementAttr, model.get(databind.modelAttr));
       });
     });
-  }
+  };
 
   methods.unbind = function(selector, view, model){
     view.$(selector).each(function(index){
@@ -454,24 +460,21 @@ Backbone.ModelBinding.DataBindBinding = (function(){
         model.unbind("change:" + databind.modelAttr, methods._modelChange);
       });
     });
-  }
+  };
 
   return methods;
-})();
+})(Backbone, _, $);
 
 
 // ----------------------------
 // Binding Conventions
 // ----------------------------
-Backbone.ModelBinding.Conventions = (function(){
-  return {
-    text: {selector: "input:text", handler: Backbone.ModelBinding.StandardBinding}, 
-    textarea: {selector: "textarea", handler: Backbone.ModelBinding.StandardBinding},
-    password: {selector: "input:password", handler: Backbone.ModelBinding.StandardBinding},
-    radio: {selector: "input:radio", handler: Backbone.ModelBinding.RadioGroupBinding},
-    checkbox: {selector: "input:checkbox", handler: Backbone.ModelBinding.CheckboxBinding},
-    select: {selector: "select", handler: Backbone.ModelBinding.SelectBoxBinding},
-    databind: { selector: "*[data-bind]", handler: Backbone.ModelBinding.DataBindBinding}
-  }
-})();
-
+Backbone.ModelBinding.Conventions = {
+  text: {selector: "input:text", handler: Backbone.ModelBinding.StandardBinding},
+  textarea: {selector: "textarea", handler: Backbone.ModelBinding.StandardBinding},
+  password: {selector: "input:password", handler: Backbone.ModelBinding.StandardBinding},
+  radio: {selector: "input:radio", handler: Backbone.ModelBinding.RadioGroupBinding},
+  checkbox: {selector: "input:checkbox", handler: Backbone.ModelBinding.CheckboxBinding},
+  select: {selector: "select", handler: Backbone.ModelBinding.SelectBoxBinding},
+  databind: { selector: "*[data-bind]", handler: Backbone.ModelBinding.DataBindBinding}
+};
